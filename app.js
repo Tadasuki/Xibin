@@ -161,8 +161,8 @@ function bindEvents() {
 
   document.addEventListener("input", (event) => {
     if (event.target.matches("[data-search-box]")) {
-      state.search = event.target.value.trim();
-      renderTranscript();
+      state.search = event.target.value;
+      renderTranscriptResults();
     }
   });
 
@@ -455,6 +455,7 @@ function renderFocusPanel() {
             <button class="mind-tool-button" type="button" data-mind-action="zoom-in">放大</button>
             <button class="mind-tool-button" type="button" data-mind-action="zoom-out">缩小</button>
             <button class="mind-tool-button" type="button" data-mind-action="reset">恢复</button>
+            <button class="mind-tool-button" type="button" data-mind-action="fullscreen">全屏</button>
           </div>
           <div class="mind-viewport" data-mind-viewport data-session-key="${escapeAttr(session.date)}">
             <div class="mind-surface" data-mind-surface>
@@ -566,18 +567,34 @@ function renderTranscript() {
     filterCampChip("observe", state.campFilter === "observe", campMeta.observe.label)
   ].join("");
 
-  const visibleMessages = session.messages.filter((message) => {
-    const speakerOk = state.speakerFilter === "all" || message.sender === state.speakerFilter;
-    const campOk = state.campFilter === "all" || message.stance === state.campFilter || message.participantCamp === state.campFilter;
-    const searchOk = !state.search
-      || message.content.includes(state.search)
-      || message.sender.includes(state.search)
-      || message.replyTo?.sender?.includes(state.search)
-      || message.replyTo?.content?.includes(state.search);
-    return speakerOk && campOk && searchOk;
-  });
+  el.transcriptPanel.innerHTML = `
+    <div class="toolbar-row">
+      <input class="search-box" data-search-box type="search" value="${escapeAttr(state.search)}" placeholder="搜索名字或内容，例如 改开 / 通山 / 杰福.">
+      <div class="toolbar-group">${speakerChips}</div>
+    </div>
+    <div style="margin-top:12px" class="toolbar-group">${campChips}</div>
+    <div class="transcript-meta" data-transcript-meta></div>
+    <div class="message-list" data-message-list></div>
+  `;
+  renderTranscriptResults();
+}
 
-  const cards = visibleMessages.length
+function renderTranscriptResults() {
+  const session = currentSession();
+  const campMeta = getCampMeta(session.category.id);
+  const visibleMessages = getVisibleTranscriptMessages(session);
+  const transcriptMeta = el.transcriptPanel.querySelector("[data-transcript-meta]");
+  const messageList = el.transcriptPanel.querySelector("[data-message-list]");
+  if (!transcriptMeta || !messageList) {
+    return;
+  }
+
+  transcriptMeta.innerHTML = `
+    <span>显示 ${visibleMessages.length} / ${session.messages.length} 条消息</span>
+    <span>${escapeHtml(session.date)} · ${escapeHtml(session.category.label)}</span>
+  `;
+
+  messageList.innerHTML = visibleMessages.length
     ? visibleMessages.map((message) => {
       const badges = [];
       if (message.isTarget) {
@@ -611,19 +628,20 @@ function renderTranscript() {
       `;
     }).join("")
     : '<div class="empty-state">当前筛选条件下没有命中消息。</div>';
+}
 
-  el.transcriptPanel.innerHTML = `
-    <div class="toolbar-row">
-      <input class="search-box" data-search-box type="search" value="${escapeAttr(state.search)}" placeholder="搜索名字或内容，例如 改开 / 通山 / 杰福.">
-      <div class="toolbar-group">${speakerChips}</div>
-    </div>
-    <div style="margin-top:12px" class="toolbar-group">${campChips}</div>
-    <div class="transcript-meta">
-      <span>显示 ${visibleMessages.length} / ${session.messages.length} 条消息</span>
-      <span>${escapeHtml(session.date)} · ${escapeHtml(session.category.label)}</span>
-    </div>
-    <div class="message-list">${cards}</div>
-  `;
+function getVisibleTranscriptMessages(session) {
+  const search = state.search.trim();
+  return session.messages.filter((message) => {
+    const speakerOk = state.speakerFilter === "all" || message.sender === state.speakerFilter;
+    const campOk = state.campFilter === "all" || message.stance === state.campFilter || message.participantCamp === state.campFilter;
+    const searchOk = !search
+      || message.content.includes(search)
+      || message.sender.includes(search)
+      || message.replyTo?.sender?.includes(search)
+      || message.replyTo?.content?.includes(search);
+    return speakerOk && campOk && searchOk;
+  });
 }
 
 function analyzeData(data) {
@@ -971,38 +989,58 @@ function activateMindMap() {
   const key = viewport.dataset.sessionKey;
   applyMindTransform(surface, ensureMindView(viewport));
 
+  let activePointers = new Map();
+  let lastDist = 0;
   let dragging = false;
-  let startX = 0;
-  let startY = 0;
-  let originX = 0;
-  let originY = 0;
+  let startX = 0, startY = 0;
+  let originX = 0, originY = 0;
 
   viewport.onpointerdown = (event) => {
-    if (event.target.closest("button")) {
-      return;
-    }
-    dragging = true;
-    viewport.classList.add("dragging");
-    startX = event.clientX;
-    startY = event.clientY;
-    originX = state.mindViews[key].x;
-    originY = state.mindViews[key].y;
+    if (event.target.closest("button")) return;
+    activePointers.set(event.pointerId, event);
     viewport.setPointerCapture(event.pointerId);
+
+    if (activePointers.size === 1) {
+      dragging = true;
+      viewport.classList.add("dragging");
+      startX = event.clientX;
+      startY = event.clientY;
+      originX = state.mindViews[key].x;
+      originY = state.mindViews[key].y;
+    } else if (activePointers.size === 2) {
+      dragging = false;
+      const pts = Array.from(activePointers.values());
+      lastDist = Math.hypot(pts[0].clientX - pts[1].clientX, pts[0].clientY - pts[1].clientY);
+    }
   };
 
   viewport.onpointermove = (event) => {
-    if (!dragging) {
-      return;
+    activePointers.set(event.pointerId, event);
+
+    if (activePointers.size === 2) {
+      const pts = Array.from(activePointers.values());
+      const dist = Math.hypot(pts[0].clientX - pts[1].clientX, pts[0].clientY - pts[1].clientY);
+      if (lastDist > 0) {
+        const factor = dist / lastDist;
+        const centerX = (pts[0].clientX + pts[1].clientX) / 2;
+        const centerY = (pts[0].clientY + pts[1].clientY) / 2;
+        zoomMindAt(viewport, factor, centerX, centerY);
+      }
+      lastDist = dist;
+    } else if (dragging && activePointers.size === 1) {
+      state.mindViews[key].x = originX + (event.clientX - startX);
+      state.mindViews[key].y = originY + (event.clientY - startY);
+      applyMindTransform(surface, state.mindViews[key]);
     }
-    state.mindViews[key].x = originX + (event.clientX - startX);
-    state.mindViews[key].y = originY + (event.clientY - startY);
-    applyMindTransform(surface, state.mindViews[key]);
   };
 
   viewport.onpointerup = (event) => {
-    dragging = false;
-    viewport.classList.remove("dragging");
-    viewport.releasePointerCapture(event.pointerId);
+    activePointers.delete(event.pointerId);
+    if (activePointers.size < 2) lastDist = 0;
+    if (activePointers.size === 0) {
+      dragging = false;
+      viewport.classList.remove("dragging");
+    }
   };
 
   viewport.onpointercancel = viewport.onpointerup;
@@ -1012,7 +1050,43 @@ function activateMindMap() {
   };
 }
 
+function zoomMindAt(viewport, factor, clientX, clientY) {
+  const surface = viewport.querySelector("[data-mind-surface]");
+  const view = ensureMindView(viewport);
+  const rect = viewport.getBoundingClientRect();
+  const nextScale = clamp(view.scale * factor, MIND_SCALE_MIN, MIND_SCALE_MAX);
+  
+  if (nextScale === view.scale) return;
+
+  const localX = clientX - rect.left;
+  const localY = clientY - rect.top;
+  const worldX = (localX - view.x) / view.scale;
+  const worldY = (localY - view.y) / view.scale;
+
+  view.scale = nextScale;
+  view.x = localX - worldX * nextScale;
+  view.y = localY - worldY * nextScale;
+  applyMindTransform(surface, view);
+}
+
 function handleMindAction(action, viewport) {
+  const wrap = viewport.closest(".mind-wrap");
+
+  if (action === "fullscreen") {
+    wrap?.classList.toggle("fullscreen");
+    const isFull = wrap?.classList.contains("fullscreen");
+    const btn = wrap?.querySelector('[data-mind-action="fullscreen"]');
+    if (btn) btn.textContent = isFull ? "退出" : "全屏";
+    
+    // Resize logic
+    setTimeout(() => {
+      const key = viewport.dataset.sessionKey;
+      state.mindViews[key] = fitMindView(viewport);
+      applyMindTransform(viewport.querySelector("[data-mind-surface]"), state.mindViews[key]);
+    }, 50);
+    return;
+  }
+
   if (action === "reset") {
     resetMindView(viewport);
     return;

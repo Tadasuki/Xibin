@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "OPPO Sans Web";
+  src: url("./assets/fonts/OPPO-Sans-4.0.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #f7f4ee;
   --bg-2: #f0ebe2;
@@ -25,12 +33,16 @@
   --radius-lg: 22px;
   --radius-md: 18px;
   --radius-sm: 14px;
-  --font-ui: "OPPO Sans 3.0", "OPPO Sans", "OPPOSans", "HarmonyOS Sans SC", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-  --font-display: "Source Han Serif SC", "Source Han Serif CN", "Noto Serif CJK SC", "思源宋体", "Songti SC", serif;
+  --font-ui: "OPPO Sans Web", "OPPO Sans 4.0", "OPPO Sans 3.0", "OPPO Sans", "OPPOSans", "HarmonyOS Sans SC", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-display: "Source Han Serif SC VF", "Source Han Serif SC", "Source Han Serif CN", "Noto Serif CJK SC", "思源宋体", "Songti SC", serif;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 html,
@@ -43,6 +55,25 @@ body {
     radial-gradient(circle at 82% 8%, rgba(112, 135, 127, 0.09), transparent 22%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
   font-family: var(--font-ui);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+a[x-apple-data-detectors],
+a[x-apple-data-detectors]:visited,
+a[x-apple-data-detectors]:hover,
+a[x-apple-data-detectors]:active {
+  color: inherit !important;
+  text-decoration: none !important;
+  font: inherit !important;
+  line-height: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
 }
 
 body::before {
@@ -109,7 +140,7 @@ body.loading {
 .loading-kicker {
   color: rgba(90, 57, 43, 0.58);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 450;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -126,6 +157,14 @@ body.loading {
 button,
 input {
   font: inherit;
+  font-family: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  color: inherit;
 }
 
 .page-shell {
@@ -159,7 +198,7 @@ input {
 .panel-kicker {
   color: var(--muted);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 450;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -168,6 +207,7 @@ input {
   margin: 14px 0 12px;
   font-family: var(--font-display);
   font-size: clamp(36px, 3.8vw, 58px);
+  font-weight: 600;
   line-height: 0.94;
   letter-spacing: 0.05em;
   color: var(--ink-brown);
@@ -303,7 +343,7 @@ input {
 .overview-value {
   margin-top: 6px;
   font-size: clamp(15px, 1.5vw, 21px);
-  font-weight: 700;
+  font-weight: 450;
   letter-spacing: -0.03em;
   line-height: 1.15;
 }
@@ -372,6 +412,7 @@ input {
 .section-head h2 {
   margin: 6px 0 0;
   font-size: 22px;
+  font-weight: 450;
   letter-spacing: -0.03em;
 }
 
@@ -446,7 +487,14 @@ input {
 
 .session-date {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 450;
+}
+
+.session-date,
+.session-event,
+.session-meta,
+.session-button {
+  font-family: var(--font-ui);
 }
 
 .session-event {
@@ -459,7 +507,7 @@ input {
 .session-topline .session-event {
   margin-top: 0;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 450;
   line-height: 1.35;
 }
 
@@ -515,7 +563,7 @@ input {
 .hero-panel-title {
   margin: 6px 0 0;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 450;
   letter-spacing: -0.03em;
 }
 
@@ -557,7 +605,7 @@ input {
 .focus-date {
   flex: 0 1 auto;
   font-size: clamp(24px, 2.8vw, 34px);
-  font-weight: 700;
+  font-weight: 450;
   letter-spacing: -0.05em;
 }
 
@@ -618,7 +666,7 @@ input {
 .story-title {
   margin: 0 0 10px;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 450;
   letter-spacing: -0.02em;
 }
 
@@ -630,6 +678,7 @@ input {
   display: block;
   margin-top: 6px;
   font-size: 15px;
+  font-weight: 450;
   letter-spacing: -0.03em;
 }
 
@@ -682,7 +731,7 @@ input {
 
 .timeline-time {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 450;
   letter-spacing: -0.04em;
 }
 
@@ -749,16 +798,35 @@ input {
   background:
     radial-gradient(circle at center, rgba(255, 255, 255, 0.86), rgba(247, 244, 238, 0.94) 52%, rgba(241, 236, 228, 0.98) 100%);
   cursor: grab;
+  touch-action: none;
+  user-select: none;
 }
 
 .mind-viewport.dragging {
   cursor: grabbing;
 }
 
+.mind-wrap.fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--bg);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mind-wrap.fullscreen .mind-viewport {
+  flex: 1 1 auto;
+  height: auto;
+  border-radius: 20px;
+}
+
 .mind-surface {
   position: absolute;
   inset: 0;
   transform-origin: 0 0;
+  will-change: transform;
 }
 
 .mind-svg {
@@ -779,6 +847,7 @@ input {
 .mind-node {
   position: absolute;
   transform: translate(-50%, -50%);
+  will-change: transform;
   width: 166px;
   padding: 12px 14px;
   border: 1px solid var(--line);
@@ -991,7 +1060,7 @@ input {
 .message-sender {
   font-family: var(--font-ui);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 450;
   letter-spacing: 0.01em;
   color: var(--muted-2);
 }
@@ -1012,7 +1081,7 @@ input {
 .reply-quote-sender {
   font-family: var(--font-ui);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 450;
   color: var(--muted-2);
 }
 
@@ -1028,7 +1097,7 @@ input {
   margin: 10px 0 0;
   font-family: var(--font-display);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 550;
   line-height: 1.95;
   letter-spacing: -0.01em;
   color: var(--text);
@@ -1280,7 +1349,7 @@ code {
     background: rgba(255, 252, 248, 0.92);
     color: var(--ink-brown);
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 450;
     cursor: pointer;
   }
 
