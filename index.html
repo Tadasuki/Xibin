@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>嘻斌库 · 通三全集</title>
+  <meta name="description" content="围绕嘻斌库 JSON 的日期切片、辩论阵营、关键词与思维导图可视化页面。">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-card">
+      <div class="loading-kicker">Xi bin</div>
+      <div class="loading-title">正在坐龙舟进入通三河......</div>
+    </div>
+  </div>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Xi bin</div>
+        <h1>嘻斌库</h1>
+        <p id="heroDescription"></p>
+        <div id="heroMetrics" class="hero-metrics"></div>
+        <section id="overview" class="overview-grid overview-inline"></section>
+        <div class="hero-actions">
+          <span id="updatedChip" class="status-chip subdued">尚未载入</span>
+          <button id="refreshButton" class="soft-button" type="button">立即刷新数据</button>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <section class="hero-panel">
+          <div class="panel-kicker">高压日期</div>
+          <div id="spotlightPanel"></div>
+        </section>
+        <section class="hero-panel">
+          <div class="panel-kicker">人物刻度</div>
+          <div id="networkPanel"></div>
+        </section>
+      </div>
+    </header>
+
+    <section class="content-grid">
+      <aside class="left-column">
+        <section class="card rail-card">
+          <div class="section-head">
+            <div>
+              <h2>事件轨道</h2>
+            </div>
+          </div>
+          <div id="sessionRail" class="session-rail"></div>
+        </section>
+      </aside>
+
+      <main class="right-column">
+        <section class="card focus-card" id="focusAnchor">
+          <div id="focusPanel"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <h2>阵营分析</h2>
+            </div>
+          </div>
+          <div id="campPanel"></div>
+        </section>
+
+        <section class="card transcript-card" id="transcriptAnchor">
+          <div class="section-head">
+            <div>
+              <h2>原始对话流</h2>
+            </div>
+          </div>
+          <div id="transcriptPanel"></div>
+        </section>
+      </main>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>

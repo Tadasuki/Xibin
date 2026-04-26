@@ -1,0 +1,5472 @@
+{
+    "metadata": {
+        "database_name": "嘻斌库",
+        "target_person": {
+            "name": "老斌",
+            "label": "通三",
+            "chat_id": "杰福."
+        },
+        "description": "整理自2024-2025年间的微信群聊记录，主要关注'通三'（老斌）的言论及相关互动，用于AI模型蒸馏。",
+        "version": "1.2"
+    },
+    "participants": {
+        "杰福.": {
+            "real_name": "老斌",
+            "nicknames": [
+                "通三",
+                "通三哥",
+                "慕遥.",
+                "沉默池鱼"
+            ]
+        },
+        "慕遥.": {
+            "note": "老斌昵称，已合并至杰福."
+        },
+        "沉默池鱼": {
+            "note": "老斌昵称，已合并至杰福."
+        },
+        "雨之林": {},
+        "Jocelyn": {
+            "nicknames": [
+                "JCY",
+                "蔡甸哥"
+            ]
+        },
+        ".(抚顺)": {},
+        "Mr Guinea-pig (玉贤叔叔)": {
+            "nicknames": [
+                "玉贤叔"
+            ]
+        },
+        "laker (laker (东西湖))": {},
+        "九『江承』": {},
+        "Lilium": {},
+        "巴登": {},
+        "骏 (骏 (汉川沉湖))": {},
+        "Carry_Music (江汉哥)": {},
+        "F": {},
+        "武昌哥": {},
+        "朝鲜第一将军": {},
+        "楽しくなろう": {
+            "nicknames": [
+                "Chihaya Anon"
+            ]
+        },
+        "Rimulu": {},
+        "屠幕": {
+            "nicknames": [
+                "落幕"
+            ]
+        },
+        "v": {
+            "nicknames": [
+                "宵崎奏"
+            ]
+        },
+        "村雨": {
+            "nicknames": [
+                "里铜"
+            ]
+        },
+        "。。。": {}
+    },
+    "sessions": [
+        {
+            "date": "2024-10-19",
+            "messages": [
+                {
+                    "time": "17:30:50",
+                    "sender": "杰福.",
+                    "content": "通山的商业集中在万成广场"
+                },
+                {
+                    "time": "17:30:54",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山有必胜客吗🧐"
+                },
+                {
+                    "time": "17:31:01",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山有豪客来吗🧐"
+                },
+                {
+                    "time": "17:31:07",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山有达美乐吗🧐"
+                },
+                {
+                    "time": "17:31:12",
+                    "sender": "杰福.",
+                    "content": "[位置卡片] 豪客来卤菜店 (湖北省咸宁市通山县通羊镇月亮湾农贸市场)"
+                },
+                {
+                    "time": "17:31:14",
+                    "sender": "杰福.",
+                    "content": "有"
+                },
+                {
+                    "time": "17:31:29",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "这是 nm 豪客来？"
+                },
+                {
+                    "time": "17:31:31",
+                    "sender": "Jocelyn",
+                    "content": "《有》🧐 @武汉汉口江汉区六渡桥"
+                },
+                {
+                    "time": "17:31:33",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "@汉阳县蔡甸镇-且闲"
+                },
+                {
+                    "time": "17:31:35",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "蔡甸哥"
+                },
+                {
+                    "time": "17:31:38",
+                    "sender": "武昌哥",
+                    "content": "卤菜哈哈哈哈哈哈哈哈哈哈哈哈"
+                },
+                {
+                    "time": "17:31:39",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "他不晓得豪客来是什么"
+                },
+                {
+                    "time": "17:31:40",
+                    "sender": "Jocelyn",
+                    "content": "豪客来卤菜店"
+                },
+                {
+                    "time": "17:31:42",
+                    "sender": "雨之林",
+                    "content": "豪客来是卖卤菜的吗？"
+                },
+                {
+                    "time": "17:31:42",
+                    "sender": "Jocelyn",
+                    "content": "😂😂"
+                },
+                {
+                    "time": "17:31:44",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "笑死我了 我靠"
+                },
+                {
+                    "time": "17:31:47",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥你怎么回事"
+                },
+                {
+                    "time": "17:31:48",
+                    "sender": "武昌哥",
+                    "content": "笑死我了"
+                },
+                {
+                    "time": "17:31:53",
+                    "sender": "杰福.",
+                    "content": "不是这个吗"
+                },
+                {
+                    "time": "17:31:54",
+                    "sender": "武昌哥",
+                    "content": "哈哈哈哈哈哈哈哈"
+                },
+                {
+                    "time": "17:31:55",
+                    "sender": "杰福.",
+                    "content": "😂"
+                },
+                {
+                    "time": "17:32:00",
+                    "sender": "Jocelyn",
+                    "content": "😡😡"
+                },
+                {
+                    "time": "17:32:00",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "???"
+                },
+                {
+                    "time": "17:32:02",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "笑死我了"
+                },
+                {
+                    "time": "17:32:08",
+                    "sender": "武昌哥",
+                    "content": "哈哈哈哈哈哈哈哈哈哈哈哈"
+                },
+                {
+                    "time": "17:32:13",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "我真不行了"
+                },
+                {
+                    "time": "17:32:16",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "要把我笑死了"
+                },
+                {
+                    "time": "17:32:22",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥像没见过世面的"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-20",
+            "messages": [
+                {
+                    "time": "14:57",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥你会讲什么🤐 @咸宁市通山县"
+                },
+                {
+                    "time": "14:57",
+                    "sender": "杰福.",
+                    "content": "普通话😉",
+                    "reply_to": {
+                        "sender": "Carry_Music (江汉哥)",
+                        "content": "通山哥你会讲什么🤐"
+                    }
+                },
+                {
+                    "time": "14:58",
+                    "sender": "雨之林",
+                    "content": "可惜😘",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "普通话😉"
+                    }
+                },
+                {
+                    "time": "14:58",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥的普通话标准吗🧐 @咸宁市通山县",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "普通话😉"
+                    }
+                },
+                {
+                    "time": "14:59",
+                    "sender": "雨之林",
+                    "content": "打电话的时候听过，有咸宁口音",
+                    "reply_to": {
+                        "sender": "Carry_Music (江汉哥)",
+                        "content": "通山哥的普通话标准吗🧐"
+                    }
+                },
+                {
+                    "time": "15:00",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥不会讲通山话也不会讲武汉话，普通话也讲不明白"
+                },
+                {
+                    "time": "15:00",
+                    "sender": "雨之林",
+                    "content": "但不会说方言，又有口音，就是比较特殊的存在了😂"
+                },
+                {
+                    "time": "15:00",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "这属不属于三无语言"
+                },
+                {
+                    "time": "15:00",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "阳新哥可以"
+                },
+                {
+                    "time": "15:01",
+                    "sender": "杰福.",
+                    "content": "[语音] 3\""
+                },
+                {
+                    "time": "15:01",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "普通话比较标准，会阳新话，广州话，还会汉口话"
+                },
+                {
+                    "time": "15:01",
+                    "sender": "Jocelyn",
+                    "content": "我 ze 个普通话"
+                },
+                {
+                    "time": "15:01",
+                    "sender": "Jocelyn",
+                    "content": "🙄"
+                },
+                {
+                    "time": "15:01",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "把我笑死了",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "我 ze 个普通话"
+                    }
+                },
+                {
+                    "time": "15:01",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "哈哈哈哈哈哈哈哈"
+                },
+                {
+                    "time": "15:02",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥，你知道最标准的普通话在哪个地方吗🧐 @咸宁市通山县"
+                },
+                {
+                    "time": "15:02",
+                    "sender": "雨之林",
+                    "content": "和我认识的一些阳新，咸宁人口音一模一样"
+                },
+                {
+                    "time": "15:02",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "我这段时间要被通山哥整笑了",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "是这个味道"
+                    }
+                },
+                {
+                    "time": "15:02",
+                    "sender": "杰福.",
+                    "content": "我记得是河北哪个县",
+                    "reply_to": {
+                        "sender": "Carry_Music (江汉哥)",
+                        "content": "通山哥，你知道最标准的普通话在哪个地方吗🧐"
+                    }
+                },
+                {
+                    "time": "15:02",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "逗乐了"
+                },
+                {
+                    "time": "15:02",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "🙃你连普通话之乡都不知道",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "我记得是河北哪个县"
+                    }
+                },
+                {
+                    "time": "15:02",
+                    "sender": "雨之林",
+                    "content": "河北承德滦平"
+                },
+                {
+                    "time": "15:03",
+                    "sender": "杰福.",
+                    "content": "对对对"
+                },
+                {
+                    "time": "15:03",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥是不是经常看新闻联播吗🧐"
+                },
+                {
+                    "time": "15:03",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "怎么觉得自己讲的就是标准普通话🤐"
+                },
+                {
+                    "time": "15:03",
+                    "sender": "Jocelyn",
+                    "content": "看的是通山新闻联播",
+                    "reply_to": {
+                        "sender": "Carry_Music (江汉哥)",
+                        "content": "通山哥是不是经常看新闻联播吗🧐"
+                    }
+                },
+                {
+                    "time": "15:03",
+                    "sender": "杰福.",
+                    "content": "我不是经常看"
+                },
+                {
+                    "time": "15:03",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "哈哈哈哈哈哈哈哈",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "看的是通山新闻联播"
+                    }
+                },
+                {
+                    "time": "15:03",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "🙃@咸宁市通山县",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "我不是经常看"
+                    }
+                },
+                {
+                    "time": "15:04",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "按道理来说 通山的新闻联播播报"
+                },
+                {
+                    "time": "15:04",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "也应该是标准普通话"
+                },
+                {
+                    "time": "15:04",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥这个在哪里学的"
+                },
+                {
+                    "time": "15:04",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "😬"
+                },
+                {
+                    "time": "15:04",
+                    "sender": "杰福.",
+                    "content": "从小学开始就是这样"
+                },
+                {
+                    "time": "15:04",
+                    "sender": "杰福.",
+                    "content": "😂"
+                },
+                {
+                    "time": "15:04",
+                    "sender": "杰福.",
+                    "content": "学校也不说通山话"
+                },
+                {
+                    "time": "15:05",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "以后我们开玩笑说的通山，是通山哥时空的通山，不是现实的通山"
+                },
+                {
+                    "time": "15:05",
+                    "sender": "杰福.",
+                    "content": "学校老师和我说话也是用普通话"
+                },
+                {
+                    "time": "15:05",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "别把真正的通山班子伤到了"
+                },
+                {
+                    "time": "15:06",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "为什么阳新哥会讲阳新话🤨深圳也没有阳新语环境 @咸宁市通山县",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "学校老师和我说话也是用普通话"
+                    }
+                },
+                {
+                    "time": "15:06",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "你这个是理由吗"
+                },
+                {
+                    "time": "15:06",
+                    "sender": "Jocelyn",
+                    "content": "🧐自学成才",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "跟谁学的，这不像 😂😂😂"
+                    }
+                },
+                {
+                    "time": "15:06",
+                    "sender": "杰福.",
+                    "content": "跟我和我妹还有在武汉都不说",
+                    "reply_to": {
+                        "sender": "F",
+                        "content": "你爸妈不说通山话么"
+                    }
+                },
+                {
+                    "time": "15:07",
+                    "sender": "雨之林",
+                    "content": "在校学的",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "🧐自学成才"
+                    }
+                },
+                {
+                    "time": "15:07",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "🙃🙃🙃🙃🙃🙃🙃🙃🙃🙃🙃🙃🙃"
+                },
+                {
+                    "time": "15:07",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥真的就是三无"
+                },
+                {
+                    "time": "15:08",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "家乡话不会"
+                },
+                {
+                    "time": "15:08",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "武汉话不会"
+                },
+                {
+                    "time": "15:08",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "普通话不会"
+                },
+                {
+                    "time": "15:08",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "英语更不会"
+                },
+                {
+                    "time": "15:08",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥还会啥🤐"
+                },
+                {
+                    "time": "15:08",
+                    "sender": "F",
+                    "content": "打🏓"
+                },
+                {
+                    "time": "15:08",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "绷不住了",
+                    "reply_to": {
+                        "sender": "F",
+                        "content": "打🏓"
+                    }
+                },
+                {
+                    "time": "15:08",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "笑死我了"
+                },
+                {
+                    "time": "15:08",
+                    "sender": "F",
+                    "content": "通山哥一天一蛮佩服的"
+                },
+                {
+                    "time": "15:08",
+                    "sender": "杰福.",
+                    "content": "我家亲戚就很奇怪，小时候叫我爸妈教我不要说方言，叫我说普通话，说要接轨大城市，结果呢，等我长大又明里暗里埋怨我跟家里亲戚不说通山话，每次听到他们这么说我都很心烦意乱 @武汉汉口江汉区六渡桥 @黄石阳新 雨之林 @武汉市武昌区楚河汉街 @汉阳县蔡甸镇-且闲 这是我的苦恼"
+                },
+                {
+                    "time": "15:09",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "接轨大城市🌚",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "我家亲戚就很奇怪..."
+                    }
+                },
+                {
+                    "time": "15:09",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "指来武汉不说武汉话"
+                },
+                {
+                    "time": "15:09",
+                    "sender": "F",
+                    "content": "为什么不说方言",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "我家亲戚就很奇怪..."
+                    }
+                },
+                {
+                    "time": "15:09",
+                    "sender": "杰福.",
+                    "content": "都是我亲戚说的"
+                },
+                {
+                    "time": "15:09",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "天门哥，阳新哥他们都会讲武汉话"
+                },
+                {
+                    "time": "15:09",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "在武汉呆了一段时间就会了"
+                },
+                {
+                    "time": "15:09",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥怎么什么都一窍不通🙄"
+                },
+                {
+                    "time": "15:09",
+                    "sender": "杰福.",
+                    "content": "所以不想学通山话，当初是他们说叫我不要学的"
+                },
+                {
+                    "time": "15:10",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "🤐",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "所以不想学通山话..."
+                    }
+                },
+                {
+                    "time": "15:10",
+                    "sender": "雨之林",
+                    "content": "你家人属实是有点😜",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "我家亲戚就很奇怪..."
+                    }
+                },
+                {
+                    "time": "15:10",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "叫你三无哥"
+                },
+                {
+                    "time": "15:10",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "通山哥英语水平",
+                    "reply_to": {
+                        "sender": "F",
+                        "content": "@咸宁市通山县"
+                    }
+                },
+                {
+                    "time": "15:10",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "还不如小学生"
+                },
+                {
+                    "time": "15:10",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "之前我和蔡甸哥逗他"
+                },
+                {
+                    "time": "15:10",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "Office 是办公室"
+                },
+                {
+                    "time": "15:10",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "那 officer 是什么意思"
+                },
+                {
+                    "time": "15:10",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "他的回答：打工人"
+                },
+                {
+                    "time": "15:10",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "把我和蔡甸哥笑死了"
+                },
+                {
+                    "time": "15:11",
+                    "sender": "Carry_Music (江汉哥)",
+                    "content": "人家👮都是打工人"
+                }
+            ]
+        },
+        {
+            "date": "2024-10-24",
+            "messages": [
+                {
+                    "time": "16:36:39",
+                    "sender": "杰福.",
+                    "content": "@. @雨之林 @Mr Guinea-pig @Always @laker 毛概考试，71"
+                },
+                {
+                    "time": "16:37:10",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "不配做毛主席的学生"
+                },
+                {
+                    "time": "16:37:21",
+                    "sender": "杰福.",
+                    "content": "[动画表情]"
+                },
+                {
+                    "time": "16:37:27",
+                    "sender": "Jocelyn",
+                    "content": "毛概 71？"
+                },
+                {
+                    "time": "16:39:25",
+                    "sender": ".(抚顺)",
+                    "content": "不配做毛主席的学生"
+                },
+                {
+                    "time": "16:39:29",
+                    "sender": ".(抚顺)",
+                    "content": "才71"
+                },
+                {
+                    "time": "16:39:30",
+                    "sender": ".(抚顺)",
+                    "content": "[动画表情]"
+                },
+                {
+                    "time": "16:39:32",
+                    "sender": "Jocelyn",
+                    "content": "不配做毛主席的学生"
+                },
+                {
+                    "time": "16:40:21",
+                    "sender": "杰福.",
+                    "content": "主要是有些问题确实太刁钻，我也懒得翻书了"
+                }
+            ]
+        },
+        {
+            "date": "2025-02-21",
+            "messages": [
+                {
+                    "time": "22:54",
+                    "sender": "杰福.",
+                    "content": "改开是有成就的，我们不能否认，但他确实造成了贫富差距变大等一系列矛盾，这点也不能否认，我个人认为要两面看待 @. @雨之林 @JCY"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "你在说啥",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "改开是有成就的，我们不能否认..."
+                    }
+                },
+                {
+                    "time": "22:54",
+                    "sender": ".(抚顺)",
+                    "content": "?",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "改开是有成就的，我们不能否认..."
+                    }
+                },
+                {
+                    "time": "22:54",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "新暴论"
+                },
+                {
+                    "time": "22:54",
+                    "sender": ".(抚顺)",
+                    "content": "你不会以为改开之前就没有贫富差距吧"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "骏 (骏 (汉川沉湖))",
+                    "content": "说的越来越波诡云谲了"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "雨之林",
+                    "content": "意义不明",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "改开是有成就的，我们不能否认..."
+                    }
+                },
+                {
+                    "time": "22:55",
+                    "sender": "Jocelyn",
+                    "content": "改开之前就不是贫富差距问题了"
+                },
+                {
+                    "time": "22:55",
+                    "sender": "杰福.",
+                    "content": "贫富差距是有，但是后面变大了",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "你不会以为改开之前就没有贫富差距吧"
+                    }
+                },
+                {
+                    "time": "22:55",
+                    "sender": "Jocelyn",
+                    "content": "而是别人能干的事情你不能干😜"
+                },
+                {
+                    "time": "22:56",
+                    "sender": ".(抚顺)",
+                    "content": "你可以去了解一下，截止到 1978 年，世界其他主要国家人民的生活水平是什么样子的，然后再看看中国人民当时的生活水平又是什么样"
+                },
+                {
+                    "time": "23:00",
+                    "sender": "Jocelyn",
+                    "content": "你第一天知道吗😡",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "🍃，是谁和我说毛主席时代很好的"
+                    }
+                },
+                {
+                    "time": "23:00",
+                    "sender": ".(抚顺)",
+                    "content": "? 6",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "🍃，是谁和我说毛主席时代很好的"
+                    }
+                },
+                {
+                    "time": "23:00",
+                    "sender": ".(抚顺)",
+                    "content": "那会出门都得要介绍信",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "其实也没多少人能坐上火车"
+                    }
+                },
+                {
+                    "time": "23:01",
+                    "sender": "Jocelyn",
+                    "content": "你不知道朝鲜吗😡"
+                },
+                {
+                    "time": "23:01",
+                    "sender": ".(抚顺)",
+                    "content": "没介绍信不让你走😉"
+                },
+                {
+                    "time": "23:01",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "每个时代都有黑暗"
+                },
+                {
+                    "time": "23:01",
+                    "sender": "杰福.",
+                    "content": "以前是知道不一样，现在来看，那大院子弟和 zbj 有什么区别",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "你第一天知道吗😡"
+                    }
+                },
+                {
+                    "time": "23:01",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "真的营销号看多了"
+                },
+                {
+                    "time": "23:02",
+                    "sender": ".(抚顺)",
+                    "content": "按理来说像通三哥这种家庭，改革开放对他家的受益程度其实是最高的啊"
+                },
+                {
+                    "time": "23:02",
+                    "sender": ".(抚顺)",
+                    "content": "那改开之前中西部农民过的都是什么苦日子"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "Jocelyn",
+                    "content": "你在教员那里学到了什么，就崇拜上了"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "杰福.",
+                    "content": "要走到群众中去，把人民放在心里",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "你在教员那里学到了什么"
+                    }
+                },
+                {
+                    "time": "23:03",
+                    "sender": "Jocelyn",
+                    "content": "你把人民踹沟里了",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "要走到群众中去"
+                    }
+                },
+                {
+                    "time": "23:04",
+                    "sender": "Jocelyn",
+                    "content": "吃上了几天饭"
+                },
+                {
+                    "time": "23:04",
+                    "sender": "Jocelyn",
+                    "content": "嫌人民吃太多了"
+                },
+                {
+                    "time": "23:04",
+                    "sender": "杰福.",
+                    "content": "就这我已经是全班第二了"
+                },
+                {
+                    "time": "23:04",
+                    "sender": ".(抚顺)",
+                    "content": "那你们很有实力了"
+                },
+                {
+                    "time": "23:05",
+                    "sender": "Jocelyn",
+                    "content": "你们这个班要来财了",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "就这我已经是全班第二了"
+                    }
+                },
+                {
+                    "time": "23:05",
+                    "sender": "杰福.",
+                    "content": "我是嫌大老爷吃的太多了",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "嫌人民吃太多了"
+                    }
+                },
+                {
+                    "time": "23:05",
+                    "sender": "雨之林",
+                    "content": "看到人民钱包鼓起来，嫉妒了",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "嫌人民吃太多了"
+                    }
+                },
+                {
+                    "time": "23:05",
+                    "sender": "杰福.",
+                    "content": "说好了先带后的呢？"
+                },
+                {
+                    "time": "23:05",
+                    "sender": ".(抚顺)",
+                    "content": "现在是大老爷吃肉你喝汤"
+                },
+                {
+                    "time": "23:05",
+                    "sender": ".(抚顺)",
+                    "content": "gk 之前是大老爷吃肉你吃观音土"
+                },
+                {
+                    "time": "23:05",
+                    "sender": "Jocelyn",
+                    "content": "你是嫌大老爷吃得不够好",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "我是嫌大老爷吃的太多了"
+                    }
+                },
+                {
+                    "time": "23:05",
+                    "sender": "杰福.",
+                    "content": "怎么把我们踹了"
+                },
+                {
+                    "time": "23:06",
+                    "sender": ".(抚顺)",
+                    "content": "在已知你没有逆天改命的本事的前提下，你选哪个"
+                },
+                {
+                    "time": "23:07",
+                    "sender": "Jocelyn",
+                    "content": "那个年代你都不知道大老爷天天吃肉"
+                },
+                {
+                    "time": "23:07",
+                    "sender": "杰福.",
+                    "content": "喝什么汤，实际情况是没有汤",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "现在是大老爷吃肉你喝汤"
+                    }
+                },
+                {
+                    "time": "23:07",
+                    "sender": "Jocelyn",
+                    "content": "那是你的问题了",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "喝什么汤，实际情况是没有汤"
+                    }
+                },
+                {
+                    "time": "23:07",
+                    "sender": ".(抚顺)",
+                    "content": "没有汤？"
+                },
+                {
+                    "time": "23:07",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "我爸妈差点饿死"
+                },
+                {
+                    "time": "23:07",
+                    "sender": ".(抚顺)",
+                    "content": "一样",
+                    "reply_to": {
+                        "sender": "Mr Guinea-pig (玉贤叔叔)",
+                        "content": "我爸妈差点饿死"
+                    }
+                },
+                {
+                    "time": "23:07",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "没有汤你就饿死了"
+                },
+                {
+                    "time": "23:08",
+                    "sender": "Jocelyn",
+                    "content": "蔡甸算是没发生人吃人事件",
+                    "reply_to": {
+                        "sender": "Mr Guinea-pig (玉贤叔叔)",
+                        "content": "我爸妈差点饿死"
+                    }
+                },
+                {
+                    "time": "23:09",
+                    "sender": "雨之林",
+                    "content": "那你每天吃的穿的都是什么，和你长辈小时候比呢",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "喝什么汤，实际情况是没有汤"
+                    }
+                },
+                {
+                    "time": "23:10",
+                    "sender": "杰福.",
+                    "content": "这是最基本的生活需求，连这都做不到那就废了，人民想要的是什么，是和他们一样的生活",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "那你每天吃的穿的都是什么，和你长辈小时候比呢"
+                    }
+                },
+                {
+                    "time": "23:11",
+                    "sender": "Jocelyn",
+                    "content": "怎么可能呢",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "这是最基本的生活需求，连这都做不到那就废了，人民想要的是什么，是和他们一样的生活"
+                    }
+                },
+                {
+                    "time": "23:11",
+                    "sender": ".(抚顺)",
+                    "content": "你在幻想什么",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "这是最基本的生活需求，连这都做不到那就废了，人民想要的是什么，是和他们一样的生活"
+                    }
+                },
+                {
+                    "time": "23:11",
+                    "sender": "Jocelyn",
+                    "content": "越往前越不可能"
+                },
+                {
+                    "time": "23:11",
+                    "sender": ".(抚顺)",
+                    "content": "你跟老爷的差距是一年比一年缩小的，而不是一年比一年扩大的"
+                },
+                {
+                    "time": "23:11",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "那你在做梦了",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "这是最基本的生活需求，连这都做不到那就废了，人民想要的是什么，是和他们一样的生活"
+                    }
+                },
+                {
+                    "time": "23:11",
+                    "sender": "Jocelyn",
+                    "content": "你像是大清朝去跟皇帝老爷说平等的人"
+                },
+                {
+                    "time": "23:11",
+                    "sender": ".(抚顺)",
+                    "content": "你像是大清朝去跟皇帝老爷说平等的人"
+                },
+                {
+                    "time": "23:12",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "从古至今的生产关系又没改变"
+                },
+                {
+                    "time": "23:12",
+                    "sender": "雨之林",
+                    "content": "我爷爷更喜欢 deng，时期，爷爷祖上成分被认为是有问题的，上面不让我爷爷读大学，也收缴了我们家产，我们家甚至是和别人合住的，后面摘帽平反，家里的情况才有所好转",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "我爸天天跟我说要感谢 deng"
+                    }
+                },
+                {
+                    "time": "23:12",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "变的只有生产技术的进步"
+                },
+                {
+                    "time": "23:12",
+                    "sender": "雨之林",
+                    "content": "你像是大清朝去跟皇帝老爷说平等的人",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "这是最基本的生活需求，连这都做不到那就废了，人民想要的是什么，是和他们一样的生活"
+                    }
+                },
+                {
+                    "time": "23:12",
+                    "sender": "杰福.",
+                    "content": "如果真是这样，那继续下去就可以实现了",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "你跟老爷的差距是一年比一年缩小的，而不是一年比一年扩大的"
+                    }
+                },
+                {
+                    "time": "23:12",
+                    "sender": "Jocelyn",
+                    "content": "那个年代太绝对了",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "我爷爷更喜欢 deng，时期，爷爷祖上成分被认为是有问题的..."
+                    }
+                },
+                {
+                    "time": "23:13",
+                    "sender": "Jocelyn",
+                    "content": "专制是搞不好国家的"
+                },
+                {
+                    "time": "23:13",
+                    "sender": ".(抚顺)",
+                    "content": "我和我爸也是更倾向于喜欢 deng，时期我们家也是过的很不好，虽然没有被划分成分地主阶级，但也是实打实的挨饿了很多年",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "我爷爷更喜欢 deng，时期，爷爷祖上成分被认为是有问题的..."
+                    }
+                },
+                {
+                    "time": "23:13",
+                    "sender": "雨之林",
+                    "content": "阶级永远存在",
+                    "reply_to": {
+                        "sender": "laker (laker (东西湖))",
+                        "content": "从古至今的生产关系又没改变"
+                    }
+                },
+                {
+                    "time": "23:13",
+                    "sender": ".(抚顺)",
+                    "content": "继续下去也实现不了",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "如果真是这样，那继续下去就可以实现了"
+                    }
+                },
+                {
+                    "time": "23:14",
+                    "sender": "Jocelyn",
+                    "content": "在通三哥的梦想时代，只能靠投胎"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "雨之林",
+                    "content": "饿是真的难受",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "我和我爸也是更倾向于喜欢 deng，时期我们家也是过的很不好，虽然没有被划分成分地主阶级，但..."
+                    }
+                },
+                {
+                    "time": "23:14",
+                    "sender": "杰福.",
+                    "content": "1000年后的事情谁知道呢"
+                },
+                {
+                    "time": "23:15",
+                    "sender": "杰福.",
+                    "content": "我以前从不相信有轮回转世，但有的时候我真想重新来一次"
+                },
+                {
+                    "time": "23:15",
+                    "sender": "Jocelyn",
+                    "content": "但是你知道一千年前的事情",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "1000年后的事情谁知道呢"
+                    }
+                },
+                {
+                    "time": "23:15",
+                    "sender": ".(抚顺)",
+                    "content": "是，我爸妈跟我说那会他们不仅是吃不饱，更是吃不好，顿顿都是白菜土豆萝卜三件套，然后主食就是窝窝头子和米饭",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "饿是真的难受"
+                    }
+                },
+                {
+                    "time": "23:15",
+                    "sender": ".(抚顺)",
+                    "content": "鸡鸭鱼肉什么的一个月能吃个三四次就不错了"
+                },
+                {
+                    "time": "23:15",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "这就是通三哥怀念的时代"
+                },
+                {
+                    "time": "23:15",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "我爸妈只有过年能吃"
+                },
+                {
+                    "time": "23:15",
+                    "sender": ".(抚顺)",
+                    "content": "哦对了，我说的这会已经是改革开放初期了"
+                },
+                {
+                    "time": "23:16",
+                    "sender": ".(抚顺)",
+                    "content": "我父母对窝窝头有 PTSD",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "我奶奶也有土豆 ptsd"
+                    }
+                },
+                {
+                    "time": "23:16",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "通三哥吃几顿野菜团子窝窝头就晓得了"
+                },
+                {
+                    "time": "23:16",
+                    "sender": ".(抚顺)",
+                    "content": "他们基本不吃"
+                },
+                {
+                    "time": "23:16",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "还不用吃吃苦思甜饭"
+                },
+                {
+                    "time": "23:16",
+                    "sender": ".(抚顺)",
+                    "content": "但我觉得窝窝头很好吃"
+                },
+                {
+                    "time": "23:16",
+                    "sender": "杰福.",
+                    "content": "如果真实情况是大家都这么吃（包括那些高干），那我也是很愿意的，但是谁承想竟然看着吃的"
+                },
+                {
+                    "time": "23:16",
+                    "sender": "雨之林",
+                    "content": "其实我妈妈农村那边，90年代之前还很穷",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "哦对了，我说的这会已经是改革开放初期了"
+                    }
+                },
+                {
+                    "time": "23:16",
+                    "sender": "Jocelyn",
+                    "content": "现在都是改良版",
+                    "reply_to": {
+                        "sender": "laker (laker (东西湖))",
+                        "content": "通三哥吃几顿野菜团子窝窝头就晓得了"
+                    }
+                },
+                {
+                    "time": "23:16",
+                    "sender": ".(抚顺)",
+                    "content": "然后我爸妈跟我说那是你肚子里有油水，跟我们那时候不一样"
+                },
+                {
+                    "time": "23:17",
+                    "sender": "雨之林",
+                    "content": "和六七十年代甚至没有什么太大区别"
+                },
+                {
+                    "time": "23:17",
+                    "sender": ".(抚顺)",
+                    "content": "改开初期人民生活水平提升的也不是很大",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "其实我妈妈农村那边，90年代之前还很穷"
+                    }
+                },
+                {
+                    "time": "23:17",
+                    "sender": ".(抚顺)",
+                    "content": "1992年之后逐渐就好起来了"
+                },
+                {
+                    "time": "23:17",
+                    "sender": "Jocelyn",
+                    "content": "我小时候家里都没有电视"
+                },
+                {
+                    "time": "23:17",
+                    "sender": "Jocelyn",
+                    "content": "说出来怕你们笑话"
+                },
+                {
+                    "time": "23:17",
+                    "sender": "杰福.",
+                    "content": "我怀疑你不是在说荆饭阿"
+                },
+                {
+                    "time": "23:17",
+                    "sender": ".(抚顺)",
+                    "content": "? 零几年吗"
+                },
+                {
+                    "time": "23:18",
+                    "sender": "Jocelyn",
+                    "content": "是的",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "? 零几年吗"
+                    }
+                },
+                {
+                    "time": "23:18",
+                    "sender": "杰福.",
+                    "content": "我记得我小时候是看过电视的，反倒是长大后不怎么看了"
+                },
+                {
+                    "time": "23:18",
+                    "sender": "雨之林",
+                    "content": "那你先试下天天吃这些，到底是理想还是面面包更重要",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "如果真实情况是大家都这么吃（包括那些高干），那我也是很愿意的，但是谁承想竟然看着吃的"
+                    }
+                },
+                {
+                    "time": "23:19",
+                    "sender": "杰福.",
+                    "content": "至少 2008 之前就看过了"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "现在起码饿不死"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "我家现在 3 个电视"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "1987 年还在逃港"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "杰福.",
+                    "content": "前提是大家都这么吃",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "那你先试下天天吃这些，到底是理想还是面面包更重要"
+                    }
+                },
+                {
+                    "time": "23:20",
+                    "sender": "杰福.",
+                    "content": "你让你吃面包，然后看着你吃鱼肉火锅，你这让我怎么想"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "Jocelyn",
+                    "content": "所以并不是想要人民过好日子，你只是想让人民跟你一样穷",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "前提是大家都这么吃"
+                    }
+                },
+                {
+                    "time": "23:20",
+                    "sender": "雨之林",
+                    "content": "其他人是造了什么孽，要跟着这么吃",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "前提是大家都这么吃"
+                    }
+                },
+                {
+                    "time": "23:20",
+                    "sender": ".(抚顺)",
+                    "content": "所以并不是想要人民过好日子，你只是想让人民跟你一样穷",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "前提是大家都这么吃"
+                    }
+                },
+                {
+                    "time": "23:20",
+                    "sender": "Jocelyn",
+                    "content": "别人有能力凭什么要跟你一样的"
+                },
+                {
+                    "time": "23:20",
+                    "sender": ".(抚顺)",
+                    "content": "有能力的人为什么要跟你一样？"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "杰福.",
+                    "content": "所以我的意思是要么一起富，要么一起穷"
+                },
+                {
+                    "time": "23:21",
+                    "sender": ".(抚顺)",
+                    "content": "人家有能力吃好喝好住好，为什么要降低自身条件去迁就你"
+                },
+                {
+                    "time": "23:21",
+                    "sender": "Jocelyn",
+                    "content": "那你就不能富呢",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "所以我的意思是要么一起富，要么一起穷"
+                    }
+                },
+                {
+                    "time": "23:21",
+                    "sender": ".(抚顺)",
+                    "content": "那你咋不能变富？",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "所以我的意思是要么一起富，要么一起穷"
+                    }
+                },
+                {
+                    "time": "23:21",
+                    "sender": "Jocelyn",
+                    "content": "别人的钱是大风刮来的"
+                },
+                {
+                    "time": "23:21",
+                    "sender": "Mr Guinea-pig (玉贤叔叔)",
+                    "content": "钱都是加班来的"
+                },
+                {
+                    "time": "23:21",
+                    "sender": "杰福.",
+                    "content": "或许他们早就已经忘了当初的理想，我也不怪他们",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "人家有能力吃好喝好住好，为什么要降低自身条件去迁就你"
+                    }
+                },
+                {
+                    "time": "23:21",
+                    "sender": "雨之林",
+                    "content": "国家进步了，作出贡献的多吃，碌碌无为的少吃，不是很正常吗"
+                },
+                {
+                    "time": "23:22",
+                    "sender": ".(抚顺)",
+                    "content": "中国这么多的小康阶级，人家哪个不是通过自己努力才得到的美好生活？"
+                },
+                {
+                    "time": "23:22",
+                    "sender": "杰福.",
+                    "content": "我想听听玉贤叔的看法 @Mr Guinea-pig"
+                },
+                {
+                    "time": "23:22",
+                    "sender": "Jocelyn",
+                    "content": "他们有什么理想，又不是什么达官显贵，只想过好自己的生活，努力赚来的钱为什么要给你。",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "或许他们早就已经忘了当初的理想，我也不怪他们"
+                    }
+                },
+                {
+                    "time": "23:22",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "通三哥就是当年吃大锅饭那帮人"
+                },
+                {
+                    "time": "23:23",
+                    "sender": ".(抚顺)",
+                    "content": "通三哥就是想让全国人民一起陪他吃土土豆白菜萝卜三件套"
+                },
+                {
+                    "time": "23:23",
+                    "sender": "Jocelyn",
+                    "content": "通三哥去朝鲜住吧"
+                },
+                {
+                    "time": "23:23",
+                    "sender": "雨之林",
+                    "content": "正是因为改革开放，有了按劳分配，才能激发大家的力量，国家的蛋糕才能做大，哪怕人家吃的多，但你分到的蛋糕，也总会比以前大一点，即使你什么都不干"
+                },
+                {
+                    "time": "23:23",
+                    "sender": ".(抚顺)",
+                    "content": "鸭绿江不加盖"
+                },
+                {
+                    "time": "23:23",
+                    "sender": "Jocelyn",
+                    "content": "鸭绿江没有加盖",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "鸭绿江不加盖"
+                    }
+                },
+                {
+                    "time": "23:24",
+                    "sender": "杰福.",
+                    "content": "你们要说努力是吧，我爸爸我妈妈辛苦了大半辈子，从10几岁没读书了就出去打工了，辛苦了这么久难道不够努力吗，结果呢，到现在我我家还是活着这种生活，我爸生病了，没钱治，我妈身体也有问题，也因为没钱只能忍着，难道是他们不努力吗"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Jocelyn",
+                    "content": "方向不对",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "你们要说努力是吧"
+                    }
+                },
+                {
+                    "time": "23:24",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "努力本来就不是包有结果的"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "雨之林",
+                    "content": "他们都是为了面包",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "他们有什么理想"
+                    }
+                },
+                {
+                    "time": "23:25",
+                    "sender": ".(抚顺)",
+                    "content": "至少你家从村子里走到了县城，在县城安了家",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "你们要说努力是吧"
+                    }
+                },
+                {
+                    "time": "23:25",
+                    "sender": ".(抚顺)",
+                    "content": "这就是改革给你家庭带来的收益"
+                },
+                {
+                    "time": "23:26",
+                    "sender": "Jocelyn",
+                    "content": "因为自己努力没结果，所以否认全部人的努力",
+                    "reply_to": {
+                        "sender": "laker (laker (东西湖))",
+                        "content": "努力本来就不是包有结果的"
+                    }
+                },
+                {
+                    "time": "23:26",
+                    "sender": ".(抚顺)",
+                    "content": "你还想一步登天靠一代人从通三的村子走到北京东城区？"
+                },
+                {
+                    "time": "23:26",
+                    "sender": "雨之林",
+                    "content": "放在过去，县城是能随便便去的吗",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "至少你家从村子里走到了县城，在县城安了家"
+                    }
+                },
+                {
+                    "time": "23:26",
+                    "sender": ".(抚顺)",
+                    "content": "我不能说没有这种人，但这个概率是极低极低的"
+                },
+                {
+                    "time": "23:26",
+                    "sender": "Jocelyn",
+                    "content": "玩游戏抽卡没抽到，怪平台"
+                },
+                {
+                    "time": "23:26",
+                    "sender": "雨之林",
+                    "content": "村主任帮 min 兵在村口守着",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "放在过去，县城是能随便便去的吗"
+                    }
+                },
+                {
+                    "time": "23:26",
+                    "sender": ".(抚顺)",
+                    "content": "谁敢出去就收拾谁"
+                },
+                {
+                    "time": "23:27",
+                    "sender": "雨之林",
+                    "content": "都得留在村里种地"
+                },
+                {
+                    "time": "23:27",
+                    "sender": "Jocelyn",
+                    "content": "像是那种一天做十套模拟题最后没考上高中的人说的话"
+                },
+                {
+                    "time": "23:27",
+                    "sender": ".(抚顺)",
+                    "content": "然后还得交农业税"
+                },
+                {
+                    "time": "23:27",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "起码你现在可以在省城武汉，去北京上海这种国际大都市，甚至办了护照跑去东京纽约"
+                },
+                {
+                    "time": "23:27",
+                    "sender": "Jocelyn",
+                    "content": "不知道你们班上有这样的奇才",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "像是那种一天做十套模拟题最后没考上高中的人说的话"
+                    }
+                },
+                {
+                    "time": "23:27",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "这都感恩了"
+                },
+                {
+                    "time": "23:28",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "放在古代出县都非常难"
+                },
+                {
+                    "time": "23:28",
+                    "sender": ".(抚顺)",
+                    "content": "农业税都是 2006 年才废除的"
+                },
+                {
+                    "time": "23:30",
+                    "sender": "巴登",
+                    "content": "按劳分配和私有制基本没什么关系",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "正是因为改革开放，有了按劳分配..."
+                    }
+                },
+                {
+                    "time": "23:30",
+                    "sender": ".(抚顺)",
+                    "content": "搬通三种一辈子地吧"
+                },
+                {
+                    "time": "23:30",
+                    "sender": "Jocelyn",
+                    "content": "再以前就没有九年义务教育",
+                    "reply_to": {
+                        "sender": "Mr Guinea-pig (玉贤叔叔)",
+                        "content": "九年义务教育"
+                    }
+                },
+                {
+                    "time": "23:30",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "算知青了，还是得下放",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "有个高中文凭的就算高学历"
+                    }
+                },
+                {
+                    "time": "23:30",
+                    "sender": "巴登",
+                    "content": "非公有制经济一般是生产要素分配"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "杰福.",
+                    "content": "所以真是我投胎投错了吗"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "雨之林",
+                    "content": "因为就是公有制的分配方式",
+                    "reply_to": {
+                        "sender": "巴登",
+                        "content": "按劳分配和私有制基本没什么关系"
+                    }
+                },
+                {
+                    "time": "23:31",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "大概率一辈子出不了通山",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "不 gk 通三哥还想去武汉读大学？"
+                    }
+                },
+                {
+                    "time": "23:31",
+                    "sender": "Jocelyn",
+                    "content": "读大学得推荐",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "不 gk 通三哥还想去武汉读大学？"
+                    }
+                },
+                {
+                    "time": "23:31",
+                    "sender": ".(抚顺)",
+                    "content": "对，没人推荐你就是个神童都去不成",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "读大学得推荐"
+                    }
+                },
+                {
+                    "time": "23:31",
+                    "sender": ".(抚顺)",
+                    "content": "老老实实种地吧"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "杰福.",
+                    "content": "可是我爸妈很爱我，最大的问题就是没钱，但是他们会把最好的给我"
+                },
+                {
+                    "time": "23:31",
+                    "sender": ".(抚顺)",
+                    "content": "去个县城都费劲",
+                    "reply_to": {
+                        "sender": "laker (laker (东西湖))",
+                        "content": "大概率一辈子出不了通山"
+                    }
+                },
+                {
+                    "time": "23:32",
+                    "sender": "巴登",
+                    "content": "公有制 and 中国十分之九的人拿钱没直接联系",
+                    "reply_to": {
+                        "sender": "雨之林",
+                        "content": "因为就是公有制的分配方式"
+                    }
+                },
+                {
+                    "time": "23:32",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "普通人没有受教育的权利"
+                },
+                {
+                    "time": "23:32",
+                    "sender": "杰福.",
+                    "content": "也是没钱读书",
+                    "reply_to": {
+                        "sender": "laker (laker (东西湖))",
+                        "content": "普通人没有受教育的权利"
+                    }
+                },
+                {
+                    "time": "23:32",
+                    "sender": ".(抚顺)",
+                    "content": "你要学会认清现实",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "可是我爸妈很爱我，最大的问题就是没钱..."
+                    }
+                },
+                {
+                    "time": "23:32",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "没有九年义务教育你都没机会跟我们说话",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "也是没钱读书"
+                    }
+                },
+                {
+                    "time": "23:33",
+                    "sender": "Jocelyn",
+                    "content": "🙄要说造业，我们这大部分人开局都跟通三哥差不多",
+                    "reply_to": {
+                        "sender": "骏",
+                        "content": "要说造业我比通三哥造业"
+                    }
+                },
+                {
+                    "time": "23:33",
+                    "sender": ".(抚顺)",
+                    "content": "都差不多"
+                },
+                {
+                    "time": "23:33",
+                    "sender": ".(抚顺)",
+                    "content": "我一个矿区矿工的后代能比通三哥强哪去？"
+                },
+                {
+                    "time": "23:33",
+                    "sender": "巴登",
+                    "content": "万般皆是命，人比人就是气死人",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "所以真是我投胎投错了吗"
+                    }
+                },
+                {
+                    "time": "23:33",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "在以前这些是不应该被穷人看到的"
+                },
+                {
+                    "time": "23:34",
+                    "sender": ".(抚顺)",
+                    "content": "我父母爷爷奶奶都是工人"
+                },
+                {
+                    "time": "23:34",
+                    "sender": "Jocelyn",
+                    "content": "老工业区的都是这样",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "我父母爷爷奶奶都是工人"
+                    }
+                },
+                {
+                    "time": "23:35",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "有多少贫困山区受到资助后走上歧途荒废了的"
+                },
+                {
+                    "time": "23:35",
+                    "sender": "巴登",
+                    "content": "为人民服务算不算人工"
+                },
+                {
+                    "time": "23:35",
+                    "sender": "Jocelyn",
+                    "content": "因为没田种了"
+                },
+                {
+                    "time": "23:35",
+                    "sender": "Jocelyn",
+                    "content": "那要看怎么服务了",
+                    "reply_to": {
+                        "sender": "巴登",
+                        "content": "为人民服务算不算人工"
+                    }
+                },
+                {
+                    "time": "23:35",
+                    "sender": "巴登",
+                    "content": "我家是正宗的工农联盟"
+                },
+                {
+                    "time": "23:35",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "通山哥发大横财也不见得是一件好事😡"
+                },
+                {
+                    "time": "23:35",
+                    "sender": "杰福.",
+                    "content": "说得好",
+                    "reply_to": {
+                        "sender": "骏",
+                        "content": "我要让大家收入提高"
+                    }
+                },
+                {
+                    "time": "23:35",
+                    "sender": "Jocelyn",
+                    "content": "通三哥发大横财才马上就瞧不起人了",
+                    "reply_to": {
+                        "sender": "laker (laker (东西湖))",
+                        "content": "通山哥发大横财也不见得是一件好事"
+                    }
+                },
+                {
+                    "time": "23:36",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "马上会站到他的对立面",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "通三哥发大横财才马上就瞧不起人了"
+                    }
+                },
+                {
+                    "time": "23:36",
+                    "sender": "杰福.",
+                    "content": "我知道，突然这么多钱会被人盯上，容易没命，所以钱得慢慢增加不能突然增加🙄",
+                    "reply_to": {
+                        "sender": "laker (laker (东西湖))",
+                        "content": "通山哥发大横财也不见得是一件好事"
+                    }
+                },
+                {
+                    "time": "23:36",
+                    "sender": "Jocelyn",
+                    "content": "我对哪个都没有多好的看法",
+                    "reply_to": {
+                        "sender": "巴登",
+                        "content": "我针对没什么多好的看法"
+                    }
+                },
+                {
+                    "time": "23:36",
+                    "sender": "巴登",
+                    "content": "改不改，我屋里在哪里，改变不了什么😂"
+                },
+                {
+                    "time": "23:36",
+                    "sender": ".(抚顺)",
+                    "content": "只是打着为民请命的幌子罢了🙄",
+                    "reply_to": {
+                        "sender": "Jocelyn",
+                        "content": "通三哥发大横财才马上就瞧不起人了"
+                    }
+                },
+                {
+                    "time": "23:36",
+                    "sender": "Jocelyn",
+                    "content": "因为统治阶级本来就不该作为崇拜的对象"
+                },
+                {
+                    "time": "23:37",
+                    "sender": "雨之林",
+                    "content": "谁天天这么闲😱",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "我知道，突然这么多钱会被人盯上..."
+                    }
+                },
+                {
+                    "time": "23:37",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "通山哥只是恨自己不是资本家罢了"
+                },
+                {
+                    "time": "23:37",
+                    "sender": ".(抚顺)",
+                    "content": "只能说我相对来说会更好看哪个，但总体上我都是没什么看法"
+                },
+                {
+                    "time": "23:37",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "你要是有真钱那你身边人也应该有钱，至少亲戚朋友都有钱"
+                },
+                {
+                    "time": "23:38",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "你在一个穷人圈子就没什么好说的了"
+                },
+                {
+                    "time": "23:38",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "是互联网让你看到这么多😜"
+                },
+                {
+                    "time": "23:38",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "不然你也不至于幻想"
+                },
+                {
+                    "time": "23:38",
+                    "sender": ".(抚顺)",
+                    "content": "没事少刷点短视频"
+                },
+                {
+                    "time": "23:38",
+                    "sender": ".(抚顺)",
+                    "content": "少点幻想，认清现实"
+                },
+                {
+                    "time": "23:39",
+                    "sender": ".(抚顺)",
+                    "content": "95% 的中国人都是普通老百姓"
+                },
+                {
+                    "time": "23:39",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "五十年代土改的时候很多佃农还不认地主是坏的，是地主让他们有地种有饭吃，不但不要批斗反而要感恩"
+                },
+                {
+                    "time": "23:39",
+                    "sender": "Jocelyn",
+                    "content": "现在还不还是的",
+                    "reply_to": {
+                        "sender": "laker (laker (东西湖))",
+                        "content": "五十年代土改的时候..."
+                    }
+                },
+                {
+                    "time": "23:41",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "三大改造之前是这样的"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "没有资本家穷人家的孩子根本没有在城市立足的权利"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "是资本家给了他们工作岗位"
+                },
+                {
+                    "time": "23:42",
+                    "sender": ".(抚顺)",
+                    "content": "只能说"
+                },
+                {
+                    "time": "23:42",
+                    "sender": "laker (laker (东西湖))",
+                    "content": "没有工作你就得回老家种地"
+                },
+                {
+                    "time": "23:42",
+                    "sender": ".(抚顺)",
+                    "content": "相比于地主，资本家会稍好一些"
+                },
+                {
+                    "time": "23:42",
+                    "sender": "Jocelyn",
+                    "content": "所以不要对上位者抱有希望"
+                },
+                {
+                    "time": "23:42",
+                    "sender": ".(抚顺)",
+                    "content": "但这这也只是生产力的进步，不代表剥削阶级心善"
+                },
+                {
+                    "time": "23:42",
+                    "sender": "Jocelyn",
+                    "content": "不要天天想着先富带动后富"
+                },
+                {
+                    "time": "23:42",
+                    "sender": ".(抚顺)",
+                    "content": "不能对任何剥削阶级产生不切实际的幻想"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "杰福.",
+                    "content": "不否认资产阶级在历史上的进步性😉"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "杰福.",
+                    "content": "毕竟创造了巨大的生产力"
+                },
+                {
+                    "time": "23:49",
+                    "sender": "杰福.",
+                    "content": "为天地立心，为生民立命，为往圣继绝学，为万世开太平"
+                },
+                {
+                    "time": "23:50",
+                    "sender": "杰福.",
+                    "content": "我很喜欢的一句话"
+                }
+            ]
+        },
+        {
+            "date": "2025-06-17",
+            "messages": [
+                {
+                    "time": "18:00",
+                    "sender": "杰福.",
+                    "content": "我早就想恢复管理了@",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "确实"
+                    }
+                },
+                {
+                    "time": "18:00",
+                    "sender": "杰福.",
+                    "content": "最多就12个 所以说降一个@"
+                },
+                {
+                    "time": "18:00",
+                    "sender": ".(抚顺)",
+                    "content": "降不了啊"
+                },
+                {
+                    "time": "18:00",
+                    "sender": "杰福.",
+                    "content": "肯定可以，之前怎么有空的",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "降不了啊"
+                    }
+                },
+                {
+                    "time": "18:00",
+                    "sender": ".(抚顺)",
+                    "content": "那是之前"
+                },
+                {
+                    "time": "18:00",
+                    "sender": ".(抚顺)",
+                    "content": "你小子当上管理我现在也不放心"
+                },
+                {
+                    "time": "18:01",
+                    "sender": ".(抚顺)",
+                    "content": "我怕你天天特码在群里宣扬你那套抽象的旺座理论"
+                },
+                {
+                    "time": "18:01",
+                    "sender": "杰福.",
+                    "content": "那不会，咱们也就在咱们小群说说",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "我怕你天天特码在群里宣扬你那套抽象的旺座理论"
+                    }
+                },
+                {
+                    "time": "18:01",
+                    "sender": ".(抚顺)",
+                    "content": "以后再说吧"
+                },
+                {
+                    "time": "18:02",
+                    "sender": "杰福.",
+                    "content": "真不走了？真不跟我回山了？@",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "以后再说吧"
+                    }
+                },
+                {
+                    "time": "18:02",
+                    "sender": "杰福.",
+                    "content": "这是穷怕了"
+                },
+                {
+                    "time": "18:01",
+                    "sender": "九『江承』",
+                    "content": "这什么，没听过",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "我怕你天天特码在群里宣扬你那套抽象的旺座理论"
+                    }
+                },
+                {
+                    "time": "18:04",
+                    "sender": ".(抚顺)",
+                    "content": "这什么，没听过 就是这小子天天给我宣扬上个世纪的计划经济时代好",
+                    "reply_to": {
+                        "sender": "九『江承』",
+                        "content": "这什么，没听过"
+                    }
+                },
+                {
+                    "time": "18:05",
+                    "sender": ".(抚顺)",
+                    "content": "网络左派"
+                },
+                {
+                    "time": "18:05",
+                    "sender": "九『江承』",
+                    "content": "噢"
+                },
+                {
+                    "time": "18:04",
+                    "sender": "杰福.",
+                    "content": "就是赞扬毛主席时代",
+                    "reply_to": {
+                        "sender": ".(抚顺)",
+                        "content": "就是这小子天天给我宣扬上个世纪的计划经济时代好"
+                    }
+                }
+            ]
+        },
+        {
+            "date": "2025-10-01",
+            "messages": [
+                {
+                    "time": "21:42",
+                    "sender": "杰福.",
+                    "content": "其实，我是左派 @朝鲜第一将军 @Lilium @宵崎奏 🙄✨"
+                },
+                {
+                    "time": "21:42",
+                    "sender": "杰福.",
+                    "content": "就是主张恢复毛主席时期的制度 @Lilium",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "? 🧐"
+                    }
+                },
+                {
+                    "time": "21:42",
+                    "sender": "朝鲜第一将军",
+                    "content": "我不主张",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "就是主张恢复毛主席时期的制度 @Lilium"
+                    }
+                },
+                {
+                    "time": "21:42",
+                    "sender": "朝鲜第一将军",
+                    "content": "我不想挨饿"
+                },
+                {
+                    "time": "21:42",
+                    "sender": "朝鲜第一将军",
+                    "content": "我是务实主义"
+                },
+                {
+                    "time": "21:42",
+                    "sender": "朝鲜第一将军",
+                    "content": "我再说一遍"
+                },
+                {
+                    "time": "21:42",
+                    "sender": "朝鲜第一将军",
+                    "content": "现在的经济水平是建立在改革开放之后加入全球贸易体系上发展起来的"
+                },
+                {
+                    "time": "21:42",
+                    "sender": "朝鲜第一将军",
+                    "content": "如果没有 gk 就不可能有现在的经济水平"
+                },
+                {
+                    "time": "21:47",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 所以说，改开是不是已经搞了，全球贸易是不是也加入了，现在再恢复呢？是不是就能让工农有更好的生活了",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "如果没有 gk 就不可能有现在的经济水平"
+                    }
+                },
+                {
+                    "time": "21:47",
+                    "sender": "杰福.",
+                    "content": "说空话谁都会说"
+                },
+                {
+                    "time": "21:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福.，事实上农民的生活待遇也是比以前好很多了",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "说空话谁都会说"
+                    }
+                },
+                {
+                    "time": "21:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "乡村扶持，村村通路，新农合"
+                },
+                {
+                    "time": "21:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "这些都是肉眼可见提升农民待遇的 zc"
+                },
+                {
+                    "time": "21:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "做的好的要承认，做的差的要批判"
+                },
+                {
+                    "time": "21:48",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 @Lilium 还是那句话，假如说改开前是 10 和 1 的差距，那么现在就是 10000 和 10 的差距，你猜未来会不会差距更大"
+                },
+                {
+                    "time": "21:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "你真说反了"
+                },
+                {
+                    "time": "21:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "以前才是 1 万和 10 的差距"
+                },
+                {
+                    "time": "21:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "现在反倒是 10 和 1"
+                },
+                {
+                    "time": "21:52",
+                    "sender": "Lilium",
+                    "content": "真不觉得 我觉得改开之后经济水平提升了很多吧 不然现在真不一定能过这么好"
+                },
+                {
+                    "time": "21:52",
+                    "sender": "杰福.",
+                    "content": "你的意思是在现的富人过的和以前的穷人一样？"
+                },
+                {
+                    "time": "21:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 改开绝对是对 99% 以上核中国普通人受益的",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "真不觉得 我觉得改开之后经济水平提升了很多吧..."
+                    }
+                },
+                {
+                    "time": "21:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "不改开的话现在过的还不如朝鲜"
+                },
+                {
+                    "time": "21:52",
+                    "sender": "Lilium",
+                    "content": "是的",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "改开绝对是对 99% 以上核中国普通人受益的"
+                    }
+                },
+                {
+                    "time": "21:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "这也是改开之后发展起来了"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "Lilium",
+                    "content": "发展水平能相当于现在的几分之几...",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "不改开的话现在过的还不如朝鲜"
+                    }
+                },
+                {
+                    "time": "21:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "我天天拿朝鲜逛亮子玩梗"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "Lilium",
+                    "content": "经济水平"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "搁 1978 之前中国人过的真不如朝鲜人"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "杰福.",
+                    "content": "很多人觉得改开之前中国是完全封闭的，那就理解错了，这个和 cx 那种完全不一样"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 平均也就相当于 1990 年代中期",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "发展水平能相当于现在的几分之几..."
+                    }
+                },
+                {
+                    "time": "21:53",
+                    "sender": "Lilium",
+                    "content": "所以我一直觉得改开是一件很有正面意义的事情"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "极个别发达地区能达到 10 年左右"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "这是真的"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "宏大层面的不谈，就说改开至少是让人吃饱饭了"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "Lilium",
+                    "content": "尽管 zbb 说了 those 什么的"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "杰福.",
+                    "content": "有正面意义也有负面意义"
+                },
+                {
+                    "time": "21:53",
+                    "sender": "Lilium",
+                    "content": "我也不想现在就是普通通的水水平我现在还是"
+                },
+                {
+                    "time": "21:54",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 他那个理论，我已经联合微信群的兄弟们打他五六次了",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "尽管 zbb 说了 those 什么的"
+                    }
+                },
+                {
+                    "time": "21:54",
+                    "sender": "杰福.",
+                    "content": "是吃饱了这个我承认，但是往上一看吓死人啊 @朝鲜第一将军",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "宏大层面的不谈，就说改开至少是让人吃饱饭了"
+                    }
+                },
+                {
+                    "time": "21:54",
+                    "sender": "Lilium",
+                    "content": "我已经觉得比较烂了的再烂我直接重开算了"
+                },
+                {
+                    "time": "21:55",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福.，我怎么跟你说呢",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "是吃饱了这个我承认，但是往上一看吓死人啊"
+                    }
+                },
+                {
+                    "time": "21:55",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 我爸我妈小时候是真吃不饱饭",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "我已经觉得比较烂了的再烂我直接重开算了"
+                    }
+                },
+                {
+                    "time": "21:55",
+                    "sender": "朝鲜第一将军",
+                    "content": "🌚🌚 这是真的"
+                },
+                {
+                    "time": "21:55",
+                    "sender": "Lilium",
+                    "content": "@朝鲜第一将军 对啊改开之前我爷爷奶奶小时候真的很难惨...",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "我爸我妈小时候是真吃不饱饭"
+                    }
+                },
+                {
+                    "time": "21:55",
+                    "sender": "Lilium",
+                    "content": "🌚🌚"
+                },
+                {
+                    "time": "21:55",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福.，至少你现在可以自由迁徙，想吃什么就吃什么，想去哪就去哪，上网聊天也没人拦着你",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "你的意思是在现的富人过的和以前的穷人一样？"
+                    }
+                },
+                {
+                    "time": "21:55",
+                    "sender": "朝鲜第一将军",
+                    "content": "但是以前"
+                },
+                {
+                    "time": "21:55",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 @Lilium 这个你俩怎么说",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "很多人觉得改开之前中国是完全封闭的..."
+                    }
+                },
+                {
+                    "time": "21:55",
+                    "sender": "Lilium",
+                    "content": "@杰福.，但是你看加知道现在得就就是正面意义更大",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "有正面意义也有负面意义"
+                    }
+                },
+                {
+                    "time": "21:55",
+                    "sender": "朝鲜第一将军",
+                    "content": "这些现在看来平平常常的东西是只有 bj 的大院子弟们才能享受到的"
+                },
+                {
+                    "time": "21:55",
+                    "sender": "朝鲜第一将军",
+                    "content": "人家看美国大片，你那样板戏"
+                },
+                {
+                    "time": "21:57",
+                    "sender": "Lilium",
+                    "content": "并没有说完全封闭"
+                },
+                {
+                    "time": "21:57",
+                    "sender": "Lilium",
+                    "content": "就是发展速度很落后"
+                },
+                {
+                    "time": "21:57",
+                    "sender": "杰福.",
+                    "content": "现在还不是有些东西只能有钱人享受到的"
+                },
+                {
+                    "time": "21:57",
+                    "sender": "朝鲜第一将军",
+                    "content": "人家想去哪就去哪，你去个县城都得要介绍信"
+                },
+                {
+                    "time": "21:57",
+                    "sender": "Lilium",
+                    "content": "我在 21 世纪应该还过着 20 世纪的生活吧..."
+                },
+                {
+                    "time": "21:57",
+                    "sender": "Lilium",
+                    "content": "我不关注其他的"
+                },
+                {
+                    "time": "21:57",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福.，这些是有钱人能享受到的吗",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "现在还不是有些东西只能有钱人享受到的"
+                    }
+                },
+                {
+                    "time": "21:57",
+                    "sender": "Lilium",
+                    "content": "我只知道我现在很舒服"
+                },
+                {
+                    "time": "21:57",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 这么说吧，如果按他那个逻辑来",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "我在 21 世纪应该还过着 20 世纪的生活吧..."
+                    }
+                },
+                {
+                    "time": "21:57",
+                    "sender": "Lilium",
+                    "content": "有饭吃 有手机 互联网"
+                },
+                {
+                    "time": "21:57",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 有钱人有私人飞机，我到现在都没坐过飞机",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "这些是有钱人能享受到的吗"
+                    }
+                },
+                {
+                    "time": "21:57",
+                    "sender": "Lilium",
+                    "content": "其他的不是我关心也能做到的"
+                },
+                {
+                    "time": "21:58",
+                    "sender": "朝鲜第一将军",
+                    "content": "现在咱们都得还为温饱发愁"
+                },
+                {
+                    "time": "21:58",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 🌚🌚 我爷爷姥爷他们也是，卧槽，他们是真赶上吃不饱饭那几年"
+                },
+                {
+                    "time": "21:58",
+                    "sender": "朝鲜第一将军",
+                    "content": "饿的前胸贴后背的"
+                },
+                {
+                    "time": "21:58",
+                    "sender": "Lilium",
+                    "content": "为了制裁上流社会的人牺牲我自己"
+                },
+                {
+                    "time": "21:58",
+                    "sender": "朝鲜第一将军",
+                    "content": "是"
+                },
+                {
+                    "time": "21:58",
+                    "sender": "Lilium",
+                    "content": "凭什么牺牲我的舒服日子"
+                },
+                {
+                    "time": "22:01",
+                    "sender": "朝鲜第一将军",
+                    "content": "这种同归于尽的方式还是算了"
+                },
+                {
+                    "time": "22:01",
+                    "sender": "朝鲜第一将军",
+                    "content": "你要说不影响现在的生活条件的情况下把 zbj 都栓了"
+                },
+                {
+                    "time": "22:01",
+                    "sender": "朝鲜第一将军",
+                    "content": "谁能做到这点我百分百支持"
+                },
+                {
+                    "time": "22:01",
+                    "sender": "杰福.",
+                    "content": "难道就没有一种两全其美的办法吗"
+                },
+                {
+                    "time": "22:01",
+                    "sender": "朝鲜第一将军",
+                    "content": "那我不管，反正事实是我没坐过 @朝鲜第一将军",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "有钱人有私人飞机，我到现在都没坐过飞机"
+                    }
+                },
+                {
+                    "time": "22:01",
+                    "sender": "朝鲜第一将军",
+                    "content": "你没坐过飞机的原因是你暂时没有出远门的需求而不是你家连一张飞机票都买不起，兄弟这点你要搞清楚"
+                },
+                {
+                    "time": "22:01",
+                    "sender": "朝鲜第一将军",
+                    "content": "@朝鲜第一将军 这个确实",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "你没坐过飞机的原因是你暂时没有出远门的需求..."
+                    }
+                },
+                {
+                    "time": "22:01",
+                    "sender": "朝鲜第一将军",
+                    "content": "不是去不起 是没这个需求"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "杰福.",
+                    "content": "其实我现在也不能天天吃肉"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 东北这边多少相对富裕一点",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "这太奢侈了吧 我爷爷奶奶只有过年过节才有"
+                    }
+                },
+                {
+                    "time": "22:02",
+                    "sender": "Lilium",
+                    "content": "这种日子别再让我在 21 世纪继续缝过了好吗"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "朝鲜第一将军",
+                    "content": "平均半个月能吃一次肉"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "朝鲜第一将军",
+                    "content": "然后这就已经是当时最发达的地区了"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "杰福.",
+                    "content": "还真是买不起，我这边肉挺贵的，平常也就是吃些家常炒菜，不能天天吃肉"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "朝鲜第一将军",
+                    "content": "我这超市里的猪肉和鸡肉"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "朝鲜第一将军",
+                    "content": "八九块一斤的都一抓一大把"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "杰福.",
+                    "content": "你买这种便宜肉当我没说"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "Lilium",
+                    "content": "猪肉鸡肉鸭肉买几斤可以吃一天了"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "杰福.",
+                    "content": "也不知道能不能吃"
+                },
+                {
+                    "time": "22:02",
+                    "sender": "Lilium",
+                    "content": "那你觉得恢复以前你能过得比现在还好吗"
+                },
+                {
+                    "time": "22:15",
+                    "sender": "杰福.",
+                    "content": "我开始还以为シロ会站在我这一边"
+                },
+                {
+                    "time": "22:15",
+                    "sender": "Lilium",
+                    "content": "@杰福.，开什么玩笑我现在有的吃有的穿有手机互联网游戏玩很满足了 多的我也不关心也做不到 我做不到你知道吗",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "我开始还以为シロ会站在我这一边"
+                    }
+                },
+                {
+                    "time": "22:15",
+                    "sender": "Lilium",
+                    "content": "我不想过上辈那般的苦日子"
+                },
+                {
+                    "time": "22:15",
+                    "sender": "楽しくなろう",
+                    "content": "我去，其实爽在现在就行了"
+                },
+                {
+                    "time": "22:18",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福.，你现在是要跟我说，退回去搞计划经济能立刻让中国的综合国力翻十倍，中国民众的生活条件也立刻翻十倍，你放心，我立刻调转枪口支持计划经济"
+                },
+                {
+                    "time": "22:18",
+                    "sender": "楽しくなろう",
+                    "content": "制度就是按最适合时事来写的"
+                },
+                {
+                    "time": "22:18",
+                    "sender": "朝鲜第一将军",
+                    "content": "这是我曾经说过的话",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "这是我曾经说过的话"
+                    }
+                },
+                {
+                    "time": "22:18",
+                    "sender": "楽しくなろう",
+                    "content": "而且现在的制度也是以前碰壁出来的"
+                },
+                {
+                    "time": "22:18",
+                    "sender": "杰福.",
+                    "content": "现在是要搞这个还真的可以，因为改开已经把经济拉上来了 @朝鲜第一将军",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "这是我曾经说过的话"
+                    }
+                },
+                {
+                    "time": "22:18",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 其实这些人跟我们都不在一个层次，我们永远不会跟他们有任何交集",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "资本有上层 就是草管人命无视法律 我能..."
+                    }
+                },
+                {
+                    "time": "22:19",
+                    "sender": "楽しくなろう",
+                    "content": "咱又没过过苦日子"
+                },
+                {
+                    "time": "22:19",
+                    "sender": "楽しくなろう",
+                    "content": "没有意志力啊"
+                },
+                {
+                    "time": "22:19",
+                    "sender": "朝鲜第一将军",
+                    "content": "就过好自己就得了"
+                },
+                {
+                    "time": "22:19",
+                    "sender": "楽しくなろう",
+                    "content": "说白了你白说了"
+                },
+                {
+                    "time": "22:19",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福.，你还是没听懂我的意思",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "现在是要搞这个还真的可以..."
+                    }
+                },
+                {
+                    "time": "22:19",
+                    "sender": "Lilium",
+                    "content": "你真觉得以前的制度适合现在的世界 and 国情吗"
+                },
+                {
+                    "time": "22:19",
+                    "sender": "朝鲜第一将军",
+                    "content": "我再给你详细谓一谓哈"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "楽しくなろう",
+                    "content": "什么叫顺应时代啊"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "杰福.",
+                    "content": "@Chihaya Anon 那现在咱们确实确实是碰壁了",
+                    "reply_to": {
+                        "sender": "楽しくなろう",
+                        "content": "而且现在的制度也是以前碰壁出来的"
+                    }
+                },
+                {
+                    "time": "22:20",
+                    "sender": "楽しくなろう",
+                    "content": "什么时候有什么时候都制度"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "楽しくなろう",
+                    "content": "@杰福.，你觉得碰了多少？",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@Chihaya Anon 那现在咱们确实确实是碰壁了"
+                    }
+                },
+                {
+                    "time": "22:20",
+                    "sender": "朝鲜第一将军",
+                    "content": "现在的经济水平是建立在改革开放之后加入全球贸易体系上发展起来的，想保持现在的生活水平 continue 往上走，就要走现在的体系道路，你如果现在就想开倒车，那就是封闭锁国自绝于全球贸易体系 @杰福."
+                },
+                {
+                    "time": "22:20",
+                    "sender": "楽しくなろう",
+                    "content": "这玩意儿就是没办法完全做到平衡"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "楽しくなろう",
+                    "content": "现在已经不错了"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "朝鲜第一将军",
+                    "content": "而且你知道现在的中国搞这出来的连锁反应有多大吗"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "楽しくなろう",
+                    "content": "哪怕是真的有漏洞能怎么样呢"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "朝鲜第一将军",
+                    "content": "往大了说全世界都会为之动荡"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "楽しくなろう",
+                    "content": "要提出来一个更好的谁提的出来"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 包的",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "@朝鲜第一将军 我们也没什么值得别人玩弄的资本"
+                    }
+                },
+                {
+                    "time": "22:20",
+                    "sender": "楽しくなろう",
+                    "content": "整个世界谁的好了？！"
+                },
+                {
+                    "time": "22:20",
+                    "sender": "朝鲜第一将军",
+                    "content": "zbb 这想法是想让全世界经济危机"
+                },
+                {
+                    "time": "22:21",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 控制资本就行了，也没说闭关锁国",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "现在的经济水平是建立在改革开放之后..."
+                    }
+                },
+                {
+                    "time": "22:21",
+                    "sender": "朝鲜第一将军",
+                    "content": "一个全球化最大的受益者，全球第一大工业国，退回闭关锁国搞计划经济"
+                },
+                {
+                    "time": "22:22",
+                    "sender": "Lilium",
+                    "content": "@朝鲜第一将军 六六六 全世界都得疯掉吧",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "一个全球化最大的受益者..."
+                    }
+                },
+                {
+                    "time": "22:22",
+                    "sender": "楽しくなろう",
+                    "content": "危机是全球的事"
+                },
+                {
+                    "time": "22:22",
+                    "sender": "楽しくなろう",
+                    "content": "国外就是会影响国内"
+                },
+                {
+                    "time": "22:22",
+                    "sender": "楽しくなろう",
+                    "content": "666 疯了吧！"
+                },
+                {
+                    "time": "22:22",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 那世界经济直接崩盘了",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "@朝鲜第一将军 六六六 全世界都得疯掉吧"
+                    }
+                },
+                {
+                    "time": "22:23",
+                    "sender": "朝鲜第一将军",
+                    "content": "你以为"
+                },
+                {
+                    "time": "22:23",
+                    "sender": "杰福.",
+                    "content": "@Chihaya Anon 说对了，还真有，共产主义制度",
+                    "reply_to": {
+                        "sender": "楽しくなろう",
+                        "content": "到底哪个制度 is 完美的我请问了"
+                    }
+                },
+                {
+                    "time": "22:23",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福.，搞笑，纯做梦的",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@Chihaya Anon 说对了，还真有..."
+                    }
+                },
+                {
+                    "time": "22:23",
+                    "sender": "楽しくなろう",
+                    "content": "一百年也做不到"
+                },
+                {
+                    "time": "22:24",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Lilium 而且中国还是世界绝大部分经济体的第一大贸易伙伴",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "一个全球化最大的受益者..."
+                    }
+                },
+                {
+                    "time": "22:24",
+                    "sender": "楽しくなろう",
+                    "content": "知不知道中国多少合作伙伴啊"
+                },
+                {
+                    "time": "22:24",
+                    "sender": "朝鲜第一将军",
+                    "content": "真要是整这出"
+                },
+                {
+                    "time": "22:25",
+                    "sender": "Lilium",
+                    "content": "@朝鲜第一将军 这种情况下怎么可能呢",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "@Lilium 而且中国还是世界绝大部分经济体的第一大贸易伙伴"
+                    }
+                },
+                {
+                    "time": "22:25",
+                    "sender": "楽しくなろう",
+                    "content": "什么叫中亚 中非"
+                },
+                {
+                    "time": "22:25",
+                    "sender": "朝鲜第一将军",
+                    "content": "都不是普通经济危机的事了"
+                },
+                {
+                    "time": "22:25",
+                    "sender": "朝鲜第一将军",
+                    "content": "带来的后果已经不是能想象出来的恐怖了"
+                },
+                {
+                    "time": "22:25",
+                    "sender": "杰福.",
+                    "content": "其实说白了，现在全球还不够动荡吗，不是经济动荡，是军事动荡"
+                },
+                {
+                    "time": "22:25",
+                    "sender": "朝鲜第一将军",
+                    "content": "你现在在再动荡，至少还是有一个相对来说稳定的贸易体系"
+                },
+                {
+                    "time": "22:25",
+                    "sender": "楽しくなろう",
+                    "content": "能咋的，漂亮国贱啊"
+                },
+                {
+                    "time": "22:25",
+                    "sender": "Lilium",
+                    "content": "你觉得还不详吗"
+                },
+                {
+                    "time": "22:25",
+                    "sender": "楽しくなろう",
+                    "content": "人家打架它也插手"
+                },
+                {
+                    "time": "22:26",
+                    "sender": "朝鲜第一将军",
+                    "content": "而且这个贸易体系的最大受益者是中国"
+                },
+                {
+                    "time": "22:26",
+                    "sender": "Lilium",
+                    "content": "你一个经济贸易大国竟然封闭你想搞乱全世界吗"
+                },
+                {
+                    "time": "22:26",
+                    "sender": "Lilium",
+                    "content": "你吓死我了吧你"
+                },
+                {
+                    "time": "22:26",
+                    "sender": "楽しくなろう",
+                    "content": "吓死谁呢"
+                },
+                {
+                    "time": "22:26",
+                    "sender": "Lilium",
+                    "content": "@朝鲜第一将军 对呀",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "而且这个贸易体系的最大受益者是中国"
+                    }
+                },
+                {
+                    "time": "22:26",
+                    "sender": "朝鲜第一将军",
+                    "content": "说句恐怖的，全人类的命运都可能为之改写"
+                },
+                {
+                    "time": "22:26",
+                    "sender": "楽しくなろう",
+                    "content": "而且一部分经济就是跟国外贸易得来的啊"
+                },
+                {
+                    "time": "22:26",
+                    "sender": "楽しくなろう",
+                    "content": "你锁了要咋滴"
+                },
+                {
+                    "time": "22:26",
+                    "sender": "朝鲜第一将军",
+                    "content": "中国是出口型经济"
+                },
+                {
+                    "time": "22:26",
+                    "sender": "朝鲜第一将军",
+                    "content": "外贸是中国经济的三大引擎之一"
+                },
+                {
+                    "time": "22:27",
+                    "sender": "楽しくなろう",
+                    "content": "你把人家庙占了，搞自己内部搞出口的也崩了"
+                },
+                {
+                    "time": "22:27",
+                    "sender": "杰福.",
+                    "content": "111，说偏了",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "控制资本就行了，也没说闭关锁国"
+                    }
+                },
+                {
+                    "time": "22:28",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福.，不是你说的要回到 78 之前的制度",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "111，说偏了"
+                    }
+                },
+                {
+                    "time": "22:28",
+                    "sender": "朝鲜第一将军",
+                    "content": "那不就是关起门来搞计划经济吗"
+                },
+                {
+                    "time": "22:28",
+                    "sender": "朝鲜第一将军",
+                    "content": "然后带来的后果就是全球经济震荡啊"
+                },
+                {
+                    "time": "22:28",
+                    "sender": "Lilium",
+                    "content": "控制资本..."
+                },
+                {
+                    "time": "22:28",
+                    "sender": "Lilium",
+                    "content": "你突然让我想到大锅饭"
+                },
+                {
+                    "time": "22:28",
+                    "sender": "楽しくなろう",
+                    "content": "可以宣布完犊子了"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "Lilium",
+                    "content": "不能是这个吧"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "朝鲜第一将军",
+                    "content": "我再跟你们说个 cold 知识"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "朝鲜第一将军",
+                    "content": "实际上改革开放的苗头"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "朝鲜第一将军",
+                    "content": "是毛主席时代开始准备的"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "楽しくなろう",
+                    "content": "那肯定不是脑瓜子一热弄出来的"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "朝鲜第一将军",
+                    "content": "我们最终的目的一直都是改革开放融入全球化啊"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "Lilium",
+                    "content": "我没招了"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "楽しくなろう",
+                    "content": "这个政策至少是上层经过辩驳啊"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "Lilium",
+                    "content": "是什么突然让人想到那个时代的管理制度"
+                },
+                {
+                    "time": "22:29",
+                    "sender": "朝鲜第一将军",
+                    "content": "之所以当时关起门搞计划经济那是因为当时的中国以及国际局势不适合中国搞改开"
+                },
+                {
+                    "time": "22:30",
+                    "sender": "楽しくなろう",
+                    "content": "脑子抽了吧"
+                },
+                {
+                    "time": "22:30",
+                    "sender": "楽しくなろう",
+                    "content": "谁不知道改革开放之后发展的多迅速啊"
+                },
+                {
+                    "time": "22:30",
+                    "sender": "楽しくなろう",
+                    "content": "没看见深圳几十年从一个小破乡镇变成大城市了吗"
+                },
+                {
+                    "time": "22:30",
+                    "sender": "楽しくなろう",
+                    "content": "告诉我除了这个政策啥政策做得倒"
+                },
+                {
+                    "time": "22:30",
+                    "sender": "杰福.",
+                    "content": "@Chihaya Anon 然后呢，跟咱们普通人有关系吗",
+                    "reply_to": {
+                        "sender": "楽しくなろう",
+                        "content": "没看见深圳几十年从一个小破乡镇变成大城市了吗"
+                    }
+                },
+                {
+                    "time": "22:30",
+                    "sender": "朝鲜第一将军",
+                    "content": "第一那个年代美西方一直对华进行封锁，想对外开放人家也不给你开这个门，第二，就算当时美西方对咱开放，中国当时没有自己的完整工业体系，你搞改革开放就等着被西方的廉价工业品倾销死吧"
+                },
+                {
+                    "time": "22:30",
+                    "sender": "杰福.",
+                    "content": "深圳哪怕变成超过纽约的城市，普通人还是过得不好那有啥用"
+                },
+                {
+                    "time": "22:30",
+                    "sender": "楽しくなろう",
+                    "content": "@杰福.，没关系吗？",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@Chihaya Anon 然后呢，跟咱们普通人有关系吗"
+                    }
+                },
+                {
+                    "time": "22:31",
+                    "sender": "楽しくなろう",
+                    "content": "没钱你搞乡村振兴吗？"
+                },
+                {
+                    "time": "22:31",
+                    "sender": "楽しくなろう",
+                    "content": "你家农村没变好是吧"
+                },
+                {
+                    "time": "22:31",
+                    "sender": "朝鲜第一将军",
+                    "content": "之前农民过的啥日子你比我们更清楚吧"
+                },
+                {
+                    "time": "22:31",
+                    "sender": "楽しくなろう",
+                    "content": "不然你深圳赚的钱去哪了？"
+                },
+                {
+                    "time": "22:31",
+                    "sender": "楽しくなろう",
+                    "content": "你知道广州钱去哪了吗？"
+                },
+                {
+                    "time": "22:31",
+                    "sender": "杰福.",
+                    "content": "不要扯那些歪的，我只知道改开当初的第一条承诺就没有被兑现"
+                },
+                {
+                    "time": "22:31",
+                    "sender": "楽しくなろう",
+                    "content": "你俩滚犊子去吧"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "屠幕",
+                    "content": "666 什么时代了还在讨论这些问题"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "屠幕",
+                    "content": "逆天"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "朝鲜第一将军",
+                    "content": "绷不住了"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "楽しくなろう",
+                    "content": "反正我就知道我家乡下就是变好了"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "楽しくなろう",
+                    "content": "滚吧你"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "朝鲜第一将军",
+                    "content": "狗承都看不下去了"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "楽しくなろう",
+                    "content": "我以前走的啥几把路我不知道吗？"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "Rimulu",
+                    "content": "真没招了"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "楽しくなろう",
+                    "content": "经济变化有没有影响我家我比你清楚"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "楽しくなろう",
+                    "content": "滚吧"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "楽しくなろう",
+                    "content": "换以前我家更是山卡拉"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "朝鲜第一将军",
+                    "content": "这个搞笑的一点是"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "朝鲜第一将军",
+                    "content": "我一个辽宁工人家庭出身的"
+                },
+                {
+                    "time": "22:34",
+                    "sender": "杰福.",
+                    "content": "@Chihaya Anon 你这个不能证明啥",
+                    "reply_to": {
+                        "sender": "楽しくなろう",
+                        "content": "换以前我家更是山卡拉"
+                    }
+                },
+                {
+                    "time": "22:34",
+                    "sender": "朝鲜第一将军",
+                    "content": "按理来说我算是计划经济时代的既得利益者"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "楽しくなろう",
+                    "content": "@杰福. 666",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@Chihaya Anon 你这个不能证明啥"
+                    }
+                },
+                {
+                    "time": "22:35",
+                    "sender": "朝鲜第一将军",
+                    "content": "结果我是维护改开的"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "楽しくなろう",
+                    "content": "不能证明啥"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "楽しくなろう",
+                    "content": "你要啥证明？"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "朝鲜第一将军",
+                    "content": "他一个湖北的农民家庭"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "楽しくなろう",
+                    "content": "到底要干啥？"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "朝鲜第一将军",
+                    "content": "居然给计划经济招魂"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "朝鲜第一将军",
+                    "content": "我真绷不住了"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "朝鲜第一将军",
+                    "content": "能不能不要乱套用"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "楽しくなろう",
+                    "content": "@朝鲜第一将军 不是现在谁几把想当农民",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "他一个湖北的农民家庭"
+                    }
+                },
+                {
+                    "time": "22:35",
+                    "sender": "楽しくなろう",
+                    "content": "你在套用啥玩意的"
+                },
+                {
+                    "time": "22:35",
+                    "sender": "楽しくなろう",
+                    "content": "现在环境变变好吗？"
+                },
+                {
+                    "time": "22:36",
+                    "sender": "楽しくなろう",
+                    "content": "你就搁那看你那破学校"
+                },
+                {
+                    "time": "22:36",
+                    "sender": "楽しくなろう",
+                    "content": "我就说你以前连学校都去不了"
+                },
+                {
+                    "time": "22:36",
+                    "sender": "朝鲜第一将军",
+                    "content": "@Chihaya Anon 以前的农民那个惨啊",
+                    "reply_to": {
+                        "sender": "楽しくなろう",
+                        "content": "@朝鲜第一将军 不是现在谁几把想当农民"
+                    }
+                },
+                {
+                    "time": "22:36",
+                    "sender": "朝鲜第一将军",
+                    "content": "年年还得交农业税"
+                },
+                {
+                    "time": "22:36",
+                    "sender": "朝鲜第一将军",
+                    "content": "然后，还不能随意出村"
+                },
+                {
+                    "time": "22:36",
+                    "sender": "楽しくなろう",
+                    "content": "按你以前爬个两三小时山都没到学校"
+                },
+                {
+                    "time": "22:36",
+                    "sender": "楽しくなろう",
+                    "content": "还几把医院呢"
+                },
+                {
+                    "time": "22:36",
+                    "sender": "朝鲜第一将军",
+                    "content": "去趟你家属地县城都得有介绍信"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "v",
+                    "content": "都是底层人"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "楽しくなろう",
+                    "content": "小诊所都没有"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "v",
+                    "content": "别说什么了"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "楽しくなろう",
+                    "content": "握草了"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "楽しくなろう",
+                    "content": "你跟我说这个"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "杰福.",
+                    "content": "@Chihaya Anon 没有农民你哪来的饭吃，还说农民起来了",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "以前的农民那个惨啊"
+                    }
+                },
+                {
+                    "time": "22:37",
+                    "sender": "v",
+                    "content": "说的是谁想当农民不是说看不起农民",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "没有农民你哪来的饭吃，还说农民起来了"
+                    }
+                },
+                {
+                    "time": "22:37",
+                    "sender": "楽しくなろう",
+                    "content": "@杰福. 不是？我不想当农民我就瞧不起农民了吗",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "没有农民你哪来的饭吃，还说农民起来了"
+                    }
+                },
+                {
+                    "time": "22:37",
+                    "sender": "楽しくなろう",
+                    "content": "别特么在这里叫了"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "v",
+                    "content": "bro 觉得自己是带红臂章批判斗人的"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "杰福.",
+                    "content": "@宵崎奏 你也知道处境不好啊",
+                    "reply_to": {
+                        "sender": "v",
+                        "content": "说的是谁想当农民不是说看不起农民"
+                    }
+                },
+                {
+                    "time": "22:37",
+                    "sender": "楽しくなろう",
+                    "content": "换回去以前老子找人弄死你"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "v",
+                    "content": "实际上自己是大吃饱年代没锅饿死的"
+                },
+                {
+                    "time": "22:37",
+                    "sender": "楽しくなろう",
+                    "content": "你也叫"
+                },
+                {
+                    "time": "22:38",
+                    "sender": "楽しくなろう",
+                    "content": "叫你爹呢"
+                },
+                {
+                    "time": "22:38",
+                    "sender": "楽しくなろう",
+                    "content": "滚吧"
+                },
+                {
+                    "time": "22:38",
+                    "sender": "屠幕",
+                    "content": "我就一句话"
+                },
+                {
+                    "time": "22:38",
+                    "sender": "屠幕",
+                    "content": "我坚决维护改革开放"
+                },
+                {
+                    "time": "22:38",
+                    "sender": "屠幕",
+                    "content": "谁给计划经济招魂我喷谁"
+                },
+                {
+                    "time": "22:41",
+                    "sender": "屠幕",
+                    "content": "没有国家你现在还活着？"
+                },
+                {
+                    "time": "22:41",
+                    "sender": "楽しくなろう",
+                    "content": "觉得自己没吃到就回深山老林里一个人活"
+                },
+                {
+                    "time": "22:41",
+                    "sender": "Lilium",
+                    "content": "如果你农村的路改了还不算那你还指望改什么"
+                },
+                {
+                    "time": "22:41",
+                    "sender": "Lilium",
+                    "content": "你搞清楚你就说一个普通人"
+                },
+                {
+                    "time": "22:41",
+                    "sender": "屠幕",
+                    "content": "那么讨厌现在国家政策你就走啊"
+                },
+                {
+                    "time": "22:41",
+                    "sender": "屠幕",
+                    "content": "还呆在这干嘛"
+                },
+                {
+                    "time": "22:41",
+                    "sender": "Lilium",
+                    "content": "路改了基础设施好了都是造福你了"
+                },
+                {
+                    "time": "22:41",
+                    "sender": "v",
+                    "content": "底层芝麻就老老实实认命"
+                },
+                {
+                    "time": "22:45",
+                    "sender": "朝鲜第一将军",
+                    "content": "你俩也别觉得群里全是兔友小粉红 我就说白了你现在就是一个底层贱民放几十年前你还是底层贱民 大吃饱浮夸风你是一点也不提了哈"
+                },
+                {
+                    "time": "22:46",
+                    "sender": "v",
+                    "content": "真觉得自己翻身做主了"
+                },
+                {
+                    "time": "22:46",
+                    "sender": "Lilium",
+                    "content": "你要不看看国情有没有改变和世界的情况呢你"
+                },
+                {
+                    "time": "22:45",
+                    "sender": "杰福.",
+                    "content": "为啥不敢？这是当时期的制度阿",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "大吃饱浮夸风你是一点也不提了哈"
+                    }
+                },
+                {
+                    "time": "22:45",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福. 我说白了让你一天三顿观音土橡子面树皮你就老实了",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "为啥不敢？这是毛主席时期的制度阿"
+                    }
+                },
+                {
+                    "time": "22:45",
+                    "sender": "杰福.",
+                    "content": "我说白了让你一天三顿观音土橡子面树皮你就老实了",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "确实"
+                    }
+                },
+                {
+                    "time": "22:47",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 这些东西都被改开后严重夸大了，实际上没那么严重，不然毛主席会坐视不管？你猜猜现在的历史是谁写的 😎",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "你俩也别觉得群里全是兔友小粉红..."
+                    }
+                },
+                {
+                    "time": "22:47",
+                    "sender": "村雨",
+                    "content": "你到底在炫耀什么。"
+                },
+                {
+                    "time": "22:47",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福. 搞笑",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@朝鲜第一将军 这些东西都被改开后严重夸大了..."
+                    }
+                },
+                {
+                    "time": "22:47",
+                    "sender": "杰福.",
+                    "content": "@Lilium 我从头到尾都没说穿越回去吧，是你们理解错了",
+                    "reply_to": {
+                        "sender": "Lilium",
+                        "content": "你凭什么让我本来就很苟活的普通人回到更落后的时候"
+                    }
+                },
+                {
+                    "time": "22:47",
+                    "sender": "朝鲜第一将军",
+                    "content": "大吃饱是假的？"
+                },
+                {
+                    "time": "22:47",
+                    "sender": "楽しくなろう",
+                    "content": "这是夸大？"
+                },
+                {
+                    "time": "22:47",
+                    "sender": "朝鲜第一将军",
+                    "content": "观音土橡子面树皮也是假的？"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "村雨",
+                    "content": "书没读几页天天就是在这里遗世独立。"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 严重夸大",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "大吃饱是假的？"
+                    }
+                },
+                {
+                    "time": "22:48",
+                    "sender": "v",
+                    "content": "你知道现在不好你又能怎么办？你觉得以前好你自己下去怀念去 以前死的可不少"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "v",
+                    "content": "6666@杰福.",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@朝鲜第一将军 严重夸大"
+                    }
+                },
+                {
+                    "time": "22:48",
+                    "sender": "。。。",
+                    "content": "@杰福. 六六六你咋知道啊",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@朝鲜第一将军 这些东西都被改开后严重夸大了..."
+                    }
+                },
+                {
+                    "time": "22:48",
+                    "sender": "村雨",
+                    "content": "你身上有一种很文盲但是渴望特立独行的气质。我不忍打破"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "楽しくなろう",
+                    "content": "真把自己当历史了"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "村雨",
+                    "content": "[鼠鼠嘲笑表情]"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "v",
+                    "content": "生产靠积极性是真的对吗😂😂😂"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "v",
+                    "content": "你觉得严重夸大"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "v",
+                    "content": "那放到那时候试试呗"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "v",
+                    "content": "赶紧把你手机电脑锅全砸了"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "v",
+                    "content": "赶超英美"
+                },
+                {
+                    "time": "22:48",
+                    "sender": "杰福.",
+                    "content": "现在的社会恰恰证明了毛主席是对的 @宵崎奏",
+                    "reply_to": {
+                        "sender": "v",
+                        "content": "生产靠积极性是真的对吗😂😂😂"
+                    }
+                },
+                {
+                    "time": "22:49",
+                    "sender": "楽しくなろう",
+                    "content": "嗯高铁你也别坐了，"
+                },
+                {
+                    "time": "22:49",
+                    "sender": "朝鲜第一将军",
+                    "content": "我真不行了"
+                },
+                {
+                    "time": "22:49",
+                    "sender": "v",
+                    "content": "哥们你太幽默",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "现在的社会恰恰证明了毛主席是对的..."
+                    }
+                },
+                {
+                    "time": "22:49",
+                    "sender": "v",
+                    "content": "你知道生产靠积极性是谁说的不"
+                },
+                {
+                    "time": "22:49",
+                    "sender": "村雨",
+                    "content": "你这么谄媚他他能给你好处还是咋的"
+                },
+                {
+                    "time": "22:49",
+                    "sender": "v",
+                    "content": "你就毛主席"
+                },
+                {
+                    "time": "22:49",
+                    "sender": "村雨",
+                    "content": "我真不行了"
+                },
+                {
+                    "time": "22:49",
+                    "sender": "屠幕",
+                    "content": "真该让你回去被鬼子乱杀"
+                },
+                {
+                    "time": "22:49",
+                    "sender": "v",
+                    "content": "行了知道你是啥人了"
+                },
+                {
+                    "time": "22:49",
+                    "sender": "v",
+                    "content": "小王座"
+                },
+                {
+                    "time": "22:50",
+                    "sender": "村雨",
+                    "content": "到底在这里嘀嘀咕咕给谁看呢"
+                },
+                {
+                    "time": "22:50",
+                    "sender": "楽しくなろう",
+                    "content": "要我说当年肃反的就是你吧"
+                },
+                {
+                    "time": "22:50",
+                    "sender": "楽しくなろう",
+                    "content": "这个 xx 懂得都懂啊"
+                },
+                {
+                    "time": "22:50",
+                    "sender": "楽しくなろう",
+                    "content": "我就不说了"
+                },
+                {
+                    "time": "22:50",
+                    "sender": "屠幕",
+                    "content": "活的过抗日吗在这指点江山"
+                },
+                {
+                    "time": "22:50",
+                    "sender": "村雨",
+                    "content": "唉实在不行你自己想想办法混人大去实现你的梦想吧好不"
+                },
+                {
+                    "time": "22:50",
+                    "sender": "村雨",
+                    "content": "跟我们也说也没意思"
+                },
+                {
+                    "time": "22:51",
+                    "sender": "杰福.",
+                    "content": "现在的人大，工农都没几个人"
+                },
+                {
+                    "time": "22:51",
+                    "sender": "村雨",
+                    "content": "你去了不就有了"
+                },
+                {
+                    "time": "22:51",
+                    "sender": "村雨",
+                    "content": "兄弟"
+                },
+                {
+                    "time": "22:51",
+                    "sender": "v",
+                    "content": "你去吧兄弟"
+                },
+                {
+                    "time": "22:51",
+                    "sender": "Lilium",
+                    "content": "你到底知不知道我们都是一群只有时间拼搏赚钱过自己日子的普通人"
+                },
+                {
+                    "time": "22:51",
+                    "sender": "Lilium",
+                    "content": "你别做梦吧"
+                },
+                {
+                    "time": "22:51",
+                    "sender": "v",
+                    "content": "兄弟"
+                },
+                {
+                    "time": "22:51",
+                    "sender": "v",
+                    "content": "你放在以前也不是翻身做主的"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "村雨",
+                    "content": "零个人想听你小猪脑想出来的话"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "你要真认为现在不公平就去努力改变"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "你要没那个本事你就早点认命"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "过好自己就得了"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "我从去年就开始跟你说这个"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "村雨",
+                    "content": "大家陪你支教这么久也算是宠你了"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "v",
+                    "content": "你是广西被吃的两脚羊"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "微信群你湖北老乡们也这么跟你说"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "v",
+                    "content": "大吃饱啃树皮的贱民"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "你就听不进去啊"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "杰福.",
+                    "content": "说白了你们就是反对......"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "v",
+                    "content": "又反对了"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "朝鲜第一将军",
+                    "content": "我再说一遍，没人反对"
+                },
+                {
+                    "time": "22:52",
+                    "sender": "v",
+                    "content": "bro 是二极管"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "反对的是回到那个落后的制度"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "v",
+                    "content": "非黑即白"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "我真尼玛。。。"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "v",
+                    "content": "别的不我说哈"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "v",
+                    "content": "我就一直都在说"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "v",
+                    "content": "你觉得你这底层贱民"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "v",
+                    "content": "到那时候就不是贱民了？"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "@里铜 你太城市化了 我能说我给他支教一年了吗",
+                    "reply_to": {
+                        "sender": "村雨",
+                        "content": "大家陪你支教这么久也算是宠你了"
+                    }
+                },
+                {
+                    "time": "22:53",
+                    "sender": "村雨",
+                    "content": "@朝鲜第一将军🌚。",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "@里铜你太城市化了 我能说我给他支教一年了吗"
+                    }
+                },
+                {
+                    "time": "22:53",
+                    "sender": "村雨",
+                    "content": "行兄弟"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "@里铜你太城市化了 我才是他的人民教师",
+                    "reply_to": {
+                        "sender": "村雨",
+                        "content": "@朝鲜第一将军🌚。"
+                    }
+                },
+                {
+                    "time": "22:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "我真的"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "朝鲜第一将军",
+                    "content": "绷不住了"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "v",
+                    "content": "放以前天天动荡批斗这个停工那个停产十年没有高考"
+                },
+                {
+                    "time": "22:53",
+                    "sender": "v",
+                    "content": "你就满足了是嘛"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "杰福.",
+                    "content": "没有高考是对的，现在的高考筛选出来的都是啥人"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "杰福.",
+                    "content": "毛主席停高考也是对的"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "楽しくなろう",
+                    "content": "又众人皆醉你独醒"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "来我问问你"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "楽しくなろう",
+                    "content": "嗯嗯嗯"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "bro 现在什么学历"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "楽しくなろう",
+                    "content": "对对对哥们你就是神"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "Lilium",
+                    "content": "@沉默池鱼. ?",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "没有高考是对的，现在的高考筛选出来的都是啥人"
+                    }
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "@沉默池鱼."
+                },
+                {
+                    "time": "22:54",
+                    "sender": "朝鲜第一将军",
+                    "content": "先是赶英超美然后大吃饱啃树皮橡子面最后再批斗大会停工停产你就开心了是吧"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "村雨",
+                    "content": "被高考刷下来了就仇高考对吗"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "楽しくなろう",
+                    "content": "谁几把想断章取义你"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "村雨",
+                    "content": "很可怜噢"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "我爷爷当年就是个农民 他是全家唯一一个高中生 但是因为那动荡十年 他没有机会高考 只能回家务农"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "懂吗"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "楽しくなろう",
+                    "content": "嗯嗯断章取义啥了？"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "又断章取义了"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "现在就是经济全球化"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "你没学过政治？"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "你不顺应时代潮流"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "朝鲜第一将军",
+                    "content": "你踏马一个世界第一大工业国开倒车搞计划经济"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "朝鲜第一将军",
+                    "content": "你想让全世界陪你一块玩完吗"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "v",
+                    "content": "倒施逆行搞计划经济？"
+                },
+                {
+                    "time": "22:54",
+                    "sender": "楽しくなろう",
+                    "content": "到底在几把说什么傻话"
+                },
+                {
+                    "time": "22:57",
+                    "sender": "v",
+                    "content": "哦美国现在确实是在逆全球化"
+                },
+                {
+                    "time": "22:57",
+                    "sender": "v",
+                    "content": "但是人家他妈的是发动战争欺负中立国"
+                },
+                {
+                    "time": "22:57",
+                    "sender": "v",
+                    "content": "人家是收益"
+                },
+                {
+                    "time": "22:57",
+                    "sender": "朝鲜第一将军",
+                    "content": "踏马的，逆全球化的我见过"
+                },
+                {
+                    "time": "22:57",
+                    "sender": "v",
+                    "content": "你倒行逆施搞自家经济？"
+                },
+                {
+                    "time": "22:57",
+                    "sender": "朝鲜第一将军",
+                    "content": "你踏马这种逆全球化的我还是第一次见"
+                },
+                {
+                    "time": "22:57",
+                    "sender": "朝鲜第一将军",
+                    "content": "自己搞自己"
+                },
+                {
+                    "time": "22:57",
+                    "sender": "楽しくなろう",
+                    "content": "人家还掌握经济主动权呢"
+                },
+                {
+                    "time": "22:57",
+                    "sender": "v",
+                    "content": "你这个逆全球化收益的是？"
+                },
+                {
+                    "time": "22:58",
+                    "sender": "屠幕",
+                    "content": "有本事就坐着绿皮火车，踩着老式单车，走在凹凸不平的石子上面到那个破烂不堪的小屋子，天天还要担心能不能吃饱的环境去，不然你凭什么说以前过得比现在好"
+                },
+                {
+                    "time": "22:58",
+                    "sender": "朝鲜第一将军",
+                    "content": "@宵崎奏 他认为这样就能人人平等了",
+                    "reply_to": {
+                        "sender": "v",
+                        "content": "你这个逆全球化收益的是？"
+                    }
+                },
+                {
+                    "time": "22:58",
+                    "sender": "村雨",
+                    "content": "[姨吧嘲讽表情]"
+                },
+                {
+                    "time": "22:58",
+                    "sender": "朝鲜第一将军",
+                    "content": "@落幕 都说了不要断章取义",
+                    "reply_to": {
+                        "sender": "屠幕",
+                        "content": "有本事就坐着绿皮火车..."
+                    }
+                },
+                {
+                    "time": "22:58",
+                    "sender": "楽しくなろう",
+                    "content": "@里铜你太城市化了 燃起来了",
+                    "reply_to": {
+                        "sender": "村雨",
+                        "content": "[姨吧嘲讽表情]"
+                    }
+                },
+                {
+                    "time": "22:58",
+                    "sender": "v",
+                    "content": "制度可不是能一下子就说过去的"
+                },
+                {
+                    "time": "22:58",
+                    "sender": "朝鲜第一将军",
+                    "content": "你要逆全球化自己把自己的经济出口断了"
+                },
+                {
+                    "time": "22:58",
+                    "sender": "朝鲜第一将军",
+                    "content": "不是你图啥呢"
+                },
+                {
+                    "time": "22:59",
+                    "sender": "屠幕",
+                    "content": "怎么会有人觉得计划经济就平等了这么逆天"
+                },
+                {
+                    "time": "22:59",
+                    "sender": "朝鲜第一将军",
+                    "content": "你真想在通三县的乡下呆一辈子吗"
+                },
+                {
+                    "time": "22:59",
+                    "sender": "Lilium",
+                    "content": "那你说为什么也要回归以前的制度"
+                },
+                {
+                    "time": "22:59",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 我不想阿",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "你真想在通三县的乡下呆一辈子吗"
+                    }
+                },
+                {
+                    "time": "22:59",
+                    "sender": "楽しくなろう",
+                    "content": "你说你觉得回到以前的制度有啥好处"
+                },
+                {
+                    "time": "23:01",
+                    "sender": "朝鲜第一将军",
+                    "content": "@沉默池鱼. 你这不就是自相矛盾吗",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@朝鲜第一将军 我不想阿"
+                    }
+                },
+                {
+                    "time": "23:01",
+                    "sender": "杰福.",
+                    "content": "你以为我不知道以前的啥生活吗？"
+                },
+                {
+                    "time": "23:01",
+                    "sender": "村雨",
+                    "content": "[行政给你懂完了哦表情]"
+                },
+                {
+                    "time": "23:01",
+                    "sender": "村雨",
+                    "content": "我真不行了"
+                },
+                {
+                    "time": "23:01",
+                    "sender": "v",
+                    "content": "我是来无去我失败"
+                },
+                {
+                    "time": "23:01",
+                    "sender": "v",
+                    "content": "下课"
+                },
+                {
+                    "time": "23:01",
+                    "sender": "楽しくなろう",
+                    "content": "下课"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "楽しくなろう",
+                    "content": "傻得得数"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "楽しくなろう",
+                    "content": "知道以前啥生活和现在比现在不好吗"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "屠幕",
+                    "content": "你让以前呆过的老人听到你在这些话人家都当场气的吐血"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "v",
+                    "content": "还是我说的"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "楽しくなろう",
+                    "content": "下课"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "楽しくなろう",
+                    "content": "我自说了"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "v",
+                    "content": "贱民就是贱民"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "v",
+                    "content": "什么制度也改变不了你是贱民的事实"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "v",
+                    "content": "想飞升就去刹那 去掌握生产资料"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "杰福.",
+                    "content": "@宵崎奏 你话语就是背叛革命背叛无产阶级",
+                    "reply_to": {
+                        "sender": "v",
+                        "content": "贱民就是贱民"
+                    }
+                },
+                {
+                    "time": "23:02",
+                    "sender": "v",
+                    "content": "你觉得难听但是就是事实"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "v",
+                    "content": "你放在啥时候都是被牺牲的那些人"
+                },
+                {
+                    "time": "23:02",
+                    "sender": "v",
+                    "content": "小王座"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "朝鲜第一将军",
+                    "content": "@沉默池鱼. 那踏马是改革开放以后才有言论自由了",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@宵崎奏 你话语就是背叛革命背叛无产阶级"
+                    }
+                },
+                {
+                    "time": "23:03",
+                    "sender": "v",
+                    "content": "那你不是感叹现在地位不好人民地位不幸福吗"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "v",
+                    "content": "你不是说钱去哪里了吗"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "v",
+                    "content": "那你还是不被牺牲的那些啊"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "朝鲜第一将军",
+                    "content": "我再多说一句"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "朝鲜第一将军",
+                    "content": "就算塔现在收走了所有 zbj 的财产，你觉得会把这些财产分给你们？"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "朝鲜第一将军",
+                    "content": "我言尽于此"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "v",
+                    "content": "脱产的就别 bb 那么多了"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "v",
+                    "content": "上两天班就老实了"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "朝鲜第一将军",
+                    "content": "算了，我们这么多人都说也没用"
+                },
+                {
+                    "time": "23:03",
+                    "sender": "朝鲜第一将军",
+                    "content": "下课吧"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "朝鲜第一将军",
+                    "content": "我最后一句，你别觉得是我们针对你，事实上这个群的所有人包括你在内都是 ggkf 的受益者"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "朝鲜第一将军",
+                    "content": "谁诋毁 ggkf 谁就是没良心"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "朝鲜第一将军",
+                    "content": "就这样"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "v",
+                    "content": "@朝鲜第一将军 憧憬将军的感情还不完啊 [表情] 阶级产生在被社会打打两年就老实了",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "就这样"
+                    }
+                },
+                {
+                    "time": "23:09",
+                    "sender": "v",
+                    "content": "[表情][表情][表情]"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "v",
+                    "content": "我看你是支持穆铝铝还不知道自己支持的是穆铝铝的"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "朝鲜第一将军",
+                    "content": "我压根就没看明白你说的什么"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "朝鲜第一将军",
+                    "content": "我说真的"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "朝鲜第一将军",
+                    "content": "你给她们一群压根不鉴证的女生逼到联合起来攻击你"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "朝鲜第一将军",
+                    "content": "做到这份步，从某种程度上来说你也挺牛逼的"
+                },
+                {
+                    "time": "23:09",
+                    "sender": "v",
+                    "content": "你觉得生产靠积极性的思路是通说的"
+                },
+                {
+                    "time": "23:13",
+                    "sender": "楽しくなろう",
+                    "content": "@朝鲜第一将军 我是真不行了！",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "你给她们一群压根不鉴证的女生逼到联合起来攻击你"
+                    }
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "见证的也攻击你啊"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "往左必须拷打"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "杰福.",
+                    "content": "什么网友，我不是网友，我是左派毛派"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "我在群里说话够收敛了"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "非黑即白 那个词就不说了"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "朝鲜第一将军",
+                    "content": "你湖北老乡们也是白给你讲那么多东西"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "那我请问了，你是左派毛派你有什么实践没有 有没有什么成功的案例"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "带领同事提高公司待遇福利 改善环境"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "你做到过没"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "如果你只是在网上说说"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "杰福.",
+                    "content": "那为什么，不走他的道路了，还要挂这个旗帜 @朝鲜第一将军",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "你湖北老乡们也是白给你讲那么多东西"
+                    }
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "那你还不算往左啊 [表情]"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "杰福.",
+                    "content": "@宵崎奏 首先，得给我这个机会，都不让我当老板，我怎么干？",
+                    "reply_to": {
+                        "sender": "v",
+                        "content": "带领同事提高公司待遇福利 改善环境"
+                    }
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "这个东西是老板干的吗？"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "你不是说革命吗"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "你带着无产阶级同事去闹革命改善自己的福利待遇啊"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "你连群众都发动不了"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "朝鲜第一将军",
+                    "content": "你以为尼克松访华是干什么来了？"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "朝鲜第一将军",
+                    "content": "来陪你玩了？"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 这个......让我想想怎么解释",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "你以为尼克松访华是干什么来了？"
+                    }
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "你带着同事罢工呗 [表情][表情]"
+                },
+                {
+                    "time": "23:14",
+                    "sender": "v",
+                    "content": "别说你自己一个人不敢的借口"
+                },
+                {
+                    "time": "23:17",
+                    "sender": "朝鲜第一将军",
+                    "content": "我不行了我真得去微信群给那几个湖北兄弟看看你的壮举 @杰福.",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "@朝鲜第一将军 这个......让我想想怎么解释"
+                    }
+                },
+                {
+                    "time": "23:17",
+                    "sender": "朝鲜第一将军",
+                    "content": "我现在真服你了兄弟"
+                },
+                {
+                    "time": "23:17",
+                    "sender": "朝鲜第一将军",
+                    "content": "真服了"
+                },
+                {
+                    "time": "23:18",
+                    "sender": "杰福.",
+                    "content": "想到了，道说搞搞集体经济就不能让外国领导人访华了 @朝鲜第一将军",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "你以为尼克松访华是干什么来了？"
+                    }
+                },
+                {
+                    "time": "23:18",
+                    "sender": "v",
+                    "content": "你是毛派不该最应该知道无产阶级人民是革命的主力吗"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "v",
+                    "content": "那你去发动呗"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "朝鲜第一将军",
+                    "content": "@杰福. ......",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "想到了，道说搞搞集体经济就不能让外国领导人访华了"
+                    }
+                },
+                {
+                    "time": "23:19",
+                    "sender": "朝鲜第一将军",
+                    "content": "我再重申一遍，尼克松访华陪你玩来了？"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "v",
+                    "content": "哥们怎么不回答呢"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "杰福.",
+                    "content": "@宵崎奏 现在法律，搞 gm 是犯法的......",
+                    "reply_to": {
+                        "sender": "v",
+                        "content": "那你去发动呗"
+                    }
+                },
+                {
+                    "time": "23:19",
+                    "sender": "v",
+                    "content": "那你就不搞非暴力了？"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "v",
+                    "content": "罢工 抗议不让你搞了？"
+                },
+                {
+                    "time": "23:19",
+                    "sender": "v",
+                    "content": "也没说非让你举着牌子游行"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "杰福.",
+                    "content": "八二宪法取消了罢工游行权 @宵崎奏",
+                    "reply_to": {
+                        "sender": "v",
+                        "content": "罢工 抗议不让你搞了？"
+                    }
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "你非要明面上大搞罢工呗"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "就是你不能和你同事一起商议不干了呗"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "啥实践也没有"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "杰福.",
+                    "content": "现在搞这些就是得不偿失...... 还会损害群众力量"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "一说就是自己是毛派"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "又损害群众力量了"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "就在你内部 你自己的公司单位 你和同事联合 你向老板提出交涉 要求提高福利待遇"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "又损失力量了？"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "Rimulu",
+                    "content": "身边空无一人哪来的给你损失"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "啥实践也没搞过"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "Rimulu",
+                    "content": "能在这个群把这个话题聊起来"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "一说就是自己是左派"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "Rimulu",
+                    "content": "bro 真当自己是哪托了"
+                },
+                {
+                    "time": "23:20",
+                    "sender": "v",
+                    "content": "旺座就旺座"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "v",
+                    "content": "只会在群里空谈大话 还是极其扯淡的空想 惹得见证的不见证的都攻击你"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Rimulu",
+                    "content": "看了一些资料觉得自己有见解了"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "v",
+                    "content": "你觉得这就是革命对吗 群里皆醉你独醒"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Rimulu",
+                    "content": "而且还出生在 cn"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Rimulu",
+                    "content": "已经超过世界上绝大多数人了"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Rimulu",
+                    "content": "你这种人我说的难听点"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "v",
+                    "content": "生产靠积极性这玩意谁说的你也不知道啊"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Rimulu",
+                    "content": "下辈子让你投胎到非洲或者中东就老实了"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "v",
+                    "content": "觉得自己处境差待遇差无力改变就认命"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "v",
+                    "content": "而不是在那里大谈空话做不切实际的昭灭空想"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "v",
+                    "content": "这群就是大家开开心心分享日常的"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Rimulu",
+                    "content": "还是上面那句话，能作为一个正常人降生在 cn"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Rimulu",
+                    "content": "就已经超过世界上绝大多数人了"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "v",
+                    "content": "别整天扯你那三瓜俩枣的搞笑政治主见 没人想听没人支持你"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "v",
+                    "content": "反正你也这么热爱见证 不如多去看看"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Rimulu",
+                    "content": "非要和这个对比和那个对比"
+                },
+                {
+                    "time": "23:24",
+                    "sender": "Rimulu",
+                    "content": "自己给自己找难受"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "v",
+                    "content": "[表情][表情]"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "我只能说幸福是知足常乐"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "你要是没能改变自己现在处境的办法"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "疯子那是日积月累的"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "你上来不到一小时能让全群的人一起攻击你"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "不得不说是种本事"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "@宵崎奏 纯纯安卓人兄弟 🌚",
+                    "reply_to": {
+                        "sender": "v",
+                        "content": "[表情][表情]"
+                    }
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "有那功夫不如打两把游戏"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "觉得自己现在过的苦就去找点能取悦自己的事"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "知足常乐不行吗"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "你没能力改变现状就认命"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "反正能让群里 136 个骂你俩"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "你俩也是挺神了"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "过好现在每一天不比每天在这想起八的虚度光阴好"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "我真求你了"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "别逗你米哥笑了"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "是让你米哥穿轮滑在你那平滑的大脑皮层上开场百米冲刺吗"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "刚刚打游戏懒得说你磨磨唧唧一个小时也不知道搞什么长途跋涉呢"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "雷锋号司机你去当吧"
+                },
+                {
+                    "time": "23:29",
+                    "sender": "Rimulu",
+                    "content": "你真适合开点这玩意"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "朝鲜第一将军",
+                    "content": "尼玛的雷锋号我真绷不住了"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "朝鲜第一将军",
+                    "content": "怎么这么搞笑"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "Rimulu",
+                    "content": "不是我就说白了"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "Rimulu",
+                    "content": "是"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "Rimulu",
+                    "content": "你说的没什么太大问题"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "Rimulu",
+                    "content": "乡村是难了点"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "Rimulu",
+                    "content": "我从小在我爷家长大的"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "朝鲜第一将军",
+                    "content": "你能做到让两个群加一块近二十多个人轮流攻击你"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "Rimulu",
+                    "content": "一下雨那泥巴路"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "朝鲜第一将军",
+                    "content": "也是无敌了"
+                },
+                {
+                    "time": "23:31",
+                    "sender": "Rimulu",
+                    "content": "是人走的？"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "Rimulu",
+                    "content": "后面铺的板油路"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "Rimulu",
+                    "content": "水泥路"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "Rimulu",
+                    "content": "你出的钱啊？"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "杰福.",
+                    "content": "是啊，我小时候也是这样，农村土路，这还是改开后"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "Rimulu",
+                    "content": "别逗你米哥就行么"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "Rimulu",
+                    "content": "还在那计划经济呢"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "Rimulu",
+                    "content": "你要拿铺路票子排队去是吗"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "Rimulu",
+                    "content": "生产力进步多少了也不想想"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "Rimulu",
+                    "content": "还在那计划经济呢"
+                },
+                {
+                    "time": "23:41",
+                    "sender": "Rimulu",
+                    "content": "不改开，说好听点深圳到现在可能也就是个大渔村"
+                },
+                {
+                    "time": "23:42",
+                    "sender": "杰福.",
+                    "content": "改开了这么久，我老家怎么还是没有火车站呢？"
+                },
+                {
+                    "time": "23:42",
+                    "sender": "Rimulu",
+                    "content": "新时代刚掣帮你闭关锁国了"
+                },
+                {
+                    "time": "23:42",
+                    "sender": "杰福.",
+                    "content": "@您的好友已离线（但仍在窥屏） 闭关锁国了，照你说的，计划经济 = 闭关锁国是吧",
+                    "reply_to": {
+                        "sender": "Rimulu",
+                        "content": "新时代刚掣帮你闭关锁国了"
+                    }
+                },
+                {
+                    "time": "23:42",
+                    "sender": "Rimulu",
+                    "content": "现在这时时代你搞计划经济"
+                },
+                {
+                    "time": "23:42",
+                    "sender": "Rimulu",
+                    "content": "你告诉我新时代闭关锁国有什么区别"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "杰福.",
+                    "content": "计划经济时代没有和国际对接么？和苏联外交是干嘛的"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "Rimulu",
+                    "content": "我真求你了"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "Rimulu",
+                    "content": "大脑皮层平滑就拿剪刀剪几个沟回来再和我说话"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "朝鲜第一将军",
+                    "content": "@沉默池鱼. 苏东阵营和北约阵营联合起来封杀你你忘了？",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "计划经济时代没有和国际对接么？和苏联外交是干嘛的"
+                    }
+                },
+                {
+                    "time": "23:43",
+                    "sender": "Rimulu",
+                    "content": "又扯上苏联了"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "Rimulu",
+                    "content": "苏联当时把专家全搬走让 cn 自己研发的事你怎么不说"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "Rimulu",
+                    "content": "现在国家发展需要向别人低头？"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "Rimulu",
+                    "content": "还有"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "Rimulu",
+                    "content": "bro 还在那认大哥呢"
+                },
+                {
+                    "time": "23:43",
+                    "sender": "Rimulu",
+                    "content": "苏联解体多久了"
+                },
+                {
+                    "time": "23:46",
+                    "sender": "朝鲜第一将军",
+                    "content": "@沉默池鱼. 我寻思新宾也是前两天才通火车站啊",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "改开了这么久，我老家怎么还是没有火车站呢？"
+                    }
+                },
+                {
+                    "time": "23:46",
+                    "sender": "Rimulu",
+                    "content": "又劝过两说了"
+                },
+                {
+                    "time": "23:46",
+                    "sender": "Rimulu",
+                    "content": "@朝鲜第一将军 就没必要拿这个说事，我说白了",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "@沉默池鱼. 我寻思新宾也是前两天才通火车站啊"
+                    }
+                },
+                {
+                    "time": "23:46",
+                    "sender": "朝鲜第一将军",
+                    "content": "@您的好友已离线（但仍在窥屏） 是",
+                    "reply_to": {
+                        "sender": "Rimulu",
+                        "content": "@朝鲜第一将军 就没必要拿这个说事，我说白了"
+                    }
+                },
+                {
+                    "time": "23:46",
+                    "sender": "Rimulu",
+                    "content": "苏联当时为什么要援助 cn"
+                },
+                {
+                    "time": "23:46",
+                    "sender": "杰福.",
+                    "content": "本来就是阿，功是功，过是过"
+                },
+                {
+                    "time": "23:46",
+                    "sender": "Rimulu",
+                    "content": "不就是想把 cn 也拉入他们那个联盟吗"
+                },
+                {
+                    "time": "23:46",
+                    "sender": "朝鲜第一将军",
+                    "content": "那抚顺通个动车还三起三落呢，我说啥了"
+                },
+                {
+                    "time": "23:46",
+                    "sender": "Rimulu",
+                    "content": "火车站通是早晚的事"
+                },
+                {
+                    "time": "23:46",
+                    "sender": "Rimulu",
+                    "content": "各地联系加剧是大势所趋"
+                },
+                {
+                    "time": "23:48",
+                    "sender": "Rimulu",
+                    "content": "或早或晚"
+                },
+                {
+                    "time": "23:48",
+                    "sender": "Rimulu",
+                    "content": "你拿这事说"
+                },
+                {
+                    "time": "23:48",
+                    "sender": "Rimulu",
+                    "content": "那我真没招了"
+                },
+                {
+                    "time": "23:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "而且他那边又不是没有铁路的修建计划"
+                },
+                {
+                    "time": "23:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "没招了"
+                },
+                {
+                    "time": "23:48",
+                    "sender": "Rimulu",
+                    "content": "你赚一个亿投资你家乡去不就完事了"
+                },
+                {
+                    "time": "23:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "你不能因为局部的因素而否定这个整体的发展"
+                },
+                {
+                    "time": "23:48",
+                    "sender": "杰福.",
+                    "content": "是有计划，但是被资本做局了，没办法 @朝鲜第一将军",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "而且他那边又不是没有铁路的修建计划"
+                    }
+                },
+                {
+                    "time": "23:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "@沉默池鱼.。",
+                    "reply_to": {
+                        "sender": "杰福.",
+                        "content": "是有计划，但是被资本做局了，没办法"
+                    }
+                },
+                {
+                    "time": "23:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "你知道武汉和南昌铁路局是谁开的吗你就资本...."
+                },
+                {
+                    "time": "23:48",
+                    "sender": "朝鲜第一将军",
+                    "content": "🌚🌚"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "Rimulu",
+                    "content": "照你这么说"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "Rimulu",
+                    "content": "一线城市的消费水准"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "朝鲜第一将军",
+                    "content": "你觉得"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "Rimulu",
+                    "content": "我是是不是应该和你一样天怒人怨"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "朝鲜第一将军",
+                    "content": "这是什么丢人的事吗"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "朝鲜第一将军",
+                    "content": "那按你这个想法"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "朝鲜第一将军",
+                    "content": "我家这个城市计划经济时代是全国有名的大城市"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "Rimulu",
+                    "content": "是不是这也是被资本做局了"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "朝鲜第一将军",
+                    "content": "改革开放以后直接跌落到五线城市"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "朝鲜第一将军",
+                    "content": "那我是不是得比你更怨天尤人啊"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "朝鲜第一将军",
+                    "content": "怎么看我都比你更像是那个年代的既得利益者吧？"
+                },
+                {
+                    "time": "23:51",
+                    "sender": "杰福.",
+                    "content": "@朝鲜第一将军 但是你没有，那我有啥办法阿 😅",
+                    "reply_to": {
+                        "sender": "朝鲜第一将军",
+                        "content": "那我是不是得比你更怨天尤人啊"
+                    }
+                },
+                {
+                    "time": "23:54",
+                    "sender": "村雨",
+                    "content": "。。。"
+                },
+                {
+                    "time": "23:54",
+                    "sender": "村雨",
+                    "content": "行"
+                },
+                {
+                    "time": "23:54",
+                    "sender": "村雨",
+                    "content": "我就不说啥了"
+                },
+                {
+                    "time": "23:54",
+                    "sender": "村雨",
+                    "content": "是"
+                },
+                {
+                    "time": "23:54",
+                    "sender": "村雨",
+                    "content": "别讲你那一套了"
+                },
+                {
+                    "time": "23:54",
+                    "sender": "村雨",
+                    "content": "聊点日常生活或者游戏什么的"
+                }
+            ]
+        }
+    ]
+}
