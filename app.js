@@ -370,7 +370,7 @@ function renderHeroPanels() {
     <div class="hero-ranking" style="margin-top:12px">${spotlight}</div>
   `;
   el.networkPanel.innerHTML = `
-    <div class="hero-panel-title">谁最常接老斌的话</div>
+    <div class="hero-panel-title">谁最常接通三哥的话</div>
     <div class="hero-ranking" style="margin-top:12px">${responders || '<div class="empty-state">暂无回应链。</div>'}</div>
     ${mostTalkative ? `<div class="hero-panel-foot">${escapeHtml(`全局最密：${mostTalkative.sender} · ${mostTalkative.count} 条`)}</div>` : ""}
   `;
@@ -383,7 +383,7 @@ function renderOverview() {
     overviewCard("时间跨度", `${dateRange.start} → ${dateRange.end}`, `共跨 ${state.analysis.totals.sessionCount} 个日期切片，默认进入最近一组。`),
     overviewCard("最长会话", hottestSession.title, `${hottestSession.messageCount} 条消息，对应日期 ${hottestSession.date}。`),
     overviewCard("回应压力最大", strongestResponseSession.title, `每条目标发言平均会引出 ${strongestResponseSession.responsePressure.toFixed(1)} 条非目标回应。`),
-    overviewCard("最常接话者", topResponder ? topResponder.sender : "暂无", topResponder ? `累计 ${topResponder.count} 次接在老斌发言后出现，主模式是 ${topResponder.dominantRoleLabel}。` : "暂无接话统计。")
+    overviewCard("最常接话者", topResponder ? topResponder.sender : "暂无", topResponder ? `累计 ${topResponder.count} 次接在通三哥发言后出现，主模式是 ${topResponder.dominantRoleLabel}。` : "暂无接话统计。")
   ].join("");
 }
 
@@ -400,7 +400,7 @@ function renderSessionRail() {
         <div class="bar-fill" style="width:${(session.messageCount / maxMessages) * 100}%"></div>
       </div>
       <div class="session-meta">
-        <span>${session.messageCount} 条 · 老斌 ${session.targetCount} 条</span>
+        <span>${session.messageCount} 条 · 通三哥 ${session.targetCount} 条</span>
         <span>${session.timeRange}</span>
       </div>
     </button>
@@ -542,7 +542,7 @@ function renderCampPanel() {
       <div class="camp-meter-fill">${meter}</div>
     </div>
     <div class="camp-ribbon">
-      ${escapeHtml(`${campMeta.core.label} ${session.targetCount} 条 · 非老斌 ${session.messageCount - session.targetCount} 条 · 主回应 ${session.dominantCampLabel}`)}
+      ${escapeHtml(`${campMeta.core.label} ${session.targetCount} 条 · 非通三哥 ${session.messageCount - session.targetCount} 条 · 主回应 ${session.dominantCampLabel}`)}
     </div>
     <div class="camp-grid">${columns}</div>
   `;
@@ -579,18 +579,18 @@ function renderTranscript() {
 
   const cards = visibleMessages.length
     ? visibleMessages.map((message) => {
-        const badges = [];
-        if (message.isTarget) {
-          badges.push(`<span class="badge core">${escapeHtml(campMeta.core.label)}</span>`);
-        } else {
-          if (message.stance !== "observe") {
-            badges.push(`<span class="badge ${message.stance}">${escapeHtml(STANCE_TEXT[message.stance])}</span>`);
-          }
-          if (message.participantCamp !== "observe" && message.participantCamp !== message.stance) {
-            badges.push(`<span class="badge ${message.participantCamp}">${escapeHtml(campMeta[message.participantCamp].label)}</span>`);
-          }
+      const badges = [];
+      if (message.isTarget) {
+        badges.push(`<span class="badge core">${escapeHtml(campMeta.core.label)}</span>`);
+      } else {
+        if (message.stance !== "observe") {
+          badges.push(`<span class="badge ${message.stance}">${escapeHtml(STANCE_TEXT[message.stance])}</span>`);
         }
-        return `
+        if (message.participantCamp !== "observe" && message.participantCamp !== message.stance) {
+          badges.push(`<span class="badge ${message.participantCamp}">${escapeHtml(campMeta[message.participantCamp].label)}</span>`);
+        }
+      }
+      return `
         <article class="message-card ${message.isTarget ? "target" : ""}">
           <div class="message-meta">
             <div>
@@ -609,7 +609,7 @@ function renderTranscript() {
           ${badges.length > 1 || (badges.length === 1 && !message.isTarget && message.stance === "observe") ? `<div class="badge-row">${badges.join("")}</div>` : ""}
         </article>
       `;
-      }).join("")
+    }).join("")
     : '<div class="empty-state">当前筛选条件下没有命中消息。</div>';
 
   el.transcriptPanel.innerHTML = `
@@ -858,7 +858,7 @@ function momentTitle(message, categoryId, position, messages, index) {
     if (position === 0 && message.isTarget) return "立场抛出";
     if (stance === "challenge") return "现实派反击";
     if (stance === "tease") return "群体开始起哄";
-    if (message.isTarget) return index > messages.length * 0.55 ? "老斌继续硬顶" : "老斌补充论点";
+    if (message.isTarget) return index > messages.length * 0.55 ? "通三哥继续硬顶" : "通三哥补充论点";
     if (stance === "support") return "有人顺着接";
   }
   if (categoryId === "local") {
@@ -933,7 +933,7 @@ function buildMindOrbit(session, campMeta) {
   const nodes = [
     mindNode("center", 550, 360, "当天命题", session.title, `${session.date} · ${session.category.label}`, 0),
     mindNode("", 385, 225, "关键词簇", session.keywords.slice(0, 3).map((item) => item.token).join(" · ") || "关键词分散", session.timelineMoments[0]?.title || "起点", 0.2),
-    mindNode("", 390, 495, campMeta.core.label, trimText(session.targetQuotes[0]?.content || "老斌这天更偏短句", 34), session.targetQuotes[1]?.content || "", 0.35),
+    mindNode("", 390, 495, campMeta.core.label, trimText(session.targetQuotes[0]?.content || "通三哥这天更偏短句", 34), session.targetQuotes[1]?.content || "", 0.35),
     mindNode("", 715, 225, "群体回声", trimText(session.nonTargetQuotes[0]?.content || "当天回应偏短", 34), session.nonTargetQuotes[1]?.content || "", 0.5),
     mindNode("", 720, 500, "阵营结果", session.dominantCampLabel, `${session.camp.summary.challenge.messages + session.camp.summary.support.messages + session.camp.summary.tease.messages} 条高反应消息`, 0.65),
     mindNode("", 305, 140, "补充词", session.keywords[4]?.token || "通山", session.keywords[4] ? `权重 ${session.keywords[4].score.toFixed(1)}` : "", 0.9),
@@ -1251,7 +1251,7 @@ function finalizeCamp(participant, categoryId) {
 function getCampMeta(categoryId) {
   if (categoryId === "ideology") {
     return {
-      core: { label: "老斌主张", color: "#c57c56" },
+      core: { label: "通三哥主张", color: "#c57c56" },
       support: { label: "制度共振", color: "#70877f" },
       challenge: { label: "现实派反驳", color: "#c96a50" },
       tease: { label: "玩梗围观", color: "#b79a57" },

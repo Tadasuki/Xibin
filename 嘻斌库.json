@@ -2,47 +2,47 @@
     "metadata": {
         "database_name": "嘻斌库",
         "target_person": {
-            "name": "老斌",
+            "name": "通三哥",
             "label": "通三",
             "chat_id": "杰福."
         },
-        "description": "整理自2024-2025年间的微信群聊记录，主要关注'通三'（老斌）的言论及相关互动，用于AI模型蒸馏。",
+        "description": "整理自2024-2025年间的微信群聊记录，主要关注'通三'（通三哥）的言论及相关互动，用于AI模型蒸馏。",
         "version": "1.2"
     },
     "participants": {
         "杰福.": {
-            "real_name": "老斌",
+            "real_name": "通三哥",
             "nicknames": [
                 "通三",
-                "通三哥",
+                "通山哥",
                 "慕遥.",
                 "沉默池鱼"
             ]
         },
         "慕遥.": {
-            "note": "老斌昵称，已合并至杰福."
+            "note": "通三哥昵称，已合并至杰福."
         },
         "沉默池鱼": {
-            "note": "老斌昵称，已合并至杰福."
+            "note": "通三哥昵称，已合并至杰福."
         },
-        "雨之林": {},
-        "Jocelyn": {
+        "雨之林（阳新哥）": {},
+        "Jocelyn（蔡甸哥）": {
             "nicknames": [
                 "JCY",
                 "蔡甸哥"
             ]
         },
-        ".(抚顺)": {},
+        ".(抚顺哥)": {},
         "Mr Guinea-pig (玉贤叔叔)": {
             "nicknames": [
                 "玉贤叔"
             ]
         },
-        "laker (laker (东西湖))": {},
+        "laker (laker (夏口哥))": {},
         "九『江承』": {},
         "Lilium": {},
         "巴登": {},
-        "骏 (骏 (汉川沉湖))": {},
+        "骏 (沉湖哥)": {},
         "Carry_Music (江汉哥)": {},
         "F": {},
         "武昌哥": {},
@@ -111,7 +111,7 @@
                 },
                 {
                     "time": "17:31:31",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "《有》🧐 @武汉汉口江汉区六渡桥"
                 },
                 {
@@ -136,17 +136,17 @@
                 },
                 {
                     "time": "17:31:40",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "豪客来卤菜店"
                 },
                 {
                     "time": "17:31:42",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "豪客来是卖卤菜的吗？"
                 },
                 {
                     "time": "17:31:42",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "😂😂"
                 },
                 {
@@ -181,7 +181,7 @@
                 },
                 {
                     "time": "17:32:00",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "😡😡"
                 },
                 {
@@ -235,7 +235,7 @@
                 },
                 {
                     "time": "14:58",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "可惜😘",
                     "reply_to": {
                         "sender": "杰福.",
@@ -253,7 +253,7 @@
                 },
                 {
                     "time": "14:59",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "打电话的时候听过，有咸宁口音",
                     "reply_to": {
                         "sender": "Carry_Music (江汉哥)",
@@ -267,7 +267,7 @@
                 },
                 {
                     "time": "15:00",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "但不会说方言，又有口音，就是比较特殊的存在了😂"
                 },
                 {
@@ -292,12 +292,12 @@
                 },
                 {
                     "time": "15:01",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "我 ze 个普通话"
                 },
                 {
                     "time": "15:01",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "🙄"
                 },
                 {
@@ -305,7 +305,7 @@
                     "sender": "Carry_Music (江汉哥)",
                     "content": "把我笑死了",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "我 ze 个普通话"
                     }
                 },
@@ -321,7 +321,7 @@
                 },
                 {
                     "time": "15:02",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "和我认识的一些阳新，咸宁人口音一模一样"
                 },
                 {
@@ -329,7 +329,7 @@
                     "sender": "Carry_Music (江汉哥)",
                     "content": "我这段时间要被通山哥整笑了",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "是这个味道"
                     }
                 },
@@ -358,7 +358,7 @@
                 },
                 {
                     "time": "15:02",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "河北承德滦平"
                 },
                 {
@@ -378,7 +378,7 @@
                 },
                 {
                     "time": "15:03",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "看的是通山新闻联播",
                     "reply_to": {
                         "sender": "Carry_Music (江汉哥)",
@@ -395,7 +395,7 @@
                     "sender": "Carry_Music (江汉哥)",
                     "content": "哈哈哈哈哈哈哈哈",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "看的是通山新闻联播"
                     }
                 },
@@ -474,10 +474,10 @@
                 },
                 {
                     "time": "15:06",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "🧐自学成才",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "跟谁学的，这不像 😂😂😂"
                     }
                 },
@@ -492,10 +492,10 @@
                 },
                 {
                     "time": "15:07",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "在校学的",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "🧐自学成才"
                     }
                 },
@@ -561,7 +561,7 @@
                 {
                     "time": "15:08",
                     "sender": "杰福.",
-                    "content": "我家亲戚就很奇怪，小时候叫我爸妈教我不要说方言，叫我说普通话，说要接轨大城市，结果呢，等我长大又明里暗里埋怨我跟家里亲戚不说通山话，每次听到他们这么说我都很心烦意乱 @武汉汉口江汉区六渡桥 @黄石阳新 雨之林 @武汉市武昌区楚河汉街 @汉阳县蔡甸镇-且闲 这是我的苦恼"
+                    "content": "我家亲戚就很奇怪，小时候叫我爸妈教我不要说方言，叫我说普通话，说要接轨大城市，结果呢，等我长大又明里暗里埋怨我跟家里亲戚不说通山话，每次听到他们这么说我都很心烦意乱 @武汉汉口江汉区六渡桥 @黄石阳新 雨之林（阳新哥） @武汉市武昌区楚河汉街 @汉阳县蔡甸镇-且闲 这是我的苦恼"
                 },
                 {
                     "time": "15:09",
@@ -622,7 +622,7 @@
                 },
                 {
                     "time": "15:10",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "你家人属实是有点😜",
                     "reply_to": {
                         "sender": "杰福.",
@@ -686,11 +686,11 @@
                 {
                     "time": "16:36:39",
                     "sender": "杰福.",
-                    "content": "@. @雨之林 @Mr Guinea-pig @Always @laker 毛概考试，71"
+                    "content": "@. @雨之林（阳新哥） @Mr Guinea-pig @Always @laker 毛概考试，71"
                 },
                 {
                     "time": "16:37:10",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "不配做毛主席的学生"
                 },
                 {
@@ -700,27 +700,27 @@
                 },
                 {
                     "time": "16:37:27",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "毛概 71？"
                 },
                 {
                     "time": "16:39:25",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "不配做毛主席的学生"
                 },
                 {
                     "time": "16:39:29",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "才71"
                 },
                 {
                     "time": "16:39:30",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "[动画表情]"
                 },
                 {
                     "time": "16:39:32",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "不配做毛主席的学生"
                 },
                 {
@@ -736,7 +736,7 @@
                 {
                     "time": "22:54",
                     "sender": "杰福.",
-                    "content": "改开是有成就的，我们不能否认，但他确实造成了贫富差距变大等一系列矛盾，这点也不能否认，我个人认为要两面看待 @. @雨之林 @JCY"
+                    "content": "改开是有成就的，我们不能否认，但他确实造成了贫富差距变大等一系列矛盾，这点也不能否认，我个人认为要两面看待 @. @雨之林（阳新哥） @JCY"
                 },
                 {
                     "time": "22:54",
@@ -749,7 +749,7 @@
                 },
                 {
                     "time": "22:54",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "?",
                     "reply_to": {
                         "sender": "杰福.",
@@ -763,17 +763,17 @@
                 },
                 {
                     "time": "22:54",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "你不会以为改开之前就没有贫富差距吧"
                 },
                 {
                     "time": "22:54",
-                    "sender": "骏 (骏 (汉川沉湖))",
+                    "sender": "骏 (沉湖哥)",
                     "content": "说的越来越波诡云谲了"
                 },
                 {
                     "time": "22:54",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "意义不明",
                     "reply_to": {
                         "sender": "杰福.",
@@ -782,7 +782,7 @@
                 },
                 {
                     "time": "22:55",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "改开之前就不是贫富差距问题了"
                 },
                 {
@@ -790,23 +790,23 @@
                     "sender": "杰福.",
                     "content": "贫富差距是有，但是后面变大了",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "你不会以为改开之前就没有贫富差距吧"
                     }
                 },
                 {
                     "time": "22:55",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "而是别人能干的事情你不能干😜"
                 },
                 {
                     "time": "22:56",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "你可以去了解一下，截止到 1978 年，世界其他主要国家人民的生活水平是什么样子的，然后再看看中国人民当时的生活水平又是什么样"
                 },
                 {
                     "time": "23:00",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "你第一天知道吗😡",
                     "reply_to": {
                         "sender": "杰福.",
@@ -815,7 +815,7 @@
                 },
                 {
                     "time": "23:00",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "? 6",
                     "reply_to": {
                         "sender": "杰福.",
@@ -824,21 +824,21 @@
                 },
                 {
                     "time": "23:00",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "那会出门都得要介绍信",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "其实也没多少人能坐上火车"
                     }
                 },
                 {
                     "time": "23:01",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "你不知道朝鲜吗😡"
                 },
                 {
                     "time": "23:01",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "没介绍信不让你走😉"
                 },
                 {
@@ -851,7 +851,7 @@
                     "sender": "杰福.",
                     "content": "以前是知道不一样，现在来看，那大院子弟和 zbj 有什么区别",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "你第一天知道吗😡"
                     }
                 },
@@ -862,17 +862,17 @@
                 },
                 {
                     "time": "23:02",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "按理来说像通三哥这种家庭，改革开放对他家的受益程度其实是最高的啊"
                 },
                 {
                     "time": "23:02",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "那改开之前中西部农民过的都是什么苦日子"
                 },
                 {
                     "time": "23:03",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "你在教员那里学到了什么，就崇拜上了"
                 },
                 {
@@ -880,13 +880,13 @@
                     "sender": "杰福.",
                     "content": "要走到群众中去，把人民放在心里",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "你在教员那里学到了什么"
                     }
                 },
                 {
                     "time": "23:03",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "你把人民踹沟里了",
                     "reply_to": {
                         "sender": "杰福.",
@@ -895,12 +895,12 @@
                 },
                 {
                     "time": "23:04",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "吃上了几天饭"
                 },
                 {
                     "time": "23:04",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "嫌人民吃太多了"
                 },
                 {
@@ -910,12 +910,12 @@
                 },
                 {
                     "time": "23:04",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "那你们很有实力了"
                 },
                 {
                     "time": "23:05",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "你们这个班要来财了",
                     "reply_to": {
                         "sender": "杰福.",
@@ -927,16 +927,16 @@
                     "sender": "杰福.",
                     "content": "我是嫌大老爷吃的太多了",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "嫌人民吃太多了"
                     }
                 },
                 {
                     "time": "23:05",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "看到人民钱包鼓起来，嫉妒了",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "嫌人民吃太多了"
                     }
                 },
@@ -947,17 +947,17 @@
                 },
                 {
                     "time": "23:05",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "现在是大老爷吃肉你喝汤"
                 },
                 {
                     "time": "23:05",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "gk 之前是大老爷吃肉你吃观音土"
                 },
                 {
                     "time": "23:05",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "你是嫌大老爷吃得不够好",
                     "reply_to": {
                         "sender": "杰福.",
@@ -971,12 +971,12 @@
                 },
                 {
                     "time": "23:06",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "在已知你没有逆天改命的本事的前提下，你选哪个"
                 },
                 {
                     "time": "23:07",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "那个年代你都不知道大老爷天天吃肉"
                 },
                 {
@@ -984,13 +984,13 @@
                     "sender": "杰福.",
                     "content": "喝什么汤，实际情况是没有汤",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "现在是大老爷吃肉你喝汤"
                     }
                 },
                 {
                     "time": "23:07",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "那是你的问题了",
                     "reply_to": {
                         "sender": "杰福.",
@@ -999,7 +999,7 @@
                 },
                 {
                     "time": "23:07",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "没有汤？"
                 },
                 {
@@ -1009,7 +1009,7 @@
                 },
                 {
                     "time": "23:07",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "一样",
                     "reply_to": {
                         "sender": "Mr Guinea-pig (玉贤叔叔)",
@@ -1018,12 +1018,12 @@
                 },
                 {
                     "time": "23:07",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "没有汤你就饿死了"
                 },
                 {
                     "time": "23:08",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "蔡甸算是没发生人吃人事件",
                     "reply_to": {
                         "sender": "Mr Guinea-pig (玉贤叔叔)",
@@ -1032,7 +1032,7 @@
                 },
                 {
                     "time": "23:09",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "那你每天吃的穿的都是什么，和你长辈小时候比呢",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1044,13 +1044,13 @@
                     "sender": "杰福.",
                     "content": "这是最基本的生活需求，连这都做不到那就废了，人民想要的是什么，是和他们一样的生活",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "那你每天吃的穿的都是什么，和你长辈小时候比呢"
                     }
                 },
                 {
                     "time": "23:11",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "怎么可能呢",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1059,7 +1059,7 @@
                 },
                 {
                     "time": "23:11",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "你在幻想什么",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1068,17 +1068,17 @@
                 },
                 {
                     "time": "23:11",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "越往前越不可能"
                 },
                 {
                     "time": "23:11",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "你跟老爷的差距是一年比一年缩小的，而不是一年比一年扩大的"
                 },
                 {
                     "time": "23:11",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "那你在做梦了",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1087,36 +1087,36 @@
                 },
                 {
                     "time": "23:11",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "你像是大清朝去跟皇帝老爷说平等的人"
                 },
                 {
                     "time": "23:11",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "你像是大清朝去跟皇帝老爷说平等的人"
                 },
                 {
                     "time": "23:12",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "从古至今的生产关系又没改变"
                 },
                 {
                     "time": "23:12",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "我爷爷更喜欢 deng，时期，爷爷祖上成分被认为是有问题的，上面不让我爷爷读大学，也收缴了我们家产，我们家甚至是和别人合住的，后面摘帽平反，家里的情况才有所好转",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "我爸天天跟我说要感谢 deng"
                     }
                 },
                 {
                     "time": "23:12",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "变的只有生产技术的进步"
                 },
                 {
                     "time": "23:12",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "你像是大清朝去跟皇帝老爷说平等的人",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1128,45 +1128,45 @@
                     "sender": "杰福.",
                     "content": "如果真是这样，那继续下去就可以实现了",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "你跟老爷的差距是一年比一年缩小的，而不是一年比一年扩大的"
                     }
                 },
                 {
                     "time": "23:12",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "那个年代太绝对了",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "我爷爷更喜欢 deng，时期，爷爷祖上成分被认为是有问题的..."
                     }
                 },
                 {
                     "time": "23:13",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "专制是搞不好国家的"
                 },
                 {
                     "time": "23:13",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "我和我爸也是更倾向于喜欢 deng，时期我们家也是过的很不好，虽然没有被划分成分地主阶级，但也是实打实的挨饿了很多年",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "我爷爷更喜欢 deng，时期，爷爷祖上成分被认为是有问题的..."
                     }
                 },
                 {
                     "time": "23:13",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "阶级永远存在",
                     "reply_to": {
-                        "sender": "laker (laker (东西湖))",
+                        "sender": "laker (laker (夏口哥))",
                         "content": "从古至今的生产关系又没改变"
                     }
                 },
                 {
                     "time": "23:13",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "继续下去也实现不了",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1175,15 +1175,15 @@
                 },
                 {
                     "time": "23:14",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "在通三哥的梦想时代，只能靠投胎"
                 },
                 {
                     "time": "23:14",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "饿是真的难受",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "我和我爸也是更倾向于喜欢 deng，时期我们家也是过的很不好，虽然没有被划分成分地主阶级，但..."
                     }
                 },
@@ -1199,7 +1199,7 @@
                 },
                 {
                     "time": "23:15",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "但是你知道一千年前的事情",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1208,16 +1208,16 @@
                 },
                 {
                     "time": "23:15",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "是，我爸妈跟我说那会他们不仅是吃不饱，更是吃不好，顿顿都是白菜土豆萝卜三件套，然后主食就是窝窝头子和米饭",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "饿是真的难受"
                     }
                 },
                 {
                     "time": "23:15",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "鸡鸭鱼肉什么的一个月能吃个三四次就不错了"
                 },
                 {
@@ -1232,36 +1232,36 @@
                 },
                 {
                     "time": "23:15",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "哦对了，我说的这会已经是改革开放初期了"
                 },
                 {
                     "time": "23:16",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "我父母对窝窝头有 PTSD",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "我奶奶也有土豆 ptsd"
                     }
                 },
                 {
                     "time": "23:16",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "通三哥吃几顿野菜团子窝窝头就晓得了"
                 },
                 {
                     "time": "23:16",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "他们基本不吃"
                 },
                 {
                     "time": "23:16",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "还不用吃吃苦思甜饭"
                 },
                 {
                     "time": "23:16",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "但我觉得窝窝头很好吃"
                 },
                 {
@@ -1271,54 +1271,54 @@
                 },
                 {
                     "time": "23:16",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "其实我妈妈农村那边，90年代之前还很穷",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "哦对了，我说的这会已经是改革开放初期了"
                     }
                 },
                 {
                     "time": "23:16",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "现在都是改良版",
                     "reply_to": {
-                        "sender": "laker (laker (东西湖))",
+                        "sender": "laker (laker (夏口哥))",
                         "content": "通三哥吃几顿野菜团子窝窝头就晓得了"
                     }
                 },
                 {
                     "time": "23:16",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "然后我爸妈跟我说那是你肚子里有油水，跟我们那时候不一样"
                 },
                 {
                     "time": "23:17",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "和六七十年代甚至没有什么太大区别"
                 },
                 {
                     "time": "23:17",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "改开初期人民生活水平提升的也不是很大",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "其实我妈妈农村那边，90年代之前还很穷"
                     }
                 },
                 {
                     "time": "23:17",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "1992年之后逐渐就好起来了"
                 },
                 {
                     "time": "23:17",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "我小时候家里都没有电视"
                 },
                 {
                     "time": "23:17",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "说出来怕你们笑话"
                 },
                 {
@@ -1328,15 +1328,15 @@
                 },
                 {
                     "time": "23:17",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "? 零几年吗"
                 },
                 {
                     "time": "23:18",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "是的",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "? 零几年吗"
                     }
                 },
@@ -1347,7 +1347,7 @@
                 },
                 {
                     "time": "23:18",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "那你先试下天天吃这些，到底是理想还是面面包更重要",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1371,7 +1371,7 @@
                 },
                 {
                     "time": "23:19",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "1987 年还在逃港"
                 },
                 {
@@ -1379,7 +1379,7 @@
                     "sender": "杰福.",
                     "content": "前提是大家都这么吃",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "那你先试下天天吃这些，到底是理想还是面面包更重要"
                     }
                 },
@@ -1390,7 +1390,7 @@
                 },
                 {
                     "time": "23:20",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "所以并不是想要人民过好日子，你只是想让人民跟你一样穷",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1399,7 +1399,7 @@
                 },
                 {
                     "time": "23:20",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "其他人是造了什么孽，要跟着这么吃",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1408,7 +1408,7 @@
                 },
                 {
                     "time": "23:20",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "所以并不是想要人民过好日子，你只是想让人民跟你一样穷",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1417,12 +1417,12 @@
                 },
                 {
                     "time": "23:20",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "别人有能力凭什么要跟你一样的"
                 },
                 {
                     "time": "23:20",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "有能力的人为什么要跟你一样？"
                 },
                 {
@@ -1432,12 +1432,12 @@
                 },
                 {
                     "time": "23:21",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "人家有能力吃好喝好住好，为什么要降低自身条件去迁就你"
                 },
                 {
                     "time": "23:21",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "那你就不能富呢",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1446,7 +1446,7 @@
                 },
                 {
                     "time": "23:21",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "那你咋不能变富？",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1455,7 +1455,7 @@
                 },
                 {
                     "time": "23:21",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "别人的钱是大风刮来的"
                 },
                 {
@@ -1468,18 +1468,18 @@
                     "sender": "杰福.",
                     "content": "或许他们早就已经忘了当初的理想，我也不怪他们",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "人家有能力吃好喝好住好，为什么要降低自身条件去迁就你"
                     }
                 },
                 {
                     "time": "23:21",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "国家进步了，作出贡献的多吃，碌碌无为的少吃，不是很正常吗"
                 },
                 {
                     "time": "23:22",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "中国这么多的小康阶级，人家哪个不是通过自己努力才得到的美好生活？"
                 },
                 {
@@ -1489,7 +1489,7 @@
                 },
                 {
                     "time": "23:22",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "他们有什么理想，又不是什么达官显贵，只想过好自己的生活，努力赚来的钱为什么要给你。",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1498,35 +1498,35 @@
                 },
                 {
                     "time": "23:22",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "通三哥就是当年吃大锅饭那帮人"
                 },
                 {
                     "time": "23:23",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "通三哥就是想让全国人民一起陪他吃土土豆白菜萝卜三件套"
                 },
                 {
                     "time": "23:23",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "通三哥去朝鲜住吧"
                 },
                 {
                     "time": "23:23",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "正是因为改革开放，有了按劳分配，才能激发大家的力量，国家的蛋糕才能做大，哪怕人家吃的多，但你分到的蛋糕，也总会比以前大一点，即使你什么都不干"
                 },
                 {
                     "time": "23:23",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "鸭绿江不加盖"
                 },
                 {
                     "time": "23:23",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "鸭绿江没有加盖",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "鸭绿江不加盖"
                     }
                 },
@@ -1537,7 +1537,7 @@
                 },
                 {
                     "time": "23:24",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "方向不对",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1546,21 +1546,21 @@
                 },
                 {
                     "time": "23:24",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "努力本来就不是包有结果的"
                 },
                 {
                     "time": "23:24",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "他们都是为了面包",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "他们有什么理想"
                     }
                 },
                 {
                     "time": "23:25",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "至少你家从村子里走到了县城，在县城安了家",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1569,98 +1569,98 @@
                 },
                 {
                     "time": "23:25",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "这就是改革给你家庭带来的收益"
                 },
                 {
                     "time": "23:26",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "因为自己努力没结果，所以否认全部人的努力",
                     "reply_to": {
-                        "sender": "laker (laker (东西湖))",
+                        "sender": "laker (laker (夏口哥))",
                         "content": "努力本来就不是包有结果的"
                     }
                 },
                 {
                     "time": "23:26",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "你还想一步登天靠一代人从通三的村子走到北京东城区？"
                 },
                 {
                     "time": "23:26",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "放在过去，县城是能随便便去的吗",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "至少你家从村子里走到了县城，在县城安了家"
                     }
                 },
                 {
                     "time": "23:26",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "我不能说没有这种人，但这个概率是极低极低的"
                 },
                 {
                     "time": "23:26",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "玩游戏抽卡没抽到，怪平台"
                 },
                 {
                     "time": "23:26",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "村主任帮 min 兵在村口守着",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "放在过去，县城是能随便便去的吗"
                     }
                 },
                 {
                     "time": "23:26",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "谁敢出去就收拾谁"
                 },
                 {
                     "time": "23:27",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "都得留在村里种地"
                 },
                 {
                     "time": "23:27",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "像是那种一天做十套模拟题最后没考上高中的人说的话"
                 },
                 {
                     "time": "23:27",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "然后还得交农业税"
                 },
                 {
                     "time": "23:27",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "起码你现在可以在省城武汉，去北京上海这种国际大都市，甚至办了护照跑去东京纽约"
                 },
                 {
                     "time": "23:27",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "不知道你们班上有这样的奇才",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "像是那种一天做十套模拟题最后没考上高中的人说的话"
                     }
                 },
                 {
                     "time": "23:27",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "这都感恩了"
                 },
                 {
                     "time": "23:28",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "放在古代出县都非常难"
                 },
                 {
                     "time": "23:28",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "农业税都是 2006 年才废除的"
                 },
                 {
@@ -1668,18 +1668,18 @@
                     "sender": "巴登",
                     "content": "按劳分配和私有制基本没什么关系",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "正是因为改革开放，有了按劳分配..."
                     }
                 },
                 {
                     "time": "23:30",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "搬通三种一辈子地吧"
                 },
                 {
                     "time": "23:30",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "再以前就没有九年义务教育",
                     "reply_to": {
                         "sender": "Mr Guinea-pig (玉贤叔叔)",
@@ -1688,10 +1688,10 @@
                 },
                 {
                     "time": "23:30",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "算知青了，还是得下放",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "有个高中文凭的就算高学历"
                     }
                 },
@@ -1707,7 +1707,7 @@
                 },
                 {
                     "time": "23:31",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "因为就是公有制的分配方式",
                     "reply_to": {
                         "sender": "巴登",
@@ -1716,34 +1716,34 @@
                 },
                 {
                     "time": "23:31",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "大概率一辈子出不了通山",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "不 gk 通三哥还想去武汉读大学？"
                     }
                 },
                 {
                     "time": "23:31",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "读大学得推荐",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "不 gk 通三哥还想去武汉读大学？"
                     }
                 },
                 {
                     "time": "23:31",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "对，没人推荐你就是个神童都去不成",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "读大学得推荐"
                     }
                 },
                 {
                     "time": "23:31",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "老老实实种地吧"
                 },
                 {
@@ -1753,10 +1753,10 @@
                 },
                 {
                     "time": "23:31",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "去个县城都费劲",
                     "reply_to": {
-                        "sender": "laker (laker (东西湖))",
+                        "sender": "laker (laker (夏口哥))",
                         "content": "大概率一辈子出不了通山"
                     }
                 },
@@ -1765,13 +1765,13 @@
                     "sender": "巴登",
                     "content": "公有制 and 中国十分之九的人拿钱没直接联系",
                     "reply_to": {
-                        "sender": "雨之林",
+                        "sender": "雨之林（阳新哥）",
                         "content": "因为就是公有制的分配方式"
                     }
                 },
                 {
                     "time": "23:32",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "普通人没有受教育的权利"
                 },
                 {
@@ -1779,13 +1779,13 @@
                     "sender": "杰福.",
                     "content": "也是没钱读书",
                     "reply_to": {
-                        "sender": "laker (laker (东西湖))",
+                        "sender": "laker (laker (夏口哥))",
                         "content": "普通人没有受教育的权利"
                     }
                 },
                 {
                     "time": "23:32",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "你要学会认清现实",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1794,7 +1794,7 @@
                 },
                 {
                     "time": "23:32",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "没有九年义务教育你都没机会跟我们说话",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1803,7 +1803,7 @@
                 },
                 {
                     "time": "23:33",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "🙄要说造业，我们这大部分人开局都跟通三哥差不多",
                     "reply_to": {
                         "sender": "骏",
@@ -1812,12 +1812,12 @@
                 },
                 {
                     "time": "23:33",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "都差不多"
                 },
                 {
                     "time": "23:33",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "我一个矿区矿工的后代能比通三哥强哪去？"
                 },
                 {
@@ -1831,26 +1831,26 @@
                 },
                 {
                     "time": "23:33",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "在以前这些是不应该被穷人看到的"
                 },
                 {
                     "time": "23:34",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "我父母爷爷奶奶都是工人"
                 },
                 {
                     "time": "23:34",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "老工业区的都是这样",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "我父母爷爷奶奶都是工人"
                     }
                 },
                 {
                     "time": "23:35",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "有多少贫困山区受到资助后走上歧途荒废了的"
                 },
                 {
@@ -1860,12 +1860,12 @@
                 },
                 {
                     "time": "23:35",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "因为没田种了"
                 },
                 {
                     "time": "23:35",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "那要看怎么服务了",
                     "reply_to": {
                         "sender": "巴登",
@@ -1879,7 +1879,7 @@
                 },
                 {
                     "time": "23:35",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "通山哥发大横财也不见得是一件好事😡"
                 },
                 {
@@ -1893,19 +1893,19 @@
                 },
                 {
                     "time": "23:35",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "通三哥发大横财才马上就瞧不起人了",
                     "reply_to": {
-                        "sender": "laker (laker (东西湖))",
+                        "sender": "laker (laker (夏口哥))",
                         "content": "通山哥发大横财也不见得是一件好事"
                     }
                 },
                 {
                     "time": "23:36",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "马上会站到他的对立面",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "通三哥发大横财才马上就瞧不起人了"
                     }
                 },
@@ -1914,13 +1914,13 @@
                     "sender": "杰福.",
                     "content": "我知道，突然这么多钱会被人盯上，容易没命，所以钱得慢慢增加不能突然增加🙄",
                     "reply_to": {
-                        "sender": "laker (laker (东西湖))",
+                        "sender": "laker (laker (夏口哥))",
                         "content": "通山哥发大横财也不见得是一件好事"
                     }
                 },
                 {
                     "time": "23:36",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "我对哪个都没有多好的看法",
                     "reply_to": {
                         "sender": "巴登",
@@ -1934,21 +1934,21 @@
                 },
                 {
                     "time": "23:36",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "只是打着为民请命的幌子罢了🙄",
                     "reply_to": {
-                        "sender": "Jocelyn",
+                        "sender": "Jocelyn（蔡甸哥）",
                         "content": "通三哥发大横财才马上就瞧不起人了"
                     }
                 },
                 {
                     "time": "23:36",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "因为统治阶级本来就不该作为崇拜的对象"
                 },
                 {
                     "time": "23:37",
-                    "sender": "雨之林",
+                    "sender": "雨之林（阳新哥）",
                     "content": "谁天天这么闲😱",
                     "reply_to": {
                         "sender": "杰福.",
@@ -1957,111 +1957,111 @@
                 },
                 {
                     "time": "23:37",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "通山哥只是恨自己不是资本家罢了"
                 },
                 {
                     "time": "23:37",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "只能说我相对来说会更好看哪个，但总体上我都是没什么看法"
                 },
                 {
                     "time": "23:37",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "你要是有真钱那你身边人也应该有钱，至少亲戚朋友都有钱"
                 },
                 {
                     "time": "23:38",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "你在一个穷人圈子就没什么好说的了"
                 },
                 {
                     "time": "23:38",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "是互联网让你看到这么多😜"
                 },
                 {
                     "time": "23:38",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "不然你也不至于幻想"
                 },
                 {
                     "time": "23:38",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "没事少刷点短视频"
                 },
                 {
                     "time": "23:38",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "少点幻想，认清现实"
                 },
                 {
                     "time": "23:39",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "95% 的中国人都是普通老百姓"
                 },
                 {
                     "time": "23:39",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "五十年代土改的时候很多佃农还不认地主是坏的，是地主让他们有地种有饭吃，不但不要批斗反而要感恩"
                 },
                 {
                     "time": "23:39",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "现在还不还是的",
                     "reply_to": {
-                        "sender": "laker (laker (东西湖))",
+                        "sender": "laker (laker (夏口哥))",
                         "content": "五十年代土改的时候..."
                     }
                 },
                 {
                     "time": "23:41",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "三大改造之前是这样的"
                 },
                 {
                     "time": "23:41",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "没有资本家穷人家的孩子根本没有在城市立足的权利"
                 },
                 {
                     "time": "23:41",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "是资本家给了他们工作岗位"
                 },
                 {
                     "time": "23:42",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "只能说"
                 },
                 {
                     "time": "23:42",
-                    "sender": "laker (laker (东西湖))",
+                    "sender": "laker (laker (夏口哥))",
                     "content": "没有工作你就得回老家种地"
                 },
                 {
                     "time": "23:42",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "相比于地主，资本家会稍好一些"
                 },
                 {
                     "time": "23:42",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "所以不要对上位者抱有希望"
                 },
                 {
                     "time": "23:42",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "但这这也只是生产力的进步，不代表剥削阶级心善"
                 },
                 {
                     "time": "23:42",
-                    "sender": "Jocelyn",
+                    "sender": "Jocelyn（蔡甸哥）",
                     "content": "不要天天想着先富带动后富"
                 },
                 {
                     "time": "23:42",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "不能对任何剥削阶级产生不切实际的幻想"
                 },
                 {
@@ -2105,7 +2105,7 @@
                 },
                 {
                     "time": "18:00",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "降不了啊"
                 },
                 {
@@ -2113,23 +2113,23 @@
                     "sender": "杰福.",
                     "content": "肯定可以，之前怎么有空的",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "降不了啊"
                     }
                 },
                 {
                     "time": "18:00",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "那是之前"
                 },
                 {
                     "time": "18:00",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "你小子当上管理我现在也不放心"
                 },
                 {
                     "time": "18:01",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "我怕你天天特码在群里宣扬你那套抽象的旺座理论"
                 },
                 {
@@ -2137,13 +2137,13 @@
                     "sender": "杰福.",
                     "content": "那不会，咱们也就在咱们小群说说",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "我怕你天天特码在群里宣扬你那套抽象的旺座理论"
                     }
                 },
                 {
                     "time": "18:01",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "以后再说吧"
                 },
                 {
@@ -2151,7 +2151,7 @@
                     "sender": "杰福.",
                     "content": "真不走了？真不跟我回山了？@",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "以后再说吧"
                     }
                 },
@@ -2165,13 +2165,13 @@
                     "sender": "九『江承』",
                     "content": "这什么，没听过",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "我怕你天天特码在群里宣扬你那套抽象的旺座理论"
                     }
                 },
                 {
                     "time": "18:04",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "这什么，没听过 就是这小子天天给我宣扬上个世纪的计划经济时代好",
                     "reply_to": {
                         "sender": "九『江承』",
@@ -2180,7 +2180,7 @@
                 },
                 {
                     "time": "18:05",
-                    "sender": ".(抚顺)",
+                    "sender": ".(抚顺哥)",
                     "content": "网络左派"
                 },
                 {
@@ -2193,7 +2193,7 @@
                     "sender": "杰福.",
                     "content": "就是赞扬毛主席时代",
                     "reply_to": {
-                        "sender": ".(抚顺)",
+                        "sender": ".(抚顺哥)",
                         "content": "就是这小子天天给我宣扬上个世纪的计划经济时代好"
                     }
                 }
@@ -5297,7 +5297,7 @@
                 {
                     "time": "23:46",
                     "sender": "朝鲜第一将军",
-                    "content": "那抚顺通个动车还三起三落呢，我说啥了"
+                    "content": "那抚顺哥通个动车还三起三落呢，我说啥了"
                 },
                 {
                     "time": "23:46",
