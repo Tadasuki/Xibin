@@ -13,9 +13,10 @@
   <div id="loadingScreen" class="loading-screen">
     <div class="loading-card">
       <div class="loading-kicker">Xi bin</div>
-      <div class="loading-title">正在坐龙舟进入通三河......</div>
+      <div id="loadingTitle" class="loading-title">正在划龙舟<br>进入通三河<br>.</div>
     </div>
   </div>
+  <div id="mobileRailBackdrop" class="mobile-rail-backdrop"></div>
   <div class="page-shell">
     <header class="hero">
       <div class="hero-copy">
@@ -49,6 +50,7 @@
             <div>
               <h2>事件轨道</h2>
             </div>
+            <button class="mobile-close-button" type="button" data-mobile-close="rail">收起</button>
           </div>
           <div id="sessionRail" class="session-rail"></div>
         </section>
@@ -78,6 +80,11 @@
         </section>
       </main>
     </section>
+  </div>
+  <div class="mobile-dock">
+    <button class="mobile-dock-button" type="button" data-mobile-action="toggle-rail">事件轨道</button>
+    <button class="mobile-dock-button" type="button" data-jump-target="focusAnchor">当前事件</button>
+    <button class="mobile-dock-button" type="button" data-jump-target="transcriptAnchor">原始对话</button>
   </div>
 
   <script src="./app.js"></script>

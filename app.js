@@ -59,11 +59,13 @@ const state = {
   dataSignature: "",
   lastLoadedAt: null,
   eventSource: null,
-  mindViews: {}
+  mindViews: {},
+  mobileRailOpen: false
 };
 
 const el = {
   loadingScreen: document.getElementById("loadingScreen"),
+  mobileRailBackdrop: document.getElementById("mobileRailBackdrop"),
   heroDescription: document.getElementById("heroDescription"),
   heroMetrics: document.getElementById("heroMetrics"),
   updatedChip: document.getElementById("updatedChip"),
@@ -74,13 +76,17 @@ const el = {
   sessionRail: document.getElementById("sessionRail"),
   focusPanel: document.getElementById("focusPanel"),
   campPanel: document.getElementById("campPanel"),
-  transcriptPanel: document.getElementById("transcriptPanel")
+  transcriptPanel: document.getElementById("transcriptPanel"),
+  loadingTitle: document.getElementById("loadingTitle")
 };
+
+let loadingInterval = null;
 
 boot();
 
 function boot() {
   document.body.classList.add("loading");
+  startLoadingAnimation();
   bindEvents();
   setupLiveHooks();
   refreshData("初始化载入");
@@ -91,8 +97,26 @@ function bindEvents() {
   el.refreshButton.addEventListener("click", () => refreshData("手动刷新"));
 
   document.addEventListener("click", (event) => {
+    const mobileAction = event.target.closest("[data-mobile-action]");
+    if (mobileAction) {
+      handleMobileAction(mobileAction.dataset.mobileAction);
+      return;
+    }
+
+    const mobileClose = event.target.closest("[data-mobile-close]");
+    if (mobileClose) {
+      closeMobileRail();
+      return;
+    }
+
+    if (event.target === el.mobileRailBackdrop) {
+      closeMobileRail();
+      return;
+    }
+
     const jumpButton = event.target.closest("[data-jump-target]");
     if (jumpButton) {
+      closeMobileRail();
       scrollToTarget(jumpButton.dataset.jumpTarget);
       return;
     }
@@ -114,6 +138,7 @@ function bindEvents() {
       state.campFilter = "all";
       state.search = "";
       render();
+      closeMobileRail();
       scrollToFocusAnchor();
       return;
     }
@@ -155,6 +180,18 @@ function bindEvents() {
       scrollable.scrollTop = clamp(nextTop, 0, maxTop);
     }
   }, { passive: false });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) {
+      closeMobileRail();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileRail();
+    }
+  });
 }
 
 function setupLiveHooks() {
@@ -238,9 +275,55 @@ function renderError(message) {
 
 function hideLoadingScreen() {
   document.body.classList.remove("loading");
+  stopLoadingAnimation();
   if (el.loadingScreen) {
     el.loadingScreen.classList.add("hidden");
   }
+}
+
+function startLoadingAnimation() {
+  if (!el.loadingTitle) return;
+  let dotCount = 0;
+  const update = () => {
+    dotCount = (dotCount % 6) + 1;
+    el.loadingTitle.innerHTML = `正在划龙舟<br>进入通三河<br>${".".repeat(dotCount)}`;
+  };
+  update();
+  loadingInterval = setInterval(update, 60);
+}
+
+function stopLoadingAnimation() {
+  if (loadingInterval) {
+    clearInterval(loadingInterval);
+    loadingInterval = null;
+  }
+}
+
+function handleMobileAction(action) {
+  if (action === "toggle-rail") {
+    toggleMobileRail();
+  }
+}
+
+function toggleMobileRail() {
+  if (window.innerWidth > 760) {
+    return;
+  }
+  state.mobileRailOpen = !state.mobileRailOpen;
+  syncMobileRailState();
+}
+
+function closeMobileRail() {
+  if (!state.mobileRailOpen) {
+    return;
+  }
+  state.mobileRailOpen = false;
+  syncMobileRailState();
+}
+
+function syncMobileRailState() {
+  const shouldOpen = state.mobileRailOpen && window.innerWidth <= 760;
+  document.body.classList.toggle("mobile-rail-open", shouldOpen);
 }
 
 function renderHeroMetrics() {
