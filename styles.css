@@ -1209,6 +1209,8 @@ code {
   .timeline-list,
   .transcript-card .message-list {
     max-height: none;
+    overflow: visible;
+    overscroll-behavior: auto;
   }
 
   .story-panel {
@@ -1223,7 +1225,7 @@ code {
 
   .page-shell {
     width: min(100vw - 16px, 1500px);
-    margin: 8px auto 88px;
+    margin: 8px auto 110px;
   }
 
   .hero,
@@ -1322,13 +1324,15 @@ code {
     min-height: 0;
     max-height: none;
     padding-right: 2px;
+    overflow: auto;
+    overscroll-behavior: contain;
   }
 
   .mobile-dock {
     position: fixed;
     left: 10px;
     right: 10px;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
     z-index: 34;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1369,6 +1373,8 @@ code {
 
   .timeline-list {
     max-height: 420px;
+    overflow: auto;
+    overscroll-behavior: contain;
   }
 
   .transcript-card {

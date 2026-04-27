@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import http from "node:http";
+import os from "node:os";
 import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -86,11 +87,27 @@ function broadcast(eventName, payload) {
   }
 }
 
+function getNetworkAddress() {
+  const interfaces = os.networkInterfaces();
+  for (const name of Object.keys(interfaces)) {
+    for (const iface of interfaces[name]) {
+      if (iface.family === "IPv4" && !iface.internal) {
+        return iface.address;
+      }
+    }
+  }
+  return null;
+}
+
 fs.watch(dataFile, { persistent: true }, () => {
   broadcast("data-changed", { updatedAt: Date.now() });
 });
 
 server.listen(port, host, () => {
-  console.log(`Dev server running at http://${host}:${port}`);
-  console.log("Watching 嘻斌库.json for changes...");
+  const networkAddress = getNetworkAddress();
+  console.log(`\n  \x1b[32m➜\x1b[0m  \x1b[1mLocal:\x1b[0m   http://localhost:${port}`);
+  if (networkAddress) {
+    console.log(`  \x1b[32m➜\x1b[0m  \x1b[1mNetwork:\x1b[0m http://${networkAddress}:${port}`);
+  }
+  console.log(`\n  Watching \x1b[36m嘻斌库.json\x1b[0m for changes...\n`);
 });
