@@ -295,8 +295,7 @@ select {
 
 .soft-button:hover,
 .filter-chip:hover,
-.session-button:hover,
-.camp-person:hover {
+.session-button:hover {
   transform: translateY(-1px);
 }
 
@@ -945,8 +944,7 @@ select {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.74);
-  cursor: pointer;
-  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+  transition: border-color 140ms ease, background 140ms ease;
 }
 
 .camp-person.active {

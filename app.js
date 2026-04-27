@@ -513,9 +513,8 @@ function renderCampPanel() {
     const group = session.camp.participants.filter((participant) => participant.camp === camp);
     const rows = group.length
       ? group.slice(0, 4).map((participant) => `
-          <button
+          <div
             class="camp-person ${state.speakerFilter === participant.sender ? "active" : ""}"
-            data-speaker-filter="${escapeAttr(participant.sender)}"
             style="--camp-color:${campMeta[camp].color}"
           >
             <div class="camp-person-head">
@@ -523,7 +522,7 @@ function renderCampPanel() {
               <span>${participant.messageCount} 条</span>
             </div>
             <p>${escapeHtml(trimText(participant.strongestQuote?.content || "没有代表句。", 62))}</p>
-          </button>
+          </div>
         `).join("")
       : '<div class="empty-state">你觉得这里会有人吗？</div>';
 
