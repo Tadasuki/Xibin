@@ -207,7 +207,7 @@ select {
   margin: 14px 0 12px;
   font-family: var(--font-display);
   font-size: clamp(36px, 3.8vw, 58px);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 0.94;
   letter-spacing: 0.05em;
   color: var(--ink-brown);
@@ -501,12 +501,13 @@ select {
   color: var(--text);
   font-size: 13px;
   line-height: 1.45;
+  font-family: var(--font-display);
 }
 
 .session-topline .session-event {
   margin-top: 0;
   font-size: 14px;
-  font-weight: 450;
+  font-weight: 500;
   line-height: 1.35;
 }
 
@@ -562,7 +563,7 @@ select {
 .hero-panel-title {
   margin: 6px 0 0;
   font-size: 18px;
-  font-weight: 450;
+  font-weight: 500;
   letter-spacing: -0.03em;
 }
 
@@ -604,8 +605,9 @@ select {
 .focus-date {
   flex: 0 1 auto;
   font-size: clamp(24px, 2.8vw, 34px);
-  font-weight: 450;
+  font-weight: 500;
   letter-spacing: -0.05em;
+  font-family: var(--font-display);
 }
 
 .jump-button {
@@ -1094,8 +1096,8 @@ select {
 .message-content {
   margin: 10px 0 0;
   font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 550;
+  font-size: 19px;
+  font-weight: 500;
   line-height: 1.95;
   letter-spacing: -0.01em;
   color: var(--text);
@@ -1361,7 +1363,7 @@ code {
   }
 
   .message-content {
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.9;
   }
 

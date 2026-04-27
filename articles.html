@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <title>通三个人文章 - 嘻斌库</title>
+  <meta name="description" content="通三哥的长文、随笔与情感告白收录。">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" href="./assets/fonts/OPPO-Sans-4.0.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@wc1font/source-han-serif-sc-vf/font.css">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    #transcriptPanel::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    #transcriptPanel {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .article-text {
+      font-size: 19px;
+      font-family: var(--font-display);
+      color: var(--text-base);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .article-text p {
+      text-indent: 2em;
+      line-height: 2;
+      margin-top: 0;
+      margin-bottom: 1.2em;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--brown-soft);
+      color: var(--muted);
+      border: 1px solid var(--brown-soft-2);
+      text-decoration: none;
+      font-size: 13px;
+      transition: all 0.2s ease;
+      width: fit-content;
+    }
+
+    .nav-link:hover {
+      background: var(--brown-soft-2);
+      color: var(--text);
+      transform: translateX(-2px);
+    }
+
+    .focus-facts.article-summary {
+      grid-template-columns: 1fr;
+    }
+
+    .fact-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .fact-value.long-text {
+      font-size: 14px;
+      line-height: 1.6;
+      font-weight: 400;
+      white-space: normal;
+      padding-top: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-card">
+      <div class="loading-kicker">Xi bin</div>
+      <div id="loadingTitle" class="loading-title">载入文章中<br>.</div>
+    </div>
+  </div>
+  <div id="mobileRailBackdrop" class="mobile-rail-backdrop"></div>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <a href="./index.html" class="nav-link">
+          <span>←</span> 返回对话流首页
+        </a>
+        <div class="eyebrow">Xi bin · Articles</div>
+        <h1>斌说说</h1>
+        <p id="heroDescription">收录通三哥个人的长文与随笔，独立于群聊之外的自我剖析。</p>
+        <div id="heroMetrics" class="hero-metrics"></div>
+        <section id="overview" class="overview-grid overview-inline"></section>
+        <div class="hero-actions">
+          <span id="updatedChip" class="status-chip subdued">尚未载入</span>
+          <button id="refreshButton" class="soft-button" type="button">立即刷新数据</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="content-grid">
+      <aside class="left-column">
+        <section class="card rail-card">
+          <div class="section-head">
+            <div>
+              <h2>文章列表</h2>
+            </div>
+            <button class="mobile-close-button" type="button" data-mobile-close="rail">收起</button>
+          </div>
+          <div id="sessionRail" class="session-rail"></div>
+        </section>
+      </aside>
+
+      <main class="right-column">
+        <section class="card focus-card" id="focusAnchor">
+          <div id="focusPanel"></div>
+        </section>
+
+        <section class="card transcript-card" id="transcriptAnchor">
+          <div class="section-head">
+            <div>
+              <h2>文章正文</h2>
+            </div>
+          </div>
+          <div id="transcriptPanel" style="padding: 24px; overflow: auto; padding-right: 8px;"></div>
+        </section>
+      </main>
+    </section>
+  </div>
+  <div class="mobile-dock">
+    <button class="mobile-dock-button" type="button" data-mobile-action="toggle-rail">文章列表</button>
+    <button class="mobile-dock-button" type="button" data-jump-target="focusAnchor">文章解析</button>
+    <button class="mobile-dock-button" type="button" data-jump-target="transcriptAnchor">正文</button>
+  </div>
+
+  <script src="./articles.js"></script>
+</body>
+
+</html>
