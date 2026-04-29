@@ -1,4 +1,4 @@
-const DATA_URL = "./恋斌场.json";
+const DATA_URL = "./data/articles.json";
 const POLL_INTERVAL = 20000;
 const MIND_SURFACE = { width: 1100, height: 720 };
 const MIND_SCALE_MIN = 0.42;
@@ -8,11 +8,9 @@ const MIND_SCALE_STEP = 1.16;
 const state = {
   data: null,
   selectedIndex: 0,
+  initialEntryApplied: false,
   globalSearch: "",
   globalSearchComposing: false,
-  transcriptSearch: "",
-  roleFilter: "all",
-  speakerFilters: new Set(),
   dataSignature: "",
   mobileRailOpen: false,
   mindViews: {}
@@ -21,7 +19,6 @@ const state = {
 const el = {
   loadingScreen: document.getElementById("loadingScreen"),
   mobileRailBackdrop: document.getElementById("mobileRailBackdrop"),
-  heroDescription: document.getElementById("heroDescription"),
   globalSearchPanel: document.getElementById("globalSearchPanel"),
   heroMetrics: document.getElementById("heroMetrics"),
   overview: document.getElementById("overview"),
@@ -88,7 +85,6 @@ function bindEvents() {
     if (globalEntry) {
       state.selectedIndex = Number(globalEntry.dataset.globalEntryIndex);
       state.globalSearch = "";
-      resetTranscriptFilters();
       render();
       state.mobileRailOpen = false;
       document.body.classList.remove("mobile-rail-open");
@@ -104,31 +100,16 @@ function bindEvents() {
     const sessionButton = event.target.closest("[data-session-index]");
     if (sessionButton) {
       state.selectedIndex = Number(sessionButton.dataset.sessionIndex);
-      resetTranscriptFilters();
       render();
       state.mobileRailOpen = false;
       document.body.classList.remove("mobile-rail-open");
-
+      
       const focusAnchor = document.getElementById("focusAnchor");
       if (focusAnchor) {
         window.requestAnimationFrame(() => {
           focusAnchor.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       }
-      return;
-    }
-
-    const speakerButton = event.target.closest("[data-speaker-filter]");
-    if (speakerButton) {
-      toggleSpeakerFilter(speakerButton.dataset.speakerFilter || "");
-      renderTranscript(currentStory());
-      return;
-    }
-
-    const roleButton = event.target.closest("[data-role-filter]");
-    if (roleButton) {
-      state.roleFilter = roleButton.dataset.roleFilter || "all";
-      renderTranscript(currentStory());
       return;
     }
   });
@@ -141,12 +122,6 @@ function bindEvents() {
       }
       renderGlobalSearchPanel();
       refocusGlobalSearchInput();
-      return;
-    }
-
-    if (event.target.matches("[data-transcript-search-box]")) {
-      state.transcriptSearch = event.target.value;
-      renderTranscript(currentStory());
     }
   });
 
@@ -168,124 +143,96 @@ function bindEvents() {
 
 async function refreshData(reason, options = {}) {
   try {
-    const response = await fetch(`${DATA_URL}?t=${Date.now()}`, {
-      cache: "no-store",
-      headers: { "Cache-Control": "no-cache" }
-    });
+    const response = await fetch(`${DATA_URL}?t=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
     const rawText = await response.text();
-    const signature = hashText(rawText);
+    const signature = rawText.length.toString();
     if (signature === state.dataSignature && options.silent) return;
 
     state.data = JSON.parse(rawText);
     state.dataSignature = signature;
-    state.selectedIndex = clamp(state.selectedIndex, 0, Math.max(0, (state.data.stories?.length || 1) - 1));
-
+    applyInitialEntrySelection();
+    state.selectedIndex = Math.min(state.selectedIndex, Math.max(0, state.data.articles.length - 1));
+    
     el.updatedChip.textContent = `已更新 · ${new Date().toLocaleTimeString("zh-CN", { hour12: false })}`;
     render();
     document.body.classList.remove("loading");
     if (el.loadingScreen) el.loadingScreen.classList.add("hidden");
   } catch (error) {
     console.error(error);
-    el.focusPanel.innerHTML = '<div class="empty-state">读取 <code>恋斌场.json</code> 失败，请通过开发服务器访问页面。</div>';
+  }
+}
+
+function applyInitialEntrySelection() {
+  if (state.initialEntryApplied || !Array.isArray(state.data?.articles)) {
+    return;
+  }
+  state.initialEntryApplied = true;
+  const params = new URLSearchParams(window.location?.search || "");
+  const entry = Number(params.get("entry"));
+  if (Number.isInteger(entry)) {
+    state.selectedIndex = clamp(entry, 0, Math.max(0, state.data.articles.length - 1));
   }
 }
 
 function render() {
-  if (!state.data || !Array.isArray(state.data.stories) || !state.data.stories.length) return;
-
-  const current = currentStory();
-  const totalMessages = state.data.stories.reduce((sum, story) => sum + (story.transcript?.length || 0), 0);
-
-  el.heroDescription.textContent = escapeHtml(state.data.metadata?.description || "");
+  if (!state.data || !state.data.articles) return;
   renderGlobalSearchPanel();
+  
   el.heroMetrics.innerHTML = `
-    <div class="metric-chip"><span>共计</span><strong>${state.data.stories.length} 条情感记录</strong></div>
-    <div class="metric-chip"><span>主角</span><strong>${escapeHtml(state.data.metadata?.target_person?.name || "未知")}</strong></div>
-    <div class="metric-chip"><span>对话数</span><strong>${totalMessages} 条</strong></div>
+    <div class="metric-chip"><span>共计</span><strong>${state.data.articles.length} 篇文章</strong></div>
+    <div class="metric-chip"><span>作者</span><strong>${escapeHtml(state.data.metadata.target_person.name)}</strong></div>
   `;
 
   el.overview.innerHTML = `
-    <article class="overview-card card">
-      <div class="overview-label">最新收录</div>
-      <div class="overview-value">${escapeHtml(state.data.stories[0]?.title || "暂无")}</div>
-      <div class="overview-text">${escapeHtml(state.data.stories[0]?.date || "")}</div>
-    </article>
-    <article class="overview-card card">
-      <div class="overview-label">当前阶段</div>
-      <div class="overview-value">${escapeHtml(current?.stage || "未标注")}</div>
-      <div class="overview-text">${escapeHtml(current?.status || "")}</div>
-    </article>
-    <article class="overview-card card">
-      <div class="overview-label">主要对象</div>
-      <div class="overview-value">${escapeHtml(current?.counterpart || "未标注")}</div>
-      <div class="overview-text">${escapeHtml(current?.source || "")}</div>
+    <article class="overview-item">
+      <div class="overview-kicker">最新收录</div>
+      <div class="overview-value" style="font-size:18px">${escapeHtml(state.data.articles[0]?.title || "暂无")}</div>
+      <p class="overview-sub">${escapeHtml(state.data.articles[0]?.date || "")}</p>
     </article>
   `;
 
-  el.sessionRail.innerHTML = state.data.stories.map((story, index) => `
-    <button class="session-button ${state.selectedIndex === index ? "active" : ""}" data-session-index="${index}">
+  el.sessionRail.innerHTML = state.data.articles.map((article, i) => `
+    <button class="session-button ${state.selectedIndex === i ? "active" : ""}" data-session-index="${i}">
       <div class="session-topline">
-        <div class="session-event">${escapeHtml(story.title)}</div>
-        <span class="session-type" style="color:#b46a5e">情史</span>
+        <div class="session-event">${escapeHtml(article.title)}</div>
+        <span class="session-type" style="color:#b79a57">散文</span>
       </div>
-      <div class="session-date">${escapeHtml(story.date)}</div>
+      <div class="session-date">${escapeHtml(article.date)}</div>
       <div class="session-meta" style="margin-top: 12px;">
-        <span>${escapeHtml(story.stage || "未分类")}</span>
-        <span>${story.transcript?.length || 0} 条聊天</span>
+        <span>${article.text.length} 字</span>
       </div>
     </button>
   `).join("");
 
-  renderFocusPanel(current);
-  renderTranscript(current);
-}
+  const article = state.data.articles[state.selectedIndex];
+  if (!article) return;
 
-function renderFocusPanel(story) {
-  const graph = buildEmotionOrbit(story);
-  const tags = (story.tags || []).map((tag) => `<span class="small-pill">${escapeHtml(tag)}</span>`).join("");
+  const mind = buildMindOrbit(article);
 
   el.focusPanel.innerHTML = `
     <section class="focus-summary">
       <div class="focus-title-row">
-        <div class="focus-date">${escapeHtml(story.title)}</div>
-        <button class="jump-button" type="button" data-jump-target="transcriptAnchor">查看原始聊天</button>
+        <div class="focus-date">${escapeHtml(article.title)}</div>
+        <button class="jump-button" type="button" data-jump-target="transcriptAnchor">阅读正文</button>
       </div>
       <div class="focus-headline">
-        <span class="small-pill">${escapeHtml(story.date)}</span>
-        <span class="small-pill">${escapeHtml(story.stage || "未标注")}</span>
-        <span class="small-pill">${escapeHtml(story.status || "未标注")}</span>
+        <span class="small-pill">${escapeHtml(article.date)}</span>
+        <span class="small-pill">文章解析</span>
       </div>
-      <div class="focus-facts story-summary">
-        <article class="fact-card">
-          <div class="fact-kicker">核心提问</div>
-          <div class="fact-value">${escapeHtml(story.overview?.premise || "")}</div>
-        </article>
-        <article class="fact-card">
-          <div class="fact-kicker">关键转折</div>
-          <div class="fact-value">${escapeHtml(story.overview?.turning_point || "")}</div>
-        </article>
-        <article class="fact-card">
-          <div class="fact-kicker">对象定位</div>
-          <div class="fact-value">${escapeHtml(story.overview?.verdict || "")}</div>
-        </article>
-        <article class="fact-card">
-          <div class="fact-kicker">关键词</div>
-          <div class="fact-value">${escapeHtml((story.tags || []).join(" / "))}</div>
-        </article>
+      <div class="focus-facts article-summary">
         <article class="fact-card full-width">
-          <div class="fact-kicker">摘要</div>
-          <div class="fact-value long-text">${escapeHtml(story.summary || "")}</div>
+          <div class="fact-kicker">核心主旨</div>
+          <div class="fact-value long-text">${escapeHtml(article.summary)}</div>
         </article>
       </div>
     </section>
 
     <div class="story-layout">
       <section class="story-panel timeline-panel">
-        <h3 class="story-title">感情线</h3>
+        <h3 class="story-title">层次结构</h3>
         <div class="timeline-list">
-          ${(story.relationshipLine || []).map((item) => `
+          ${article.structure.map((item) => `
             <article class="timeline-item" style="--node-color:${item.color}">
               <div class="timeline-head">
                 <div>
@@ -294,13 +241,12 @@ function renderFocusPanel(story) {
                 <span class="timeline-tag" style="color:${item.color}">${escapeHtml(item.title)}</span>
               </div>
               <p>${escapeHtml(item.content)}</p>
-              <div class="timeline-impact">${escapeHtml(item.impact)}</div>
             </article>
           `).join("")}
         </div>
       </section>
       <section class="story-panel">
-        <h3 class="story-title">情感图</h3>
+        <h3 class="story-title">分层解析导图</h3>
         <div class="mind-wrap">
           <div class="mind-toolbar">
             <button class="mind-tool-button" type="button" data-mind-action="zoom-in">放大</button>
@@ -308,10 +254,10 @@ function renderFocusPanel(story) {
             <button class="mind-tool-button" type="button" data-mind-action="reset">恢复</button>
             <button class="mind-tool-button" type="button" data-mind-action="fullscreen">全屏</button>
           </div>
-          <div class="mind-viewport" data-mind-viewport data-session-key="${escapeAttr(story.id)}">
+          <div class="mind-viewport" data-mind-viewport data-session-key="${escapeHtml(article.date)}">
             <div class="mind-surface" data-mind-surface>
               <svg class="mind-svg" viewBox="0 0 ${MIND_SURFACE.width} ${MIND_SURFACE.height}" aria-hidden="true">
-                ${graph.paths.map((path) => `
+                ${mind.paths.map((path) => `
                   <path
                     class="mind-beam"
                     d="M ${path.from.x} ${path.from.y} C ${path.c1.x} ${path.c1.y}, ${path.c2.x} ${path.c2.y}, ${path.to.x} ${path.to.y}"
@@ -321,7 +267,7 @@ function renderFocusPanel(story) {
                   />
                 `).join("")}
               </svg>
-              ${graph.nodes.map((node) => `
+              ${mind.nodes.map((node) => `
                 <article class="mind-node ${node.kind}" style="left:${node.x}px; top:${node.y}px; animation-delay:${node.delay}s">
                   <small>${escapeHtml(node.kicker)}</small>
                   <strong>${escapeHtml(node.title)}</strong>
@@ -335,134 +281,16 @@ function renderFocusPanel(story) {
     </div>
   `;
 
+  const formattedText = escapeHtml(article.text)
+    .split(/\n\n+/)
+    .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+    .join("");
+  el.transcriptPanel.innerHTML = `<div class="article-text">${formattedText}</div>`;
   activateMindMap();
 }
 
-function renderTranscript(story) {
-  if (!story) {
-    el.transcriptPanel.innerHTML = '<div class="empty-state">当前没有可展示的原始聊天。</div>';
-    return;
-  }
-  const targetId = state.data.metadata?.target_person?.chat_id || "";
-  const visibleMessages = getVisibleTranscriptMessages(story);
-  const speakerStats = getSpeakerStats(story);
-  const speakerChips = [
-    filterSpeakerChip("__all__", state.speakerFilters.size === 0, "全部说话人", story.transcript?.length || 0),
-    ...speakerStats.map(({ sender, count }) => filterSpeakerChip(sender, state.speakerFilters.has(sender), sender, count))
-  ].join("");
-  const roleChips = [
-    filterRoleChip("all", state.roleFilter === "all", "全部身份"),
-    filterRoleChip("target", state.roleFilter === "target", "老斌发言"),
-    filterRoleChip("other", state.roleFilter === "other", "对方判断")
-  ].join("");
-
-  el.transcriptPanel.innerHTML = `
-    <div class="toolbar-row">
-      <input
-        class="search-box"
-        data-transcript-search-box
-        type="search"
-        value="${escapeAttr(state.transcriptSearch)}"
-        placeholder="搜索名字或内容，例如 复合 / 放下 / 富家女"
-      >
-      <div class="toolbar-group">${speakerChips}</div>
-    </div>
-    <div style="margin-top:12px" class="toolbar-group">${roleChips}</div>
-    <div class="transcript-meta">
-      <span>显示 ${visibleMessages.length} / ${story.transcript?.length || 0} 条消息</span>
-      <span>${escapeHtml(story.date)} · ${escapeHtml(story.source || "")}</span>
-    </div>
-    <div class="message-list">
-      ${visibleMessages.length ? visibleMessages.map((message) => {
-        const badgeRail = renderMessageBadges([
-          {
-            tone: message.sender === targetId ? "core" : "observe",
-            label: message.sender === targetId ? "老斌发言" : "对方判断"
-          }
-        ]);
-        return `
-        <article class="message-card ${message.sender === targetId ? "target" : ""}">
-          <div class="message-meta">
-            <div class="message-meta-main">
-              <div class="message-sender">${escapeHtml(message.sender)}</div>
-              <div class="message-time">${escapeHtml(message.time)}</div>
-            </div>
-            ${badgeRail}
-          </div>
-          ${message.reply_to ? `
-            <div class="reply-quote">
-              <div class="reply-quote-sender">${escapeHtml(message.reply_to.sender)}</div>
-              <div class="reply-quote-content">${escapeHtml(message.reply_to.content)}</div>
-            </div>
-          ` : ""}
-          <p class="message-content">${escapeHtml(message.content)}</p>
-        </article>
-      `;
-      }).join("") : '<div class="empty-state">当前筛选条件下没有命中聊天。</div>'}
-    </div>
-  `;
-}
-
-function currentStory() {
-  return state.data.stories[state.selectedIndex] || state.data.stories[0];
-}
-
-function resetTranscriptFilters() {
-  state.transcriptSearch = "";
-  state.roleFilter = "all";
-  state.speakerFilters = new Set();
-}
-
-function getSpeakerStats(story) {
-  const counts = new Map();
-  for (const message of story.transcript || []) {
-    counts.set(message.sender, (counts.get(message.sender) || 0) + 1);
-  }
-  return Array.from(counts.entries())
-    .map(([sender, count]) => ({ sender, count }))
-    .sort((a, b) => b.count - a.count || a.sender.localeCompare(b.sender, "zh-CN"));
-}
-
-function toggleSpeakerFilter(sender) {
-  if (!sender || sender === "__all__") {
-    state.speakerFilters = new Set();
-    return;
-  }
-  const next = new Set(state.speakerFilters);
-  if (next.has(sender)) {
-    next.delete(sender);
-  } else {
-    next.add(sender);
-  }
-  state.speakerFilters = next;
-}
-
-function getVisibleTranscriptMessages(story) {
-  const targetId = state.data.metadata?.target_person?.chat_id || "";
-  const query = state.transcriptSearch.trim();
-  return (story.transcript || []).filter((message) => {
-    const speakerOk = state.speakerFilters.size === 0 || state.speakerFilters.has(message.sender);
-    const role = message.sender === targetId ? "target" : "other";
-    const roleOk = state.roleFilter === "all" || state.roleFilter === role;
-    const searchOk = !query
-      || message.sender.includes(query)
-      || message.content.includes(query)
-      || message.reply_to?.sender?.includes(query)
-      || message.reply_to?.content?.includes(query);
-    return speakerOk && roleOk && searchOk;
-  });
-}
-
-function filterSpeakerChip(value, active, label, count) {
-  return `<button class="filter-chip ${active ? "active" : ""}" data-speaker-filter="${escapeAttr(value)}">${escapeHtml(label)}${typeof count === "number" ? ` · ${count}` : ""}</button>`;
-}
-
-function filterRoleChip(value, active, label) {
-  return `<button class="filter-chip ${active ? "active" : ""}" data-role-filter="${escapeAttr(value)}">${escapeHtml(label)}</button>`;
-}
-
 function renderGlobalSearchPanel() {
-  if (!el.globalSearchPanel || !Array.isArray(state.data?.stories)) {
+  if (!el.globalSearchPanel || !state.data?.articles) {
     return;
   }
 
@@ -475,13 +303,13 @@ function renderGlobalSearchPanel() {
           data-global-search-box
           type="search"
           value="${escapeAttr(state.globalSearch)}"
-          placeholder="全局搜索标题或原始聊天，例如 分手 / 富家女 / 放下"
+          placeholder="全局搜索标题或正文，例如 远星 / 投射 / 喜欢"
         >
         ${state.globalSearch.trim() ? renderGlobalSearchDropdown(matches) : ""}
       </div>
       <div class="global-search-hint">
         ${state.globalSearch.trim() ? `当前关键词：<span class="global-search-keyword">${escapeHtml(state.globalSearch.trim())}</span> · ` : ""}
-        输入关键词，直接跳到命中的情感条目。
+        输入关键词，直接跳到命中的文章。
       </div>
     </div>
   `;
@@ -489,7 +317,7 @@ function renderGlobalSearchPanel() {
 
 function renderGlobalSearchDropdown(matches) {
   if (!matches.length) {
-    return `<div class="global-search-dropdown"><div class="global-search-empty">没有命中条目，换个标题词或原话关键词试试。</div></div>`;
+    return `<div class="global-search-dropdown"><div class="global-search-empty">没有命中文章，换个标题词或正文关键词试试。</div></div>`;
   }
 
   return `
@@ -511,20 +339,19 @@ function getGlobalSearchMatches() {
     return [];
   }
 
-  return state.data.stories
-    .map((story, index) => {
-      const titleField = `${story.title} ${story.date} ${story.stage} ${story.status}`.toLowerCase();
-      const transcriptField = (story.transcript || []).map((message) => `${message.sender} ${message.content} ${message.reply_to?.content || ""}`).join(" ");
-      const haystack = `${titleField} ${transcriptField}`.toLowerCase();
-      if (!haystack.includes(query)) {
+  return state.data.articles
+    .map((article, index) => {
+      const titleField = `${article.title} ${article.date}`.toLowerCase();
+      const bodyField = `${article.summary || ""} ${article.text || ""}`.toLowerCase();
+      if (!titleField.includes(query) && !bodyField.includes(query)) {
         return null;
       }
-      const matchedSource = titleField.includes(query) ? `${story.title} ${story.date} ${story.stage}` : transcriptField;
+      const matchedSource = titleField.includes(query) ? `${article.title} ${article.date}` : `${article.summary || ""} ${article.text || ""}`;
       return {
         index,
-        kicker: `${story.date} · ${story.stage || "情感条目"}`,
-        title: story.title,
-        snippet: createSearchSnippet(matchedSource, state.globalSearch) || story.summary
+        kicker: `${article.date} · 文章集`,
+        title: article.title,
+        snippet: createSearchSnippet(matchedSource, state.globalSearch) || article.summary || article.text
       };
     })
     .filter(Boolean)
@@ -544,7 +371,7 @@ function refocusGlobalSearchInput() {
 }
 
 function escapeHtml(str) {
-  if (str === null || str === undefined) return "";
+  if (!str) return "";
   return String(str)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -605,40 +432,12 @@ function highlightMatchHtml(text, query) {
   return html;
 }
 
-function renderMessageBadges(badgeItems) {
-  const seen = new Set();
-  const uniqueBadges = badgeItems.filter((badge) => {
-    if (!badge?.label) return false;
-    const key = `${badge.tone}:${badge.label}`;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
-
-  if (!uniqueBadges.length) {
-    return "";
-  }
-
-  return `
-    <div class="message-badge-rail message-badge-rail-inline">
-      ${uniqueBadges.map((badge) => `<span class="badge ${badge.tone}">${escapeHtml(badge.label)}</span>`).join("")}
-    </div>
-  `;
-}
-
-function hashText(input) {
-  let hash = 2166136261;
-  for (let i = 0; i < input.length; i += 1) {
-    hash ^= input.charCodeAt(i);
-    hash = Math.imul(hash, 16777619);
-  }
-  return String(hash >>> 0);
-}
-
 function activateMindMap() {
   const viewport = document.querySelector("[data-mind-viewport]");
   const surface = document.querySelector("[data-mind-surface]");
-  if (!viewport || !surface) return;
+  if (!viewport || !surface) {
+    return;
+  }
 
   const key = viewport.dataset.sessionKey;
   applyMindTransform(surface, ensureMindView(viewport));
@@ -646,10 +445,8 @@ function activateMindMap() {
   let activePointers = new Map();
   let lastDist = 0;
   let dragging = false;
-  let startX = 0;
-  let startY = 0;
-  let originX = 0;
-  let originY = 0;
+  let startX = 0, startY = 0;
+  let originX = 0, originY = 0;
 
   viewport.onpointerdown = (event) => {
     if (event.target.closest("button")) return;
@@ -665,11 +462,8 @@ function activateMindMap() {
       originY = state.mindViews[key].y;
     } else if (activePointers.size === 2) {
       dragging = false;
-      const points = Array.from(activePointers.values());
-      lastDist = Math.hypot(
-        points[0].clientX - points[1].clientX,
-        points[0].clientY - points[1].clientY
-      );
+      const pts = Array.from(activePointers.values());
+      lastDist = Math.hypot(pts[0].clientX - pts[1].clientX, pts[0].clientY - pts[1].clientY);
     }
   };
 
@@ -677,15 +471,12 @@ function activateMindMap() {
     activePointers.set(event.pointerId, event);
 
     if (activePointers.size === 2) {
-      const points = Array.from(activePointers.values());
-      const dist = Math.hypot(
-        points[0].clientX - points[1].clientX,
-        points[0].clientY - points[1].clientY
-      );
+      const pts = Array.from(activePointers.values());
+      const dist = Math.hypot(pts[0].clientX - pts[1].clientX, pts[0].clientY - pts[1].clientY);
       if (lastDist > 0) {
         const factor = dist / lastDist;
-        const centerX = (points[0].clientX + points[1].clientX) / 2;
-        const centerY = (points[0].clientY + points[1].clientY) / 2;
+        const centerX = (pts[0].clientX + pts[1].clientX) / 2;
+        const centerY = (pts[0].clientY + pts[1].clientY) / 2;
         zoomMindAt(viewport, factor, centerX, centerY);
       }
       lastDist = dist;
@@ -717,6 +508,7 @@ function zoomMindAt(viewport, factor, clientX, clientY) {
   const view = ensureMindView(viewport);
   const rect = viewport.getBoundingClientRect();
   const nextScale = clamp(view.scale * factor, MIND_SCALE_MIN, MIND_SCALE_MAX);
+  
   if (nextScale === view.scale) return;
 
   const localX = clientX - rect.left;
@@ -736,10 +528,10 @@ function handleMindAction(action, viewport) {
   if (action === "fullscreen") {
     wrap?.classList.toggle("fullscreen");
     const isFull = wrap?.classList.contains("fullscreen");
-    const button = wrap?.querySelector('[data-mind-action="fullscreen"]');
-    if (button) button.textContent = isFull ? "退出" : "全屏";
-
-    window.setTimeout(() => {
+    const btn = wrap?.querySelector('[data-mind-action="fullscreen"]');
+    if (btn) btn.textContent = isFull ? "退出" : "全屏";
+    
+    setTimeout(() => {
       const key = viewport.dataset.sessionKey;
       state.mindViews[key] = fitMindView(viewport);
       applyMindTransform(viewport.querySelector("[data-mind-surface]"), state.mindViews[key]);
@@ -798,10 +590,7 @@ function resetMindView(viewport) {
 }
 
 function fitMindView(viewport) {
-  const scale = Math.min(
-    viewport.clientWidth / MIND_SURFACE.width,
-    viewport.clientHeight / MIND_SURFACE.height
-  ) * 0.94;
+  const scale = Math.min(viewport.clientWidth / MIND_SURFACE.width, viewport.clientHeight / MIND_SURFACE.height) * 0.94;
   return {
     scale,
     x: (viewport.clientWidth - MIND_SURFACE.width * scale) / 2,
@@ -810,7 +599,6 @@ function fitMindView(viewport) {
 }
 
 function applyMindTransform(surface, view) {
-  if (!surface || !view) return;
   surface.style.transform = `translate(${view.x}px, ${view.y}px) scale(${view.scale})`;
 }
 
@@ -834,19 +622,16 @@ function bezier(fromNode, toNode, color, width, opacity) {
   };
 }
 
-function buildEmotionOrbit(story) {
-  const centerLabel = story.stage || "情感阶段";
-  const centerBody = story.status || story.date || "";
+function buildMindOrbit(article) {
   const nodes = [
-    mindNode("center", 550, 360, "情感核心", story.title, `${centerLabel} · ${centerBody}`, 0)
+    mindNode("center", 550, 360, "核心意象与主题", article.title, article.date, 0)
   ];
-
-  const items = story.emotionMap || [];
-  if (items[0]) nodes.push(mindNode("", 385, 225, items[0].kicker, items[0].title, items[0].body, 0.2));
-  if (items[1]) nodes.push(mindNode("", 390, 495, items[1].kicker, items[1].title, items[1].body, 0.35));
-  if (items[2]) nodes.push(mindNode("", 715, 225, items[2].kicker, items[2].title, items[2].body, 0.5));
-  if (items[3]) nodes.push(mindNode("", 720, 500, items[3].kicker, items[3].title, items[3].body, 0.65));
-  if (items[4]) nodes.push(mindNode("", 550, 140, items[4].kicker, items[4].title, items[4].body, 0.8));
+  
+  if (article.mindMap[0]) nodes.push(mindNode("", 385, 225, article.mindMap[0].kicker, article.mindMap[0].title, article.mindMap[0].body, 0.2));
+  if (article.mindMap[1]) nodes.push(mindNode("", 390, 495, article.mindMap[1].kicker, article.mindMap[1].title, article.mindMap[1].body, 0.35));
+  if (article.mindMap[2]) nodes.push(mindNode("", 715, 225, article.mindMap[2].kicker, article.mindMap[2].title, article.mindMap[2].body, 0.5));
+  if (article.mindMap[3]) nodes.push(mindNode("", 720, 500, article.mindMap[3].kicker, article.mindMap[3].title, article.mindMap[3].body, 0.65));
+  if (article.mindMap[4]) nodes.push(mindNode("", 550, 140, article.mindMap[4].kicker, article.mindMap[4].title, article.mindMap[4].body, 0.8));
 
   const edges = [
     [0, 1, "#c57c56", 3.2, 0.42],
@@ -856,14 +641,12 @@ function buildEmotionOrbit(story) {
     [0, 5, "#c57c56", 3.2, 0.42]
   ];
 
-  const paths = edges
-    .map(([fromIndex, toIndex, color, width, opacity]) => {
-      if (nodes[fromIndex] && nodes[toIndex]) {
+  const paths = edges.map(([fromIndex, toIndex, color, width, opacity]) => {
+    if (nodes[fromIndex] && nodes[toIndex]) {
         return bezier(nodes[fromIndex], nodes[toIndex], color, width, opacity);
-      }
-      return null;
-    })
-    .filter(Boolean);
+    }
+    return null;
+  }).filter(Boolean);
 
   return { nodes, paths };
 }

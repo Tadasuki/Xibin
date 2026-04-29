@@ -7,12 +7,12 @@
   <meta name="format-detection" content="telephone=no, email=no, address=no">
   <title>嘻斌库 · 通三全集</title>
   <meta name="description" content="围绕嘻斌库 JSON 的日期切片、辩论阵营、关键词与思维导图可视化页面。">
-  <link rel="icon" type="image/png" href="./favicon.png">
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preload" href="./assets/fonts/OPPO-Sans-4.0.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@wc1font/source-han-serif-sc-vf/font.css">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./src/styles.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
       <div class="hero-copy">
         <div class="eyebrow">Xi bin</div>
         <h1>嘻斌库</h1>
-        <div style="margin-top: 24px; margin-bottom: 12px;">
+        <div class="hero-link-row" style="margin-top: 24px; margin-bottom: 12px;">
           <a href="./articles.html" class="soft-button"
             style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; font-weight: 500; letter-spacing: 0.02em; padding: 0 28px; min-height: 52px; font-size: 15px; border-color: var(--accent); color: var(--accent); background: var(--paper); box-shadow: 0 6px 20px rgba(197, 124, 86, 0.12); transition: all 0.2s ease;">
             <span style="font-size: 18px;">📚</span> 查看斌说说 →
@@ -97,6 +97,24 @@
         </section>
       </main>
     </section>
+
+    <section class="contributors-section" aria-labelledby="contributorsTitle">
+      <div class="contributors-head">
+        <div>
+          <div class="section-kicker">Contributors</div>
+          <h2 id="contributorsTitle">贡献者</h2>
+        </div>
+      </div>
+      <div class="contributors-list">
+        <article class="contributor-card">
+          <div class="contributor-avatar">C</div>
+          <div>
+            <div class="contributor-name">Codex</div>
+            <div class="contributor-role">AI coding collaborator</div>
+          </div>
+        </article>
+      </div>
+    </section>
   </div>
   <div class="mobile-dock">
     <button class="mobile-dock-button" type="button" data-mobile-action="toggle-rail">内容列表</button>
@@ -104,7 +122,7 @@
     <button class="mobile-dock-button" type="button" data-jump-target="transcriptAnchor">原始对话</button>
   </div>
 
-  <script src="./app.js"></script>
+  <script src="./src/app.js"></script>
 </body>
 
 </html>

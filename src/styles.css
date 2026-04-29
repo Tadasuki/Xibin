@@ -1,6 +1,6 @@
 @font-face {
   font-family: "OPPO Sans Web";
-  src: url("./assets/fonts/OPPO-Sans-4.0.ttf") format("truetype");
+  src: url("../assets/fonts/OPPO-Sans-4.0.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -492,6 +492,74 @@ select {
   grid-template-columns: 320px minmax(0, 1fr);
   gap: 18px;
   align-items: start;
+}
+
+.contributors-section {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 253, 249, 0.9);
+  box-shadow: var(--shadow-soft);
+}
+
+.contributors-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.contributors-head h2 {
+  margin: 6px 0 0;
+  font-size: 22px;
+  font-weight: 450;
+  letter-spacing: -0.03em;
+}
+
+.contributors-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contributor-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: min(260px, 100%);
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(255, 253, 249, 0.82);
+  backdrop-filter: blur(14px) saturate(1.08);
+  -webkit-backdrop-filter: blur(14px) saturate(1.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.contributor-avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(197, 124, 86, 0.2), rgba(112, 135, 127, 0.18));
+  color: var(--ink-brown);
+  font-weight: 650;
+  border: 1px solid var(--brown-soft-3);
+}
+
+.contributor-name {
+  color: var(--ink-brown);
+  font-weight: 550;
+}
+
+.contributor-role {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .left-column,
@@ -1370,7 +1438,7 @@ code {
 
 @media (max-width: 760px) {
   body.mobile-rail-open {
-    overflow: auto;
+    overflow: hidden;
   }
 
   .page-shell {
@@ -1379,7 +1447,8 @@ code {
   }
 
   .hero,
-  .card {
+  .card,
+  .contributors-section {
     padding: 18px;
   }
 
@@ -1394,6 +1463,19 @@ code {
   .hero {
     gap: 14px;
     border-radius: 28px;
+  }
+
+  .hero-link-row {
+    display: flex !important;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .hero-link-row .soft-button {
+    margin-left: 0 !important;
+    align-items: center !important;
+    min-width: calc(50% - 9px);
   }
 
   .overview-grid,
@@ -1430,7 +1512,7 @@ code {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 41;
+    z-index: 80;
     width: min(88vw, 360px);
     height: 100dvh;
     padding: 12px;
@@ -1461,6 +1543,9 @@ code {
     display: flex;
     flex-direction: column;
     border-radius: 26px;
+    background: rgba(255, 253, 249, 0.94);
+    backdrop-filter: blur(14px) saturate(1.06);
+    -webkit-backdrop-filter: blur(14px) saturate(1.06);
     box-shadow: var(--shadow-card);
   }
 
@@ -1485,6 +1570,23 @@ code {
     overscroll-behavior: contain;
   }
 
+  .session-button,
+  .global-search-option,
+  .global-search-empty,
+  .overview-card,
+  .message-card,
+  .timeline-item,
+  .fact-card,
+  .contributor-card {
+    background: rgba(255, 253, 249, 0.88);
+    backdrop-filter: blur(14px) saturate(1.08);
+    -webkit-backdrop-filter: blur(14px) saturate(1.08);
+  }
+
+  .session-button.active {
+    background: rgba(255, 247, 239, 0.94);
+  }
+
   .mobile-dock {
     position: fixed;
     left: 10px;
@@ -1500,6 +1602,12 @@ code {
     background: rgba(255, 250, 245, 0.9);
     backdrop-filter: blur(16px);
     box-shadow: 0 18px 32px rgba(70, 56, 39, 0.14);
+  }
+
+  body.mobile-rail-open .mobile-dock {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .mobile-dock-button {

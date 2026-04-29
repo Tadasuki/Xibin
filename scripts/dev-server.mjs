@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, "..");
 const port = Number(process.env.PORT || 4173);
 const host = process.env.HOST || "0.0.0.0";
-const dataFile = path.join(rootDir, "嘻斌库.json");
+const dataFile = path.join(rootDir, "data", "嘻斌库.json");
 const sseClients = new Set();
 
 const contentTypes = {
@@ -109,5 +109,5 @@ server.listen(port, host, () => {
   if (networkAddress) {
     console.log(`  \x1b[32m➜\x1b[0m  \x1b[1mNetwork:\x1b[0m http://${networkAddress}:${port}`);
   }
-  console.log(`\n  Watching \x1b[36m嘻斌库.json\x1b[0m for changes...\n`);
+  console.log(`\n  Watching \x1b[36mdata/嘻斌库.json\x1b[0m for changes...\n`);
 });

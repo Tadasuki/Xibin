@@ -1,4 +1,6 @@
-const DATA_URL = "./嘻斌库.json";
+const DATA_URL = "./data/嘻斌库.json";
+const ARTICLES_DATA_URL = "./data/articles.json";
+const ROMANCE_DATA_URL = "./data/恋斌场.json";
 const POLL_INTERVAL = 20000;
 const DEV_EVENTS_URL = "/__events";
 const MIND_SURFACE = { width: 1100, height: 720 };
@@ -52,6 +54,8 @@ const STANCE_TEXT = {
 
 const state = {
   analysis: null,
+  articlesData: null,
+  romanceData: null,
   selectedIndex: 0,
   globalSearch: "",
   globalSearchComposing: false,
@@ -136,6 +140,11 @@ function bindEvents() {
 
     const globalEntry = event.target.closest("[data-global-entry-index]");
     if (globalEntry) {
+      if (globalEntry.dataset.globalEntryUrl) {
+        window.location.href = globalEntry.dataset.globalEntryUrl;
+        return;
+      }
+
       state.selectedIndex = Number(globalEntry.dataset.globalEntryIndex);
       state.globalSearch = "";
       render();
@@ -251,23 +260,22 @@ function setupLiveHooks() {
 
 async function refreshData(reason, options = {}) {
   try {
-    const response = await fetch(`${DATA_URL}?t=${Date.now()}`, {
-      cache: "no-store",
-      headers: { "Cache-Control": "no-cache" }
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-    const rawText = await response.text();
-    const signature = hashText(rawText);
+    const [mainRawText, articlesRawText, romanceRawText] = await Promise.all([
+      fetchDataText(DATA_URL),
+      fetchDataText(ARTICLES_DATA_URL),
+      fetchDataText(ROMANCE_DATA_URL)
+    ]);
+    const signature = hashText([mainRawText, articlesRawText, romanceRawText].join("\n---global-search---\n"));
     if (signature === state.dataSignature && options.silent) {
       updateLoadMeta(reason, false);
       return;
     }
 
-    const data = JSON.parse(rawText);
+    const data = JSON.parse(mainRawText);
     state.dataSignature = signature;
     state.analysis = analyzeData(data);
+    state.articlesData = JSON.parse(articlesRawText);
+    state.romanceData = JSON.parse(romanceRawText);
     state.selectedIndex = clampIndex(state.selectedIndex, state.analysis.sessions.length);
     state.lastLoadedAt = new Date();
     updateLoadMeta(reason, true);
@@ -278,6 +286,17 @@ async function refreshData(reason, options = {}) {
     renderError(`读取 ${DATA_URL} 失败。请通过 \`npm run dev\` 或部署后的 Pages 域名访问页面，而不是直接双击 HTML。`);
     hideLoadingScreen();
   }
+}
+
+async function fetchDataText(url) {
+  const response = await fetch(`${url}?t=${Date.now()}`, {
+    cache: "no-store",
+    headers: { "Cache-Control": "no-cache" }
+  });
+  if (!response.ok) {
+    throw new Error(`${url} HTTP ${response.status}`);
+  }
+  return response.text();
 }
 
 function updateLoadMeta(reason, changed) {
@@ -390,13 +409,13 @@ function renderGlobalSearchPanel() {
           data-global-search-box
           type="search"
           value="${escapeAttr(state.globalSearch)}"
-          placeholder="全局搜索标题或原始对话，例如 通山 / 改开 / 豪客来"
+          placeholder="全局搜索嘻斌库、斌说说、恋斌场，例如 通山 / 投射 / 富家女"
         >
         ${state.globalSearch.trim() ? renderGlobalSearchDropdown(matches) : ""}
       </div>
       <div class="global-search-hint">
         ${state.globalSearch.trim() ? `当前关键词：<span class="global-search-keyword">${escapeHtml(state.globalSearch.trim())}</span> · ` : ""}
-        输入关键词，直接跳到命中的日期条目。
+        输入关键词，直接跳到命中的日期、文章或情感条目。
       </div>
     </div>
   `;
@@ -410,7 +429,12 @@ function renderGlobalSearchDropdown(matches) {
   return `
     <div class="global-search-dropdown">
       ${matches.map((match) => `
-        <button class="global-search-option" type="button" data-global-entry-index="${match.index}">
+        <button
+          class="global-search-option"
+          type="button"
+          data-global-entry-index="${match.index}"
+          ${match.url ? `data-global-entry-url="${escapeAttr(match.url)}"` : ""}
+        >
           <div class="global-search-kicker">${escapeHtml(match.kicker)}</div>
           <div class="global-search-title">${highlightMatchHtml(match.title, state.globalSearch)}</div>
           <div class="global-search-snippet">${highlightMatchHtml(match.snippet, state.globalSearch)}</div>
@@ -426,24 +450,75 @@ function getGlobalSearchMatches() {
     return [];
   }
 
+  return [
+    ...getSessionSearchMatches(query),
+    ...getArticleSearchMatches(query),
+    ...getRomanceSearchMatches(query)
+  ].slice(0, 10);
+}
+
+function getSessionSearchMatches(query) {
   return state.analysis.sessions
     .map((session, index) => {
       const corpus = session.messages.map((message) => `${message.sender} ${message.content} ${message.replyTo?.content || ""}`).join(" ");
       const titleHit = `${session.title} ${session.date} ${session.category.label}`.toLowerCase();
       const matchedSource = titleHit.includes(query) ? `${session.title} ${session.category.label}` : corpus;
       const haystack = `${titleHit} ${corpus}`.toLowerCase();
-      if (!haystack.includes(query)) {
-        return null;
-      }
+      if (!haystack.includes(query)) return null;
       return {
         index,
-        kicker: `${session.date} · ${session.category.label}`,
+        kicker: `嘻斌库 · ${session.date} · ${session.category.label}`,
         title: session.title,
         snippet: createSearchSnippet(matchedSource, state.globalSearch) || session.summary
       };
     })
-    .filter(Boolean)
-    .slice(0, 8);
+    .filter(Boolean);
+}
+
+function getArticleSearchMatches(query) {
+  if (!Array.isArray(state.articlesData?.articles)) {
+    return [];
+  }
+
+  return state.articlesData.articles
+    .map((article, index) => {
+      const titleField = `${article.title} ${article.date}`.toLowerCase();
+      const bodyField = `${article.summary || ""} ${article.text || ""}`.toLowerCase();
+      if (!titleField.includes(query) && !bodyField.includes(query)) return null;
+      const matchedSource = titleField.includes(query) ? `${article.title} ${article.date}` : `${article.summary || ""} ${article.text || ""}`;
+      return {
+        index,
+        url: `./articles.html?entry=${index}`,
+        kicker: `斌说说 · ${article.date}`,
+        title: article.title,
+        snippet: createSearchSnippet(matchedSource, state.globalSearch) || article.summary || article.text
+      };
+    })
+    .filter(Boolean);
+}
+
+function getRomanceSearchMatches(query) {
+  if (!Array.isArray(state.romanceData?.stories)) {
+    return [];
+  }
+
+  return state.romanceData.stories
+    .map((story, index) => {
+      const titleField = `${story.title} ${story.date} ${story.stage || ""} ${story.status || ""} ${(story.tags || []).join(" ")}`.toLowerCase();
+      const summaryField = `${story.summary || ""} ${story.overview ? Object.values(story.overview).join(" ") : ""}`;
+      const transcriptField = (story.transcript || []).map((message) => `${message.sender} ${message.content} ${message.reply_to?.content || ""}`).join(" ");
+      const haystack = `${titleField} ${summaryField} ${transcriptField}`.toLowerCase();
+      if (!haystack.includes(query)) return null;
+      const matchedSource = titleField.includes(query) ? `${story.title} ${story.date} ${story.stage || ""}` : `${summaryField} ${transcriptField}`;
+      return {
+        index,
+        url: `./恋斌场.html?entry=${index}`,
+        kicker: `恋斌场 · ${story.date} · ${story.stage || "情感条目"}`,
+        title: story.title,
+        snippet: createSearchSnippet(matchedSource, state.globalSearch) || story.summary
+      };
+    })
+    .filter(Boolean);
 }
 
 function refocusGlobalSearchInput() {

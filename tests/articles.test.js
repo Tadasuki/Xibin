@@ -1,5 +1,5 @@
 const fs = require('fs');
-const code = fs.readFileSync('articles.js', 'utf8');
+const code = fs.readFileSync('src/articles.js', 'utf8');
 
 // Mock DOM
 const dom = {
@@ -12,7 +12,7 @@ const dom = {
 
 global.document = {
   getElementById: () => dom,
-  querySelector: () => dom,
+  querySelector: () => null,
   addEventListener: () => {},
   body: dom
 };
@@ -22,7 +22,7 @@ global.window = {
 };
 global.fetch = async () => ({
   ok: true,
-  text: async () => fs.readFileSync('articles.json', 'utf8')
+  text: async () => fs.readFileSync('data/articles.json', 'utf8')
 });
 
 eval(code);
