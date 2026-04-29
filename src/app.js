@@ -1,6 +1,7 @@
 const DATA_URL = "./data/嘻斌库.json";
 const ARTICLES_DATA_URL = "./data/articles.json";
 const ROMANCE_DATA_URL = "./data/恋斌场.json";
+const WHATS_NEW_STORAGE_KEY = "xibinku-whats-new-dismissed-date";
 const POLL_INTERVAL = 20000;
 const DEV_EVENTS_URL = "/__events";
 const MIND_SURFACE = { width: 1100, height: 720 };
@@ -66,12 +67,16 @@ const state = {
   lastLoadedAt: null,
   eventSource: null,
   mindViews: {},
-  mobileRailOpen: false
+  mobileRailOpen: false,
+  whatsNewOpen: false,
+  whatsNewAutoSuppressed: false
 };
 
 const el = {
   loadingScreen: document.getElementById("loadingScreen"),
   mobileRailBackdrop: document.getElementById("mobileRailBackdrop"),
+  whatsNewButton: document.getElementById("whatsNewButton"),
+  whatsNewModal: document.getElementById("whatsNewModal"),
   heroDescription: document.getElementById("heroDescription"),
   globalSearchPanel: document.getElementById("globalSearchPanel"),
   heroMetrics: document.getElementById("heroMetrics"),
@@ -102,8 +107,20 @@ function boot() {
 
 function bindEvents() {
   el.refreshButton.addEventListener("click", () => refreshData("手动刷新"));
+  el.whatsNewButton?.addEventListener("click", () => showWhatsNew());
 
   document.addEventListener("click", (event) => {
+    const whatsNewAction = event.target.closest("[data-whats-new-action]");
+    if (whatsNewAction) {
+      handleWhatsNewAction(whatsNewAction.dataset.whatsNewAction);
+      return;
+    }
+
+    if (event.target === el.whatsNewModal) {
+      closeWhatsNew();
+      return;
+    }
+
     const mobileAction = event.target.closest("[data-mobile-action]");
     if (mobileAction) {
       handleMobileAction(mobileAction.dataset.mobileAction);
@@ -236,6 +253,7 @@ function bindEvents() {
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
+      closeWhatsNew();
       closeMobileRail();
     }
   });
@@ -281,11 +299,80 @@ async function refreshData(reason, options = {}) {
     updateLoadMeta(reason, true);
     render();
     hideLoadingScreen();
+    maybeShowWhatsNew(options);
   } catch (error) {
     console.error(error);
     renderError(`读取 ${DATA_URL} 失败。请通过 \`npm run dev\` 或部署后的 Pages 域名访问页面，而不是直接双击 HTML。`);
     hideLoadingScreen();
   }
+}
+
+function maybeShowWhatsNew(options = {}) {
+  if (
+    options.silent
+    || state.whatsNewAutoSuppressed
+    || getDismissedWhatsNewDate() === todayKey()
+  ) {
+    return;
+  }
+  window.requestAnimationFrame(() => {
+    window.setTimeout(() => showWhatsNew(), 180);
+  });
+}
+
+function showWhatsNew() {
+  if (!el.whatsNewModal) {
+    return;
+  }
+  state.whatsNewOpen = true;
+  el.whatsNewModal.hidden = false;
+  document.body.classList.add("whats-new-open");
+}
+
+function closeWhatsNew() {
+  if (!el.whatsNewModal || !state.whatsNewOpen) {
+    return;
+  }
+  state.whatsNewOpen = false;
+  el.whatsNewModal.hidden = true;
+  document.body.classList.remove("whats-new-open");
+}
+
+function handleWhatsNewAction(action) {
+  if (action === "close") {
+    state.whatsNewAutoSuppressed = true;
+  } else if (action === "dismiss-today") {
+    state.whatsNewAutoSuppressed = true;
+    setDismissedWhatsNewDate(todayKey());
+  }
+  closeWhatsNew();
+}
+
+function getDismissedWhatsNewDate() {
+  try {
+    return window.localStorage.getItem(WHATS_NEW_STORAGE_KEY);
+  } catch (error) {
+    return "";
+  }
+}
+
+function setDismissedWhatsNewDate(dateKey) {
+  if (!dateKey) {
+    return;
+  }
+  try {
+    window.localStorage.setItem(WHATS_NEW_STORAGE_KEY, dateKey);
+  } catch (error) {
+    console.warn(error);
+  }
+}
+
+function todayKey() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
 }
 
 async function fetchDataText(url) {
@@ -385,12 +472,15 @@ function syncMobileRailState() {
 }
 
 function renderHeroMetrics() {
-  const { totals, targetName, hottestSession } = state.analysis;
+  const { totals, targetName } = state.analysis;
+  const archiveStats = getUnifiedArchiveStats();
   el.heroMetrics.innerHTML = [
-    metricChip(`${totals.sessionCount} 个日期切片`),
-    metricChip(`${totals.messageCount} 条消息`),
+    metricChip(`${archiveStats.totalEntries} 个跨库条目`),
+    metricChip(`${archiveStats.conversationMessages} 条对话`),
+    metricChip(`${archiveStats.articleCount} 篇斌说说`),
+    metricChip(`${archiveStats.romanceCount} 条恋斌场`),
     metricChip(`${targetName} 发言 ${totals.targetMessages} 条`),
-    metricChip(`最热日 ${hottestSession.date}`),
+    metricChip(`最热条目 ${archiveStats.hottestItem?.date || "未知"}`),
     metricChip(`活跃说话人 ${totals.activeParticipants} 人`)
   ].join("");
 }
@@ -534,16 +624,17 @@ function refocusGlobalSearchInput() {
 }
 
 function renderHeroPanels() {
-  const spotlight = state.analysis.topDebateDays.map((session, index) => `
+  const archiveStats = getUnifiedArchiveStats();
+  const spotlight = archiveStats.topPressureItems.map((item, index) => `
     <article class="hero-rank-item">
       <div class="hero-rank-head">
-        <strong>${index + 1}. ${escapeHtml(session.date)}</strong>
-        <span>${session.debateIntensity}/100</span>
+        <strong>${index + 1}. ${escapeHtml(item.date)}</strong>
+        <span>${item.pressureScore}/100</span>
       </div>
       <div style="margin-top:10px" class="hero-rank-track">
-        <div class="hero-rank-fill" style="width:${session.debateIntensity}%"></div>
+        <div class="hero-rank-fill" style="width:${item.pressureScore}%"></div>
       </div>
-      <p>${escapeHtml(`${session.category.label} · ${session.messageCount} 条消息 · ${session.timelineMoments[0]?.title || "当天起点"} 到 ${session.timelineMoments.at(-1)?.title || "当天收尾"}`)}</p>
+      <p>${escapeHtml(`${item.sourceLabel} · ${item.metricText} · ${item.summary}`)}</p>
     </article>
   `).join("");
 
@@ -562,7 +653,7 @@ function renderHeroPanels() {
 
   const mostTalkative = state.analysis.topParticipants[0];
   el.spotlightPanel.innerHTML = `
-    <div class="hero-panel-title">最容易炸起来的三天</div>
+    <div class="hero-panel-title">跨库最容易炸起来的内容</div>
     <div class="hero-ranking" style="margin-top:12px">${spotlight}</div>
   `;
   el.networkPanel.innerHTML = `
@@ -573,12 +664,13 @@ function renderHeroPanels() {
 }
 
 function renderOverview() {
-  const { dateRange, hottestSession, strongestResponseSession, topTargetResponders } = state.analysis;
+  const { topTargetResponders } = state.analysis;
+  const archiveStats = getUnifiedArchiveStats();
   const topResponder = topTargetResponders[0];
   el.overview.innerHTML = [
-    overviewCard("时间跨度", `${dateRange.start} → ${dateRange.end}`, `共跨 ${state.analysis.totals.sessionCount} 个日期切片，默认进入最近一组。`),
-    overviewCard("最长会话", hottestSession.title, `${hottestSession.messageCount} 条消息，对应日期 ${hottestSession.date}。`),
-    overviewCard("回应压力最大", strongestResponseSession.title, `每条目标发言平均会引出 ${strongestResponseSession.responsePressure.toFixed(1)} 条非目标回应。`),
+    overviewCard("时间跨度", `${archiveStats.dateRange.start} → ${archiveStats.dateRange.end}`, `共跨 ${archiveStats.totalEntries} 个条目，包含主库、斌说说与恋斌场。`),
+    overviewCard("最长内容", archiveStats.longestItem?.title || "暂无", archiveStats.longestItem ? `${archiveStats.longestItem.sourceLabel} · ${archiveStats.longestItem.metricText}，对应日期 ${archiveStats.longestItem.date}。` : "暂无内容。"),
+    overviewCard("高压内容", archiveStats.topPressureItems[0]?.title || "暂无", archiveStats.topPressureItems[0] ? `${archiveStats.topPressureItems[0].sourceLabel} · 压力 ${archiveStats.topPressureItems[0].pressureScore}/100 · ${archiveStats.topPressureItems[0].metricText}。` : "暂无高压条目。"),
     overviewCard("最常接话者", topResponder ? topResponder.sender : "暂无", topResponder ? `累计 ${topResponder.count} 次接在通三哥发言后出现，主模式是 ${topResponder.dominantRoleLabel}。` : "暂无接话统计。")
   ].join("");
 }
@@ -858,6 +950,85 @@ function getVisibleTranscriptMessages(session) {
       || message.replyTo?.content?.includes(search);
     return speakerOk && campOk && searchOk;
   });
+}
+
+function getUnifiedArchiveStats() {
+  const items = getUnifiedArchiveItems();
+  const datedItems = items.filter((item) => item.date);
+  const sortedDates = datedItems.map((item) => item.date).sort();
+  const hottestItem = items.slice().sort((a, b) => b.comparableSize - a.comparableSize || b.pressureScore - a.pressureScore)[0] || null;
+  const longestItem = items.slice().sort((a, b) => b.comparableSize - a.comparableSize || b.metricValue - a.metricValue)[0] || null;
+  const topPressureItems = items
+    .slice()
+    .sort((a, b) => b.pressureScore - a.pressureScore || b.comparableSize - a.comparableSize)
+    .slice(0, 3);
+
+  return {
+    items,
+    totalEntries: items.length,
+    articleCount: state.articlesData?.articles?.length || 0,
+    romanceCount: state.romanceData?.stories?.length || 0,
+    conversationMessages: items.reduce((sum, item) => sum + item.conversationMessages, 0),
+    dateRange: {
+      start: sortedDates[0] || "未知",
+      end: sortedDates.at(-1) || "未知"
+    },
+    hottestItem,
+    longestItem,
+    topPressureItems
+  };
+}
+
+function getUnifiedArchiveItems() {
+  const sessionItems = (state.analysis?.sessions || []).map((session) => ({
+    source: "main",
+    sourceLabel: `嘻斌库 · ${session.category.label}`,
+    date: session.date,
+    title: session.title,
+    metricValue: session.messageCount,
+    metricText: `${session.messageCount} 条消息`,
+    comparableSize: session.messageCount,
+    conversationMessages: session.messageCount,
+    pressureScore: clamp(Math.round(session.debateIntensity), 0, 100),
+    summary: `${session.timelineMoments[0]?.title || "当天起点"} 到 ${session.timelineMoments.at(-1)?.title || "当天收尾"}`
+  }));
+
+  const articleItems = (state.articlesData?.articles || []).map((article) => {
+    const textLength = String(article.text || article.summary || "").length;
+    return {
+      source: "articles",
+      sourceLabel: "斌说说",
+      date: article.date || "未知",
+      title: article.title || "未命名文章",
+      metricValue: textLength,
+      metricText: `${textLength} 字`,
+      comparableSize: Math.ceil(textLength / 40),
+      conversationMessages: 0,
+      pressureScore: clamp(Math.round(textLength / 70), 8, 100),
+      summary: article.summary || "个人长文与随笔"
+    };
+  });
+
+  const romanceItems = (state.romanceData?.stories || []).map((story) => {
+    const transcriptCount = story.transcript?.length || 0;
+    const lineCount = story.relationshipLine?.length || 0;
+    const tagCount = story.tags?.length || 0;
+    const pressureScore = transcriptCount * 8 + lineCount * 5 + tagCount * 2;
+    return {
+      source: "romance",
+      sourceLabel: `恋斌场 · ${story.stage || "情感条目"}`,
+      date: story.date || "未知",
+      title: story.title || "未命名情感条目",
+      metricValue: transcriptCount,
+      metricText: `${transcriptCount} 条聊天`,
+      comparableSize: transcriptCount + lineCount * 2,
+      conversationMessages: transcriptCount,
+      pressureScore: clamp(Math.round(pressureScore), 10, 100),
+      summary: story.status || story.summary || "情感记录"
+    };
+  });
+
+  return [...sessionItems, ...articleItems, ...romanceItems];
 }
 
 function analyzeData(data) {

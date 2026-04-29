@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" role="img" aria-labelledby="title">
+  <title id="title">Flag of the Democratic People's Republic of Korea</title>
+  <rect width="900" height="450" fill="#024fa2"/>
+  <rect y="75" width="900" height="300" fill="#fff"/>
+  <rect y="100" width="900" height="250" fill="#ed1c27"/>
+  <circle cx="225" cy="225" r="90" fill="#fff"/>
+  <path fill="#ed1c27" d="M225 139l19 58h61l-49 36 19 58-50-36-49 36 19-58-49-36h61z"/>
+</svg>

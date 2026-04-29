@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-labelledby="title">
+  <title id="title">Creative Commons Attribution 4.0</title>
+  <rect width="160" height="48" rx="12" fill="#fffdf8" fill-opacity=".72"/>
+  <rect x="1" y="1" width="158" height="46" rx="11" fill="none" stroke="#d8ccbc" stroke-width="2"/>
+  <circle cx="28" cy="24" r="15" fill="none" stroke="#5a392b" stroke-width="3"/>
+  <text x="28" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#5a392b">CC</text>
+  <circle cx="67" cy="18" r="5" fill="#5a392b"/>
+  <path d="M55 36c2-8 6-12 12-12s10 4 12 12" fill="none" stroke="#5a392b" stroke-width="4" stroke-linecap="round"/>
+  <text x="104" y="29" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#5a392b">BY 4.0</text>
+</svg>

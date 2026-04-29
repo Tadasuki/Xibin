@@ -23,11 +23,55 @@
     </div>
   </div>
   <div id="mobileRailBackdrop" class="mobile-rail-backdrop"></div>
+  <div id="whatsNewModal" class="whats-new-layer" hidden>
+    <section class="whats-new-dialog" role="dialog" aria-modal="true" aria-labelledby="whatsNewTitle">
+      <div class="whats-new-head">
+        <div>
+          <div class="section-kicker">Release Notes</div>
+          <div class="whats-new-title-line">
+            <h2 id="whatsNewTitle">What's New?</h2>
+            <span class="whats-new-status"><span class="status-dot"></span>2026-04-30（Latest）</span>
+          </div>
+        </div>
+        <button class="whats-new-close" type="button" data-whats-new-action="close" aria-label="关闭更新说明">×</button>
+      </div>
+      <div class="whats-new-body">
+        <article class="whats-new-item">
+          <div class="whats-new-date">最近更新</div>
+          <h3>后端结构重构</h3>
+          <p>这个网站后端的库是我乱做的，还用了几个不同的ai，导致目录和数据摆放比通三哥的人生还要糟糕，非常丑陋。抽时间把数据重新整理到更清楚的结构里，加载路径更稳定，维护起来也顺手了不少，页面载入速度也更轻快了一点。</p>
+        </article>
+        <article class="whats-new-item">
+          <div class="whats-new-date">新分库</div>
+          <h3>新增「恋斌场」</h3>
+          <p>新增情感史专门分区，用来收录通三哥感情经历里的关键对话、现实判断、自我投射和阶段性剧情，还不知道怎么展现三哥的情感史。</p>
+        </article>
+        <article class="whats-new-item">
+          <div class="whats-new-date">检索能力</div>
+          <h3>增添全局搜索功能</h3>
+          <p>主页顶部搜索框输入标题、日期、关键词或原始对话片段后，可以直接跳到命中的日期条目、文章或情感记录，不用再在几个页面之间来回翻。</p>
+        </article>
+        <article class="whats-new-item">
+          <div class="whats-new-date">页面落款</div>
+          <h3>增加落款</h3>
+          <p>页脚新增 CC BY 4.0 开放授权说明，以及通三哥最向往的朝鲜生活，还按照邪恶美帝国主义的霸权法律规定，标注了我批判性使用 Codex 和 Gemini 等工具的说明。</p>
+        </article>
+      </div>
+      <p class="whats-new-tip">点击主页小铃铛可再次查看</p>
+      <div class="whats-new-actions">
+        <button class="soft-button" type="button" data-whats-new-action="close">我知道了</button>
+        <button class="soft-button subdued-button" type="button" data-whats-new-action="dismiss-today">今天不再提醒</button>
+      </div>
+    </section>
+  </div>
   <div class="page-shell">
     <header class="hero">
       <div class="hero-copy">
         <div class="eyebrow">Xi bin</div>
-        <h1>嘻斌库</h1>
+        <div class="hero-title-row">
+          <h1>嘻斌库</h1>
+          <button id="whatsNewButton" class="whats-new-button" type="button" aria-label="查看更新说明">🔔</button>
+        </div>
         <div class="hero-link-row" style="margin-top: 24px; margin-bottom: 12px;">
           <a href="./articles.html" class="soft-button"
             style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; font-weight: 500; letter-spacing: 0.02em; padding: 0 28px; min-height: 52px; font-size: 15px; border-color: var(--accent); color: var(--accent); background: var(--paper); box-shadow: 0 6px 20px rgba(197, 124, 86, 0.12); transition: all 0.2s ease;">
@@ -98,23 +142,23 @@
       </main>
     </section>
 
-    <section class="contributors-section" aria-labelledby="contributorsTitle">
-      <div class="contributors-head">
-        <div>
-          <div class="section-kicker">Contributors</div>
-          <h2 id="contributorsTitle">贡献者</h2>
-        </div>
-      </div>
-      <div class="contributors-list">
-        <article class="contributor-card">
-          <div class="contributor-avatar">C</div>
-          <div>
-            <div class="contributor-name">Codex</div>
-            <div class="contributor-role">AI coding collaborator</div>
-          </div>
-        </article>
-      </div>
-    </section>
+    <footer class="site-footer">
+      <p class="license-line">
+        <img class="cc-icon" src="./assets/icons/cc-by-4.0.svg" alt="Creative Commons Attribution 4.0">
+        除另有注明外，本网页内容采用 Creative Commons Attribution 4.0 International（CC BY 4.0）许可协议开放授权。
+      </p>
+      <p>
+        <span class="company-line"><img class="flag-icon" src="./assets/icons/flag-kp.svg"
+            alt="朝鲜国旗">朝鲜通羊河网络讯息技术株式会社</span><br>
+        114-514，未来科学家大街222号，中区，平壤市，朝鲜民主主义人民共和国
+      </p>
+      <p>
+        本网页由伟大的 <strong>主体思想</strong> 驱动，在伟大的 <strong>金正恩</strong> 同志的指导下完成，并批判性使用邪恶美帝国主义的工具
+        <a href="https://platform.openai.com/docs/codex" target="_blank" rel="noopener noreferrer">OpenAI Codex</a>
+        和
+        <a href="https://deepmind.google/gemini" target="_blank" rel="noopener noreferrer">Google Gemini</a>。
+      </p>
+    </footer>
   </div>
   <div class="mobile-dock">
     <button class="mobile-dock-button" type="button" data-mobile-action="toggle-rail">内容列表</button>
