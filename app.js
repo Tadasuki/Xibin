@@ -53,6 +53,8 @@ const STANCE_TEXT = {
 const state = {
   analysis: null,
   selectedIndex: 0,
+  globalSearch: "",
+  globalSearchComposing: false,
   speakerFilter: "all",
   campFilter: "all",
   search: "",
@@ -67,6 +69,7 @@ const el = {
   loadingScreen: document.getElementById("loadingScreen"),
   mobileRailBackdrop: document.getElementById("mobileRailBackdrop"),
   heroDescription: document.getElementById("heroDescription"),
+  globalSearchPanel: document.getElementById("globalSearchPanel"),
   heroMetrics: document.getElementById("heroMetrics"),
   updatedChip: document.getElementById("updatedChip"),
   refreshButton: document.getElementById("refreshButton"),
@@ -131,6 +134,16 @@ function bindEvents() {
       return;
     }
 
+    const globalEntry = event.target.closest("[data-global-entry-index]");
+    if (globalEntry) {
+      state.selectedIndex = Number(globalEntry.dataset.globalEntryIndex);
+      state.globalSearch = "";
+      render();
+      closeMobileRail();
+      scrollToFocusAnchor();
+      return;
+    }
+
     const sessionButton = event.target.closest("[data-session-index]");
     if (sessionButton) {
       state.selectedIndex = Number(sessionButton.dataset.sessionIndex);
@@ -160,9 +173,34 @@ function bindEvents() {
   });
 
   document.addEventListener("input", (event) => {
+    if (event.target.matches("[data-global-search-box]")) {
+      state.globalSearch = event.target.value;
+      if (state.globalSearchComposing) {
+        return;
+      }
+      renderGlobalSearchPanel();
+      refocusGlobalSearchInput();
+      return;
+    }
+
     if (event.target.matches("[data-search-box]")) {
       state.search = event.target.value;
       renderTranscriptResults();
+    }
+  });
+
+  document.addEventListener("compositionstart", (event) => {
+    if (event.target.matches("[data-global-search-box]")) {
+      state.globalSearchComposing = true;
+    }
+  });
+
+  document.addEventListener("compositionend", (event) => {
+    if (event.target.matches("[data-global-search-box]")) {
+      state.globalSearchComposing = false;
+      state.globalSearch = event.target.value;
+      renderGlobalSearchPanel();
+      refocusGlobalSearchInput();
     }
   });
 
@@ -253,6 +291,7 @@ function render() {
   if (!state.analysis) {
     return;
   }
+  renderGlobalSearchPanel();
   renderHeroMetrics();
   renderHeroPanels();
   renderOverview();
@@ -335,6 +374,88 @@ function renderHeroMetrics() {
     metricChip(`最热日 ${hottestSession.date}`),
     metricChip(`活跃说话人 ${totals.activeParticipants} 人`)
   ].join("");
+}
+
+function renderGlobalSearchPanel() {
+  if (!el.globalSearchPanel || !state.analysis) {
+    return;
+  }
+
+  const matches = getGlobalSearchMatches();
+  el.globalSearchPanel.innerHTML = `
+    <div class="global-search-shell">
+      <div class="global-search-field">
+        <input
+          class="global-search-box"
+          data-global-search-box
+          type="search"
+          value="${escapeAttr(state.globalSearch)}"
+          placeholder="全局搜索标题或原始对话，例如 通山 / 改开 / 豪客来"
+        >
+        ${state.globalSearch.trim() ? renderGlobalSearchDropdown(matches) : ""}
+      </div>
+      <div class="global-search-hint">
+        ${state.globalSearch.trim() ? `当前关键词：<span class="global-search-keyword">${escapeHtml(state.globalSearch.trim())}</span> · ` : ""}
+        输入关键词，直接跳到命中的日期条目。
+      </div>
+    </div>
+  `;
+}
+
+function renderGlobalSearchDropdown(matches) {
+  if (!matches.length) {
+    return `<div class="global-search-dropdown"><div class="global-search-empty">没有命中条目，换个标题词或原话关键词试试。</div></div>`;
+  }
+
+  return `
+    <div class="global-search-dropdown">
+      ${matches.map((match) => `
+        <button class="global-search-option" type="button" data-global-entry-index="${match.index}">
+          <div class="global-search-kicker">${escapeHtml(match.kicker)}</div>
+          <div class="global-search-title">${highlightMatchHtml(match.title, state.globalSearch)}</div>
+          <div class="global-search-snippet">${highlightMatchHtml(match.snippet, state.globalSearch)}</div>
+        </button>
+      `).join("")}
+    </div>
+  `;
+}
+
+function getGlobalSearchMatches() {
+  const query = state.globalSearch.trim().toLowerCase();
+  if (!query) {
+    return [];
+  }
+
+  return state.analysis.sessions
+    .map((session, index) => {
+      const corpus = session.messages.map((message) => `${message.sender} ${message.content} ${message.replyTo?.content || ""}`).join(" ");
+      const titleHit = `${session.title} ${session.date} ${session.category.label}`.toLowerCase();
+      const matchedSource = titleHit.includes(query) ? `${session.title} ${session.category.label}` : corpus;
+      const haystack = `${titleHit} ${corpus}`.toLowerCase();
+      if (!haystack.includes(query)) {
+        return null;
+      }
+      return {
+        index,
+        kicker: `${session.date} · ${session.category.label}`,
+        title: session.title,
+        snippet: createSearchSnippet(matchedSource, state.globalSearch) || session.summary
+      };
+    })
+    .filter(Boolean)
+    .slice(0, 8);
+}
+
+function refocusGlobalSearchInput() {
+  const box = el.globalSearchPanel?.querySelector("[data-global-search-box]");
+  if (!box) {
+    return;
+  }
+  const caret = state.globalSearch.length;
+  box.focus();
+  if (typeof box.setSelectionRange === "function") {
+    box.setSelectionRange(caret, caret);
+  }
 }
 
 function renderHeroPanels() {
@@ -595,25 +716,26 @@ function renderTranscriptResults() {
 
   messageList.innerHTML = visibleMessages.length
     ? visibleMessages.map((message) => {
-      const badges = [];
+      const badgeItems = [];
       if (message.isTarget) {
-        badges.push(`<span class="badge core">${escapeHtml(campMeta.core.label)}</span>`);
+        badgeItems.push({ tone: "core", label: campMeta.core.label });
       } else {
         if (message.stance !== "observe") {
-          badges.push(`<span class="badge ${message.stance}">${escapeHtml(STANCE_TEXT[message.stance])}</span>`);
+          badgeItems.push({ tone: message.stance, label: STANCE_TEXT[message.stance] });
         }
         if (message.participantCamp !== "observe" && message.participantCamp !== message.stance) {
-          badges.push(`<span class="badge ${message.participantCamp}">${escapeHtml(campMeta[message.participantCamp].label)}</span>`);
+          badgeItems.push({ tone: message.participantCamp, label: campMeta[message.participantCamp].label });
         }
       }
+      const badgeRail = renderMessageBadges(badgeItems);
       return `
         <article class="message-card ${message.isTarget ? "target" : ""}">
           <div class="message-meta">
-            <div>
+            <div class="message-meta-main">
               <div class="message-sender">${escapeHtml(message.sender)}</div>
               <div class="message-time">${escapeHtml(message.time)}</div>
             </div>
-            ${message.isTarget || message.stance !== "observe" ? `<span class="badge ${message.isTarget ? "core" : message.stance}">${escapeHtml(message.isTarget ? campMeta.core.label : STANCE_TEXT[message.stance])}</span>` : ""}
+            ${badgeRail}
           </div>
           ${message.replyTo ? `
             <div class="reply-quote">
@@ -622,11 +744,31 @@ function renderTranscriptResults() {
             </div>
           ` : ""}
           <p class="message-content">${escapeHtml(message.content)}</p>
-          ${badges.length > 1 || (badges.length === 1 && !message.isTarget && message.stance === "observe") ? `<div class="badge-row">${badges.join("")}</div>` : ""}
         </article>
       `;
     }).join("")
     : '<div class="empty-state">当前筛选条件下没有命中消息。</div>';
+}
+
+function renderMessageBadges(badgeItems) {
+  const seen = new Set();
+  const uniqueBadges = badgeItems.filter((badge) => {
+    if (!badge?.label) return false;
+    const key = `${badge.tone}:${badge.label}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  if (!uniqueBadges.length) {
+    return "";
+  }
+
+  return `
+    <div class="message-badge-rail message-badge-rail-inline">
+      ${uniqueBadges.map((badge) => `<span class="badge ${badge.tone}">${escapeHtml(badge.label)}</span>`).join("")}
+    </div>
+  `;
 }
 
 function getVisibleTranscriptMessages(session) {
@@ -1639,4 +1781,52 @@ function escapeHtml(value) {
 
 function escapeAttr(value) {
   return escapeHtml(value);
+}
+
+function createSearchSnippet(text, query, radius = 38) {
+  const source = String(text ?? "").replace(/\s+/g, " ").trim();
+  const key = String(query ?? "").trim().toLowerCase();
+  if (!source) {
+    return "";
+  }
+  if (!key) {
+    return source.slice(0, radius * 2);
+  }
+  const lower = source.toLowerCase();
+  const index = lower.indexOf(key);
+  if (index === -1) {
+    return source.slice(0, radius * 2);
+  }
+  const start = Math.max(0, index - radius);
+  const end = Math.min(source.length, index + key.length + radius);
+  return `${start > 0 ? "…" : ""}${source.slice(start, end).trim()}${end < source.length ? "…" : ""}`;
+}
+
+function highlightMatchHtml(text, query) {
+  const source = String(text ?? "");
+  const key = String(query ?? "").trim();
+  if (!source) {
+    return "";
+  }
+  if (!key) {
+    return escapeHtml(source);
+  }
+
+  const lowerSource = source.toLowerCase();
+  const lowerKey = key.toLowerCase();
+  let cursor = 0;
+  let html = "";
+
+  while (cursor < source.length) {
+    const hit = lowerSource.indexOf(lowerKey, cursor);
+    if (hit === -1) {
+      html += escapeHtml(source.slice(cursor));
+      break;
+    }
+    html += escapeHtml(source.slice(cursor, hit));
+    html += `<span class="global-search-mark">${escapeHtml(source.slice(hit, hit + key.length))}</span>`;
+    cursor = hit + key.length;
+  }
+
+  return html;
 }

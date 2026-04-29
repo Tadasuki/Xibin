@@ -222,6 +222,138 @@ select {
   min-height: 0;
 }
 
+.global-search-shell {
+  position: relative;
+  width: min(760px, 100%);
+  margin-top: 18px;
+}
+
+.global-search-field {
+  position: relative;
+}
+
+.global-search-box {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 18px;
+  border: 1px solid var(--brown-soft-3);
+  border-radius: 20px;
+  background: rgba(255, 250, 245, 0.94);
+  color: var(--ink-brown);
+  outline: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.82),
+    0 10px 28px rgba(70, 56, 39, 0.06);
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.global-search-box::placeholder {
+  color: rgba(120, 111, 100, 0.82);
+}
+
+.global-search-box:focus {
+  border-color: rgba(112, 135, 127, 0.5);
+  background: rgba(255, 252, 248, 0.98);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 14px 34px rgba(70, 56, 39, 0.08);
+}
+
+.global-search-hint {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.global-search-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  z-index: 28;
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 253, 249, 0.97);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(14px);
+  max-height: min(420px, 52vh);
+  overflow: auto;
+}
+
+.global-search-dropdown::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.global-search-option,
+.global-search-empty {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+}
+
+.global-search-option {
+  text-align: left;
+  cursor: pointer;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.global-search-option:hover {
+  transform: translateY(-1px);
+  border-color: var(--brown-soft-3);
+  background: rgba(255, 251, 246, 0.96);
+}
+
+.global-search-kicker {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.global-search-title {
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.35;
+  color: var(--ink-brown);
+}
+
+.global-search-snippet {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.global-search-empty {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.global-search-mark,
+.global-search-keyword {
+  display: inline;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: rgba(197, 124, 86, 0.14);
+  color: var(--ink-brown);
+  box-shadow: inset 0 0 0 1px rgba(197, 124, 86, 0.12);
+}
+
+.global-search-keyword {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: linear-gradient(180deg, rgba(183, 154, 87, 0.2), rgba(197, 124, 86, 0.12));
+}
+
 .hero-metrics,
 .hero-actions,
 .toolbar-group,
@@ -1054,7 +1186,17 @@ select {
 }
 
 .message-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
   color: var(--muted-2);
+}
+
+.message-meta-main {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
 }
 
 .message-sender {
@@ -1104,11 +1246,19 @@ select {
   word-break: break-word;
 }
 
+.message-badge-rail,
 .badge-row {
-  margin-top: 12px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.message-badge-rail-inline {
+  margin-top: 0;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  max-width: 52%;
 }
 
 .badge {
@@ -1256,7 +1406,6 @@ code {
   .toolbar-row,
   .session-topline,
   .session-meta,
-  .message-meta,
   .transcript-meta,
   .camp-column-head,
   .timeline-head,
@@ -1267,6 +1416,14 @@ code {
 
   .search-box {
     width: 100%;
+  }
+
+  .global-search-shell {
+    width: 100%;
+  }
+
+  .global-search-dropdown {
+    max-height: min(380px, 46vh);
   }
 
   .left-column {
@@ -1369,6 +1526,16 @@ code {
   .message-content {
     font-size: 19px;
     line-height: 1.9;
+  }
+
+  .message-meta {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .message-badge-rail-inline {
+    max-width: 46%;
   }
 
   .timeline-list {

@@ -1,10 +1,19 @@
 /嘻斌库.json
   Cache-Control: no-cache, no-store, must-revalidate
 
+/恋斌场.json
+  Cache-Control: no-cache, no-store, must-revalidate
+
 /index.html
   Cache-Control: no-cache
 
+/恋斌场.html
+  Cache-Control: no-cache
+
 /app.js
+  Cache-Control: no-cache
+
+/恋斌场.js
   Cache-Control: no-cache
 
 /styles.css

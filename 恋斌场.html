@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no, email=no, address=no">
-  <title>通三个人文章 - 嘻斌库</title>
-  <meta name="description" content="通三哥的长文、随笔与情感告白收录。">
+  <title>恋斌场 - 嘻斌库</title>
+  <meta name="description" content="通三哥情感史整理页，收录关键聊天、感情线与情感图。">
   <link rel="icon" type="image/png" href="./favicon.png">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -22,21 +22,6 @@
     #transcriptPanel {
       scrollbar-width: none;
       -ms-overflow-style: none;
-    }
-
-    .article-text {
-      font-size: 19px;
-      font-family: var(--font-display);
-      color: var(--text-base);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .article-text p {
-      text-indent: 2em;
-      line-height: 2;
-      margin-top: 0;
-      margin-bottom: 1.2em;
     }
 
     .nav-link {
@@ -61,20 +46,43 @@
       transform: translateX(-2px);
     }
 
-    .focus-facts.article-summary {
-      grid-template-columns: 1fr;
+    .focus-facts.story-summary {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .fact-card.full-width {
       grid-column: 1 / -1;
     }
 
+    .fact-value {
+      margin-top: 6px;
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--text);
+      white-space: normal;
+    }
+
     .fact-value.long-text {
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.7;
       font-weight: 400;
-      white-space: normal;
-      padding-top: 8px;
+    }
+
+    .message-content {
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .message-card.target {
+      background:
+        radial-gradient(circle at top right, rgba(197, 124, 86, 0.08), transparent 28%),
+        rgba(197, 124, 86, 0.05);
+    }
+
+    @media (max-width: 760px) {
+      .focus-facts.story-summary {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -82,8 +90,8 @@
 <body>
   <div id="loadingScreen" class="loading-screen">
     <div class="loading-card">
-      <div class="loading-kicker">Xi bin</div>
-      <div id="loadingTitle" class="loading-title">正在出斌<br>.</div>
+      <div class="loading-kicker">Xi bin love archive</div>
+      <div class="loading-title">正在翻斌的<br>感情旧账<br>.</div>
     </div>
   </div>
   <div id="mobileRailBackdrop" class="mobile-rail-backdrop"></div>
@@ -93,9 +101,9 @@
         <a href="./index.html" class="nav-link">
           <span>←</span> 返回对话流首页
         </a>
-        <div class="eyebrow">Xi bin · Articles</div>
-        <h1>斌说说</h1>
-        <p id="heroDescription">收录通三哥个人的长文与随笔，独立于群聊之外的自我剖析。</p>
+        <div class="eyebrow">Xi bin · Romance Archive</div>
+        <h1>恋斌场</h1>
+        <p id="heroDescription">通三哥情感史整理页，优先收录能看出试探、落差、投射与现实判断的关键片段。</p>
         <div id="globalSearchPanel"></div>
         <div id="heroMetrics" class="hero-metrics"></div>
         <section id="overview" class="overview-grid overview-inline"></section>
@@ -111,7 +119,7 @@
         <section class="card rail-card">
           <div class="section-head">
             <div>
-              <h2>文章列表</h2>
+              <h2>情感条目</h2>
             </div>
             <button class="mobile-close-button" type="button" data-mobile-close="rail">收起</button>
           </div>
@@ -127,21 +135,21 @@
         <section class="card transcript-card" id="transcriptAnchor">
           <div class="section-head">
             <div>
-              <h2>文章正文</h2>
+              <h2>原始聊天</h2>
             </div>
           </div>
-          <div id="transcriptPanel" style="padding: 24px; overflow: auto; padding-right: 8px;"></div>
+          <div id="transcriptPanel"></div>
         </section>
       </main>
     </section>
   </div>
   <div class="mobile-dock">
-    <button class="mobile-dock-button" type="button" data-mobile-action="toggle-rail">文章列表</button>
-    <button class="mobile-dock-button" type="button" data-jump-target="focusAnchor">文章解析</button>
-    <button class="mobile-dock-button" type="button" data-jump-target="transcriptAnchor">正文</button>
+    <button class="mobile-dock-button" type="button" data-mobile-action="toggle-rail">情感条目</button>
+    <button class="mobile-dock-button" type="button" data-jump-target="focusAnchor">感情线</button>
+    <button class="mobile-dock-button" type="button" data-jump-target="transcriptAnchor">原始聊天</button>
   </div>
 
-  <script src="./articles.js"></script>
+  <script src="./恋斌场.js"></script>
 </body>
 
 </html>
