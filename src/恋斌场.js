@@ -12,6 +12,7 @@ const state = {
   globalSearch: "",
   globalSearchComposing: false,
   transcriptSearch: "",
+  transcriptSearchComposing: false,
   roleFilter: "all",
   speakerFilters: new Set(),
   dataSignature: "",
@@ -147,13 +148,22 @@ function bindEvents() {
 
     if (event.target.matches("[data-transcript-search-box]")) {
       state.transcriptSearch = event.target.value;
+      if (state.transcriptSearchComposing) {
+        return;
+      }
       renderTranscript(currentStory());
+      refocusTranscriptSearchInput();
     }
   });
 
   document.addEventListener("compositionstart", (event) => {
     if (event.target.matches("[data-global-search-box]")) {
       state.globalSearchComposing = true;
+      return;
+    }
+
+    if (event.target.matches("[data-transcript-search-box]")) {
+      state.transcriptSearchComposing = true;
     }
   });
 
@@ -163,6 +173,14 @@ function bindEvents() {
       state.globalSearch = event.target.value;
       renderGlobalSearchPanel();
       refocusGlobalSearchInput();
+      return;
+    }
+
+    if (event.target.matches("[data-transcript-search-box]")) {
+      state.transcriptSearchComposing = false;
+      state.transcriptSearch = event.target.value;
+      renderTranscript(currentStory());
+      refocusTranscriptSearchInput();
     }
   });
 }
@@ -551,6 +569,18 @@ function refocusGlobalSearchInput() {
     return;
   }
   const caret = state.globalSearch.length;
+  box.focus();
+  if (typeof box.setSelectionRange === "function") {
+    box.setSelectionRange(caret, caret);
+  }
+}
+
+function refocusTranscriptSearchInput() {
+  const box = el.transcriptPanel?.querySelector("[data-transcript-search-box]");
+  if (!box) {
+    return;
+  }
+  const caret = state.transcriptSearch.length;
   box.focus();
   if (typeof box.setSelectionRange === "function") {
     box.setSelectionRange(caret, caret);

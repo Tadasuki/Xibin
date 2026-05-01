@@ -19,6 +19,9 @@ const state = {
 const el = {
   loadingScreen: document.getElementById("loadingScreen"),
   mobileRailBackdrop: document.getElementById("mobileRailBackdrop"),
+  previewModal: document.getElementById("previewModal"),
+  previewModalViewer: document.getElementById("previewModalViewer"),
+  previewDownloadLink: document.getElementById("previewDownloadLink"),
   globalSearchPanel: document.getElementById("globalSearchPanel"),
   heroMetrics: document.getElementById("heroMetrics"),
   overview: document.getElementById("overview"),
@@ -103,7 +106,7 @@ function bindEvents() {
       render();
       state.mobileRailOpen = false;
       document.body.classList.remove("mobile-rail-open");
-      
+
       const focusAnchor = document.getElementById("focusAnchor");
       if (focusAnchor) {
         window.requestAnimationFrame(() => {
@@ -111,6 +114,16 @@ function bindEvents() {
         });
       }
       return;
+    }
+
+    const pptxAction = event.target.closest("[data-pptx-action]");
+    if (pptxAction) {
+      handlePptxAction(pptxAction.dataset.pptxAction);
+      return;
+    }
+
+    if (event.target === el.previewModal) {
+      closePreviewModal();
     }
   });
 
@@ -139,6 +152,7 @@ function bindEvents() {
       refocusGlobalSearchInput();
     }
   });
+
 }
 
 async function refreshData(reason, options = {}) {
@@ -153,7 +167,7 @@ async function refreshData(reason, options = {}) {
     state.dataSignature = signature;
     applyInitialEntrySelection();
     state.selectedIndex = Math.min(state.selectedIndex, Math.max(0, state.data.articles.length - 1));
-    
+
     el.updatedChip.textContent = `已更新 · ${new Date().toLocaleTimeString("zh-CN", { hour12: false })}`;
     render();
     document.body.classList.remove("loading");
@@ -177,10 +191,11 @@ function applyInitialEntrySelection() {
 
 function render() {
   if (!state.data || !state.data.articles) return;
+  closePreviewModal();
   renderGlobalSearchPanel();
-  
+
   el.heroMetrics.innerHTML = `
-    <div class="metric-chip"><span>共计</span><strong>${state.data.articles.length} 篇文章</strong></div>
+    <div class="metric-chip"><span>共计</span><strong>${state.data.articles.length} 条收录</strong></div>
     <div class="metric-chip"><span>作者</span><strong>${escapeHtml(state.data.metadata.target_person.name)}</strong></div>
   `;
 
@@ -196,11 +211,11 @@ function render() {
     <button class="session-button ${state.selectedIndex === i ? "active" : ""}" data-session-index="${i}">
       <div class="session-topline">
         <div class="session-event">${escapeHtml(article.title)}</div>
-        <span class="session-type" style="color:#b79a57">散文</span>
+        <span class="session-type" style="color:#b79a57">${escapeHtml(getArticleKindLabel(article))}</span>
       </div>
       <div class="session-date">${escapeHtml(article.date)}</div>
       <div class="session-meta" style="margin-top: 12px;">
-        <span>${article.text.length} 字</span>
+        <span>${escapeHtml(getArticleMetric(article))}</span>
       </div>
     </button>
   `).join("");
@@ -214,16 +229,16 @@ function render() {
     <section class="focus-summary">
       <div class="focus-title-row">
         <div class="focus-date">${escapeHtml(article.title)}</div>
-        <button class="jump-button" type="button" data-jump-target="transcriptAnchor">阅读正文</button>
+        <button class="jump-button" type="button" data-jump-target="transcriptAnchor">${article.kind === "pptx" ? "查看预览" : "阅读正文"}</button>
       </div>
       <div class="focus-headline">
         <span class="small-pill">${escapeHtml(article.date)}</span>
-        <span class="small-pill">文章解析</span>
+        <span class="small-pill">${escapeHtml(getArticleHeadlineTag(article))}</span>
       </div>
       <div class="focus-facts article-summary">
         <article class="fact-card full-width">
           <div class="fact-kicker">核心主旨</div>
-          <div class="fact-value long-text">${escapeHtml(article.summary)}</div>
+          <div class="fact-value long-text">${renderRichText(article.summary)}</div>
         </article>
       </div>
     </section>
@@ -281,12 +296,150 @@ function render() {
     </div>
   `;
 
+  renderArticleBody(article);
+  activateMindMap();
+}
+
+function renderArticleBody(article) {
+  if (article.kind === "pptx") {
+    const asset = article.asset || {};
+    el.transcriptPanel.innerHTML = `
+      <div class="chat-thread">
+        ${(article.transcript || []).map((message) => renderArticleMessage(message, article)).join("")}
+        <div class="document-actions" style="justify-content:center; margin-top: 4px;">
+          <button class="document-action" type="button" data-pptx-action="open-modal">放大预览</button>
+          <a class="document-action" href="${escapeAttr(asset.file || "#")}" download="${escapeAttr(asset.downloadName || article.title)}">下载到本地</a>
+        </div>
+      </div>
+    `;
+    initPptxPreview(article, el.transcriptPanel.querySelector("[data-pptx-preview]"), "thumb");
+    return;
+  }
+
   const formattedText = escapeHtml(article.text)
     .split(/\n\n+/)
-    .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+    .map((p) => `<p>${p.replace(/\n/g, "<br>")}</p>`)
     .join("");
   el.transcriptPanel.innerHTML = `<div class="article-text">${formattedText}</div>`;
-  activateMindMap();
+  closePreviewModal();
+}
+
+function renderArticleMessage(message, article) {
+  const head = `
+    <div class="message-meta">
+      <div class="message-meta-main">
+        <div class="message-sender">${escapeHtml(message.sender || "未知")}</div>
+        <div class="message-time">${escapeHtml(message.time || "")}</div>
+      </div>
+    </div>
+  `;
+
+  if (message.type === "file") {
+    const asset = article.asset || {};
+    return `
+      <article class="message-card">
+        <div class="chat-main">
+          ${head}
+          <button class="chat-file-card" type="button" data-pptx-action="open-modal">
+            <div class="chat-file-meta">
+              <div>
+                <div class="chat-file-title">${escapeHtml(message.fileLabel || asset.downloadName || article.title)}</div>
+                <div class="chat-file-size">${escapeHtml(message.sizeLabel || asset.sizeLabel || "")}</div>
+              </div>
+              <div class="chat-file-icon">P</div>
+            </div>
+            <div class="document-viewer-shell thumb-shell">
+              <div class="document-viewer document-viewer-thumb" data-pptx-preview data-pptx-mode="thumb"></div>
+            </div>
+          </button>
+        </div>
+      </article>
+    `;
+  }
+
+  if (message.type === "reply") {
+    return `
+      <article class="message-card">
+        <div class="chat-main">
+          ${head}
+          <div class="reply-quote">
+            <div class="reply-quote-sender">${escapeHtml(message.quoteSender || "")}</div>
+            <div class="reply-quote-content">${escapeHtml(message.quoteContent || "")}</div>
+          </div>
+          <p class="message-content">${escapeHtml(message.content || "")}</p>
+        </div>
+      </article>
+    `;
+  }
+
+  return `
+    <article class="message-card">
+      <div class="chat-main">
+        ${head}
+        <p class="message-content">${escapeHtml(message.content || "")}</p>
+      </div>
+    </article>
+  `;
+}
+
+function initPptxPreview(article, preview, mode = "full") {
+  if (!preview) {
+    return;
+  }
+
+  const fileUrl = getAbsoluteAssetUrl(article.asset?.file);
+  const viewerUrl = getMicrosoftOfficeViewerUrl(fileUrl);
+  preview.innerHTML = "";
+  preview.dataset.pptxMode = mode;
+  preview.dataset.pptxArticleId = article.id || article.title || "pptx";
+  preview.innerHTML = `
+    <iframe
+      class="document-viewer-frame"
+      src="${escapeAttr(viewerUrl)}"
+      title="${escapeAttr(article.asset?.downloadName || article.title || "PPTX 预览")}"
+      loading="${mode === "thumb" ? "lazy" : "eager"}"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen
+    ></iframe>
+  `;
+}
+
+function handlePptxAction(action) {
+  const article = state.data?.articles?.[state.selectedIndex];
+  if (!article || article.kind !== "pptx") {
+    return;
+  }
+
+  if (action === "open-modal") {
+    openPreviewModal(article);
+    return;
+  }
+
+  if (action === "close-modal") {
+    closePreviewModal();
+  }
+}
+
+function openPreviewModal(article) {
+  if (!el.previewModal || !el.previewModalViewer) {
+    return;
+  }
+  el.previewModal.hidden = false;
+  document.body.classList.add("preview-open");
+  el.previewDownloadLink.href = article.asset?.file || "#";
+  el.previewDownloadLink.download = article.asset?.downloadName || article.title || "document.pptx";
+  initPptxPreview(article, el.previewModalViewer, "full");
+}
+
+function closePreviewModal() {
+  if (!el.previewModal || el.previewModal.hidden) {
+    return;
+  }
+  el.previewModal.hidden = true;
+  document.body.classList.remove("preview-open");
+  if (el.previewModalViewer) {
+    el.previewModalViewer.innerHTML = "";
+  }
 }
 
 function renderGlobalSearchPanel() {
@@ -342,14 +495,14 @@ function getGlobalSearchMatches() {
   return state.data.articles
     .map((article, index) => {
       const titleField = `${article.title} ${article.date}`.toLowerCase();
-      const bodyField = `${article.summary || ""} ${article.text || ""}`.toLowerCase();
+      const bodyField = `${article.summary || ""} ${article.text || ""} ${article.asset?.downloadName || ""} ${article.asset?.note || ""}`.toLowerCase();
       if (!titleField.includes(query) && !bodyField.includes(query)) {
         return null;
       }
-      const matchedSource = titleField.includes(query) ? `${article.title} ${article.date}` : `${article.summary || ""} ${article.text || ""}`;
+      const matchedSource = titleField.includes(query) ? `${article.title} ${article.date}` : `${article.summary || ""} ${article.text || ""} ${article.asset?.downloadName || ""} ${article.asset?.note || ""}`;
       return {
         index,
-        kicker: `${article.date} · 文章集`,
+        kicker: `${article.date} · 全斌文`,
         title: article.title,
         snippet: createSearchSnippet(matchedSource, state.globalSearch) || article.summary || article.text
       };
@@ -370,6 +523,33 @@ function refocusGlobalSearchInput() {
   }
 }
 
+function getArticleKindLabel(article) {
+  return article.kind === "pptx" ? "文档" : "散文";
+}
+
+function getArticleMetric(article) {
+  if (article.kind === "pptx") {
+    return `${article.asset?.sizeLabel || "PPTX"} · 对话附件`;
+  }
+  return `${article.text.length} 字`;
+}
+
+function getArticleHeadlineTag(article) {
+  return article.kind === "pptx" ? "文档预览" : "文章解析";
+}
+
+function getAbsoluteAssetUrl(file) {
+  try {
+    return new URL(file || "", window.location.href).href;
+  } catch (error) {
+    return file || "";
+  }
+}
+
+function getMicrosoftOfficeViewerUrl(fileUrl) {
+  return `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(fileUrl)}`;
+}
+
 function escapeHtml(str) {
   if (!str) return "";
   return String(str)
@@ -382,6 +562,26 @@ function escapeHtml(str) {
 
 function escapeAttr(str) {
   return escapeHtml(str).replace(/`/g, "&#096;");
+}
+
+function renderRichText(text) {
+  const source = String(text || "");
+  const links = [];
+  const html = escapeHtml(source).replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, url) => {
+    const id = links.push({
+      label: escapeHtml(label),
+      url: escapeAttr(url)
+    }) - 1;
+    return `__RICH_LINK_${id}__`;
+  });
+
+  return html.replace(/__RICH_LINK_(\d+)__/g, (_, index) => {
+    const link = links[Number(index)];
+    if (!link) {
+      return "";
+    }
+    return `<a href="${link.url}" style="color:var(--accent); text-decoration:underline;">${link.label}</a>`;
+  });
 }
 
 function createSearchSnippet(text, query, radius = 38) {
@@ -508,7 +708,7 @@ function zoomMindAt(viewport, factor, clientX, clientY) {
   const view = ensureMindView(viewport);
   const rect = viewport.getBoundingClientRect();
   const nextScale = clamp(view.scale * factor, MIND_SCALE_MIN, MIND_SCALE_MAX);
-  
+
   if (nextScale === view.scale) return;
 
   const localX = clientX - rect.left;
@@ -530,7 +730,7 @@ function handleMindAction(action, viewport) {
     const isFull = wrap?.classList.contains("fullscreen");
     const btn = wrap?.querySelector('[data-mind-action="fullscreen"]');
     if (btn) btn.textContent = isFull ? "退出" : "全屏";
-    
+
     setTimeout(() => {
       const key = viewport.dataset.sessionKey;
       state.mindViews[key] = fitMindView(viewport);
@@ -626,7 +826,7 @@ function buildMindOrbit(article) {
   const nodes = [
     mindNode("center", 550, 360, "核心意象与主题", article.title, article.date, 0)
   ];
-  
+
   if (article.mindMap[0]) nodes.push(mindNode("", 385, 225, article.mindMap[0].kicker, article.mindMap[0].title, article.mindMap[0].body, 0.2));
   if (article.mindMap[1]) nodes.push(mindNode("", 390, 495, article.mindMap[1].kicker, article.mindMap[1].title, article.mindMap[1].body, 0.35));
   if (article.mindMap[2]) nodes.push(mindNode("", 715, 225, article.mindMap[2].kicker, article.mindMap[2].title, article.mindMap[2].body, 0.5));
@@ -643,7 +843,7 @@ function buildMindOrbit(article) {
 
   const paths = edges.map(([fromIndex, toIndex, color, width, opacity]) => {
     if (nodes[fromIndex] && nodes[toIndex]) {
-        return bezier(nodes[fromIndex], nodes[toIndex], color, width, opacity);
+      return bezier(nodes[fromIndex], nodes[toIndex], color, width, opacity);
     }
     return null;
   }).filter(Boolean);

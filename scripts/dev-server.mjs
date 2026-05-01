@@ -21,6 +21,8 @@ const contentTypes = {
   ".jpeg": "image/jpeg",
   ".png": "image/png",
   ".svg": "image/svg+xml",
+  ".pdf": "application/pdf",
+  ".pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
   ".txt": "text/plain; charset=utf-8",
   ".ttf": "font/ttf",
   ".otf": "font/otf",

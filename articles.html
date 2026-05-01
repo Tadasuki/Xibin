@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no, email=no, address=no">
-  <title>通三个人文章 - 嘻斌库</title>
-  <meta name="description" content="通三哥的长文、随笔与情感告白收录。">
+  <title>全斌文 - 嘻斌库</title>
+  <meta name="description" content="通三哥的长文、随笔与附件文档收录。">
   <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
   <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -76,6 +76,277 @@
       white-space: normal;
       padding-top: 8px;
     }
+
+    .document-preview {
+      display: grid;
+      gap: 20px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .document-preview-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .document-preview-copy h3 {
+      margin: 6px 0 8px;
+      font-size: 28px;
+    }
+
+    .document-preview-copy p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .document-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .document-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--brown-soft-2);
+      background: var(--paper);
+      color: var(--ink-brown);
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .document-action:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .document-viewer-shell {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 252, 248, 0.82);
+    }
+
+    .document-viewer-shell.thumb-shell {
+      padding: 10px;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+
+    .document-viewer {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: rgba(244, 239, 232, 0.72);
+    }
+
+    .document-viewer.document-viewer-thumb {
+      min-height: 220px;
+      height: 220px;
+      pointer-events: none;
+    }
+
+    .document-viewer.document-viewer-full {
+      height: min(70vh, 760px);
+    }
+
+    .document-viewer-frame {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #fff;
+    }
+
+    .document-empty {
+      padding: 28px;
+      border: 1px dashed var(--line-strong);
+      border-radius: 14px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .document-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chat-thread {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .chat-file-card {
+      width: min(100%, 440px);
+      padding: 14px;
+      display: grid;
+      gap: 14px;
+      text-align: left;
+      font: inherit;
+      border-radius: 18px;
+      background: rgba(255, 252, 248, 0.9);
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 28px rgba(70, 56, 39, 0.08);
+      cursor: pointer;
+    }
+
+    .chat-file-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .chat-file-title {
+      font-size: 16px;
+      font-weight: 650;
+      color: var(--ink-brown);
+    }
+
+    .chat-file-size {
+      margin-top: 4px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .chat-file-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: #df5149;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+
+    .chat-quote {
+      padding-left: 14px;
+      border-left: 3px solid rgba(112, 135, 127, 0.22);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .chat-quote strong {
+      color: var(--ink-brown);
+    }
+
+    .preview-modal[hidden] {
+      display: none;
+    }
+
+    .preview-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      background: rgba(50, 38, 29, 0.46);
+      backdrop-filter: blur(8px);
+      display: grid;
+      place-items: center;
+      padding: 18px;
+    }
+
+    .preview-dialog {
+      width: min(1100px, 100%);
+      max-height: min(92vh, 980px);
+      overflow: auto;
+      border-radius: 24px;
+      border: 1px solid rgba(90, 57, 43, 0.12);
+      background: rgba(255, 252, 248, 0.98);
+      box-shadow: 0 24px 60px rgba(50, 38, 29, 0.24);
+      padding: 18px;
+    }
+
+    .preview-dialog-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .preview-dialog-title {
+      font-size: 20px;
+      font-weight: 650;
+      color: var(--ink-brown);
+    }
+
+    .preview-dialog-close {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      border: 1px solid var(--brown-soft-2);
+      background: var(--paper);
+      color: var(--ink-brown);
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    body.preview-open {
+      overflow: hidden;
+    }
+
+    @media (max-width: 760px) {
+      .preview-modal {
+        padding: 10px;
+      }
+
+      .preview-dialog {
+        width: min(92vw, 720px);
+        max-height: 92vh;
+        overflow: hidden;
+        padding: 16px;
+        border-radius: 28px;
+      }
+
+      .document-preview-copy h3 {
+        font-size: 22px;
+      }
+
+      .preview-dialog .document-viewer-shell {
+        height: 68vh;
+        padding: 12px;
+        overflow: hidden;
+        border-radius: 22px;
+      }
+
+      .document-viewer-shell.thumb-shell {
+        height: auto;
+      }
+
+      .chat-bubble {
+        gap: 10px;
+      }
+
+      .chat-file-card {
+        width: 100%;
+      }
+
+      .document-viewer.document-viewer-full {
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+      }
+    }
   </style>
 </head>
 
@@ -87,15 +358,29 @@
     </div>
   </div>
   <div id="mobileRailBackdrop" class="mobile-rail-backdrop"></div>
+  <div id="previewModal" class="preview-modal" hidden>
+    <section class="preview-dialog" role="dialog" aria-modal="true" aria-labelledby="previewDialogTitle">
+      <div class="preview-dialog-head">
+        <div class="preview-dialog-title" id="previewDialogTitle">附件预览</div>
+        <button class="preview-dialog-close" type="button" data-pptx-action="close-modal" aria-label="关闭预览">×</button>
+      </div>
+      <div class="document-actions" style="margin-bottom: 14px; justify-content: center;">
+        <a id="previewDownloadLink" class="document-action" href="#" download>下载到本地</a>
+      </div>
+      <div class="document-viewer-shell">
+        <div id="previewModalViewer" class="document-viewer document-viewer-full"></div>
+      </div>
+    </section>
+  </div>
   <div class="page-shell">
     <header class="hero">
       <div class="hero-copy">
         <a href="./index.html" class="nav-link">
           <span>←</span> 返回对话流首页
         </a>
-        <div class="eyebrow">Xi bin · Articles</div>
-        <h1>斌说说</h1>
-        <p id="heroDescription">收录通三哥个人的长文与随笔，独立于群聊之外的自我剖析。</p>
+        <div class="eyebrow">Xi bin · Library</div>
+        <h1>全斌文</h1>
+        <p id="heroDescription">收录通三哥个人的长文、随笔与附件文档，独立于群聊之外整理成册。</p>
         <div id="globalSearchPanel"></div>
         <div id="heroMetrics" class="hero-metrics"></div>
         <section id="overview" class="overview-grid overview-inline"></section>
@@ -111,7 +396,7 @@
         <section class="card rail-card">
           <div class="section-head">
             <div>
-              <h2>文章列表</h2>
+              <h2>文库列表</h2>
             </div>
             <button class="mobile-close-button" type="button" data-mobile-close="rail">收起</button>
           </div>
@@ -127,7 +412,7 @@
         <section class="card transcript-card" id="transcriptAnchor">
           <div class="section-head">
             <div>
-              <h2>文章正文</h2>
+              <h2>正文 / 附件预览</h2>
             </div>
           </div>
           <div id="transcriptPanel" style="padding: 24px; overflow: auto; padding-right: 8px;"></div>
@@ -136,9 +421,9 @@
     </section>
   </div>
   <div class="mobile-dock">
-    <button class="mobile-dock-button" type="button" data-mobile-action="toggle-rail">文章列表</button>
+    <button class="mobile-dock-button" type="button" data-mobile-action="toggle-rail">文库列表</button>
     <button class="mobile-dock-button" type="button" data-jump-target="focusAnchor">文章解析</button>
-    <button class="mobile-dock-button" type="button" data-jump-target="transcriptAnchor">正文</button>
+    <button class="mobile-dock-button" type="button" data-jump-target="transcriptAnchor">预览</button>
   </div>
 
   <script src="./src/articles.js"></script>

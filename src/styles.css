@@ -398,17 +398,19 @@ select {
 }
 
 .whats-new-dialog {
-  width: min(560px, 100%);
-  max-height: min(720px, calc(100dvh - 36px));
+  width: min(680px, 100%);
+  max-height: min(820px, calc(100dvh - 36px));
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: rgba(255, 253, 249, 0.92);
+  border: 1px solid rgba(90, 57, 43, 0.16);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 249, 0.97), rgba(250, 245, 237, 0.94)),
+    var(--paper);
   backdrop-filter: blur(18px) saturate(1.08);
   -webkit-backdrop-filter: blur(18px) saturate(1.08);
-  box-shadow: 0 22px 70px rgba(70, 56, 39, 0.2);
+  box-shadow: 0 26px 80px rgba(70, 56, 39, 0.22);
 }
 
 .whats-new-head {
@@ -474,9 +476,80 @@ select {
 
 .whats-new-body {
   display: grid;
-  gap: 10px;
-  padding: 14px 20px;
+  gap: 14px;
+  padding: 16px 20px;
   overflow: auto;
+}
+
+.whats-new-release {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba(216, 204, 188, 0.9);
+  border-radius: 22px;
+  background: rgba(255, 253, 249, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.whats-new-release.latest {
+  border-color: rgba(197, 124, 86, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 245, 0.95), rgba(255, 253, 249, 0.76)),
+    rgba(197, 124, 86, 0.06);
+}
+
+.whats-new-release-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.whats-new-release h3 {
+  margin: 5px 0 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.15;
+  color: var(--ink-brown);
+}
+
+.whats-new-release-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(197, 124, 86, 0.24);
+  border-radius: 999px;
+  background: rgba(197, 124, 86, 0.1);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.whats-new-group {
+  padding: 12px 14px;
+  border: 1px solid rgba(216, 204, 188, 0.82);
+  border-radius: 16px;
+  background: rgba(255, 253, 249, 0.74);
+}
+
+.whats-new-group h4 {
+  margin: 0 0 8px;
+  color: var(--ink-brown);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.whats-new-group ul {
+  margin: 0;
+  padding-left: 1.15em;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.whats-new-group li + li {
+  margin-top: 3px;
 }
 
 .whats-new-item {
@@ -495,11 +568,11 @@ select {
   text-transform: uppercase;
 }
 
-.whats-new-item h3 {
+.whats-new-item h4 {
   margin: 7px 0 5px;
   color: var(--ink-brown);
-  font-size: 16px;
-  font-weight: 550;
+  font-size: 14px;
+  font-weight: 650;
 }
 
 .whats-new-item p {
@@ -1480,6 +1553,62 @@ select {
   word-break: break-word;
 }
 
+.location-card {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+  min-height: 112px;
+  padding: 8px;
+  border: 1px solid rgba(112, 135, 127, 0.24);
+  border-radius: 8px;
+  background: rgba(248, 251, 249, 0.78);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.location-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(112, 135, 127, 0.42);
+  background: rgba(248, 251, 249, 0.94);
+}
+
+.location-card-image {
+  width: 100%;
+  height: 100%;
+  min-height: 96px;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  object-fit: cover;
+  background: rgba(112, 135, 127, 0.12);
+}
+
+.location-card-body {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 4px 4px 4px 0;
+}
+
+.location-card-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 1.35;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.location-card-address {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
 .message-badge-rail,
 .badge-row {
   margin-top: 10px;
@@ -1798,6 +1927,20 @@ code {
   .message-content {
     font-size: 19px;
     line-height: 1.9;
+  }
+
+  .location-card {
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 102px;
+  }
+
+  .location-card-image {
+    min-height: 86px;
+  }
+
+  .location-card-name {
+    font-size: 18px;
   }
 
   .message-meta {

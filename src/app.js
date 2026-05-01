@@ -1,13 +1,24 @@
 const DATA_URL = "./data/嘻斌库.json";
 const ARTICLES_DATA_URL = "./data/articles.json";
 const ROMANCE_DATA_URL = "./data/恋斌场.json";
-const WHATS_NEW_STORAGE_KEY = "xibinku-whats-new-dismissed-date";
+const WHATS_NEW_STORAGE_KEY = "xibinku-whats-new-dismissed-signature";
 const POLL_INTERVAL = 20000;
 const DEV_EVENTS_URL = "/__events";
 const MIND_SURFACE = { width: 1100, height: 720 };
 const MIND_SCALE_MIN = 0.42;
 const MIND_SCALE_MAX = 2.2;
 const MIND_SCALE_STEP = 1.16;
+const LOCATION_CARD_OVERRIDES = new Map([
+  [
+    "豪客来卤菜店|湖北省咸宁市通山县通羊镇月亮湾农贸市场",
+    {
+      name: "豪客来卤菜店（月亮湾水岸花园店）",
+      image: "./assets/images/places/hkl.jpg",
+      city: "咸宁市",
+      url: "https://ditu.amap.com/place/B0GKHC1MIJ"
+    }
+  ]
+]);
 
 const CATEGORY_RULES = [
   {
@@ -58,6 +69,7 @@ const state = {
   articlesData: null,
   romanceData: null,
   selectedIndex: 0,
+  initialEntryApplied: false,
   globalSearch: "",
   globalSearchComposing: false,
   speakerFilter: "all",
@@ -294,6 +306,7 @@ async function refreshData(reason, options = {}) {
     state.analysis = analyzeData(data);
     state.articlesData = JSON.parse(articlesRawText);
     state.romanceData = JSON.parse(romanceRawText);
+    applyInitialEntrySelection();
     state.selectedIndex = clampIndex(state.selectedIndex, state.analysis.sessions.length);
     state.lastLoadedAt = new Date();
     updateLoadMeta(reason, true);
@@ -307,11 +320,24 @@ async function refreshData(reason, options = {}) {
   }
 }
 
+function applyInitialEntrySelection() {
+  if (state.initialEntryApplied || !Array.isArray(state.analysis?.sessions)) {
+    return;
+  }
+  state.initialEntryApplied = true;
+  const params = new URLSearchParams(window.location?.search || "");
+  const entry = Number(params.get("entry"));
+  if (Number.isInteger(entry)) {
+    state.selectedIndex = clampIndex(entry, state.analysis.sessions.length);
+  }
+}
+
 function maybeShowWhatsNew(options = {}) {
+  const currentSignature = getCurrentWhatsNewSignature();
   if (
     options.silent
     || state.whatsNewAutoSuppressed
-    || getDismissedWhatsNewDate() === todayKey()
+    || (currentSignature && getDismissedWhatsNewSignature() === currentSignature)
   ) {
     return;
   }
@@ -341,14 +367,14 @@ function closeWhatsNew() {
 function handleWhatsNewAction(action) {
   if (action === "close") {
     state.whatsNewAutoSuppressed = true;
-  } else if (action === "dismiss-today") {
+  } else if (action === "dismiss-current") {
     state.whatsNewAutoSuppressed = true;
-    setDismissedWhatsNewDate(todayKey());
+    setDismissedWhatsNewSignature(getCurrentWhatsNewSignature());
   }
   closeWhatsNew();
 }
 
-function getDismissedWhatsNewDate() {
+function getDismissedWhatsNewSignature() {
   try {
     return window.localStorage.getItem(WHATS_NEW_STORAGE_KEY);
   } catch (error) {
@@ -356,23 +382,23 @@ function getDismissedWhatsNewDate() {
   }
 }
 
-function setDismissedWhatsNewDate(dateKey) {
-  if (!dateKey) {
+function setDismissedWhatsNewSignature(signature) {
+  if (!signature) {
     return;
   }
   try {
-    window.localStorage.setItem(WHATS_NEW_STORAGE_KEY, dateKey);
+    window.localStorage.setItem(WHATS_NEW_STORAGE_KEY, signature);
   } catch (error) {
     console.warn(error);
   }
 }
 
-function todayKey() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const day = String(now.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+function getCurrentWhatsNewSignature() {
+  if (!el.whatsNewModal) {
+    return "";
+  }
+  const text = el.whatsNewModal.textContent?.replace(/\s+/g, " ").trim() || "";
+  return text ? hashText(text) : "";
 }
 
 async function fetchDataText(url) {
@@ -477,7 +503,7 @@ function renderHeroMetrics() {
   el.heroMetrics.innerHTML = [
     metricChip(`${archiveStats.totalEntries} 个跨库条目`),
     metricChip(`${archiveStats.conversationMessages} 条对话`),
-    metricChip(`${archiveStats.articleCount} 篇斌说说`),
+    metricChip(`${archiveStats.articleCount} 条全斌文`),
     metricChip(`${archiveStats.romanceCount} 条恋斌场`),
     metricChip(`${targetName} 发言 ${totals.targetMessages} 条`),
     metricChip(`最热条目 ${archiveStats.hottestItem?.date || "未知"}`),
@@ -499,7 +525,7 @@ function renderGlobalSearchPanel() {
           data-global-search-box
           type="search"
           value="${escapeAttr(state.globalSearch)}"
-          placeholder="全局搜索嘻斌库、斌说说、恋斌场，例如 通山 / 投射 / 富家女"
+          placeholder="全局搜索嘻斌库、全斌文、恋斌场，例如 通山 / 投射 / 富家女"
         >
         ${state.globalSearch.trim() ? renderGlobalSearchDropdown(matches) : ""}
       </div>
@@ -579,7 +605,7 @@ function getArticleSearchMatches(query) {
       return {
         index,
         url: `./articles.html?entry=${index}`,
-        kicker: `斌说说 · ${article.date}`,
+        kicker: `全斌文 · ${article.date}`,
         title: article.title,
         snippet: createSearchSnippet(matchedSource, state.globalSearch) || article.summary || article.text
       };
@@ -668,7 +694,7 @@ function renderOverview() {
   const archiveStats = getUnifiedArchiveStats();
   const topResponder = topTargetResponders[0];
   el.overview.innerHTML = [
-    overviewCard("时间跨度", `${archiveStats.dateRange.start} → ${archiveStats.dateRange.end}`, `共跨 ${archiveStats.totalEntries} 个条目，包含主库、斌说说与恋斌场。`),
+    overviewCard("时间跨度", `${archiveStats.dateRange.start} → ${archiveStats.dateRange.end}`, `共跨 ${archiveStats.totalEntries} 个条目，包含主库、全斌文与恋斌场。`),
     overviewCard("最长内容", archiveStats.longestItem?.title || "暂无", archiveStats.longestItem ? `${archiveStats.longestItem.sourceLabel} · ${archiveStats.longestItem.metricText}，对应日期 ${archiveStats.longestItem.date}。` : "暂无内容。"),
     overviewCard("高压内容", archiveStats.topPressureItems[0]?.title || "暂无", archiveStats.topPressureItems[0] ? `${archiveStats.topPressureItems[0].sourceLabel} · 压力 ${archiveStats.topPressureItems[0].pressureScore}/100 · ${archiveStats.topPressureItems[0].metricText}。` : "暂无高压条目。"),
     overviewCard("最常接话者", topResponder ? topResponder.sender : "暂无", topResponder ? `累计 ${topResponder.count} 次接在通三哥发言后出现，主模式是 ${topResponder.dominantRoleLabel}。` : "暂无接话统计。")
@@ -910,11 +936,55 @@ function renderTranscriptResults() {
               <div class="reply-quote-content">${escapeHtml(message.replyTo.content)}</div>
             </div>
           ` : ""}
-          <p class="message-content">${escapeHtml(message.content)}</p>
+          ${renderMessageContent(message)}
         </article>
       `;
     }).join("")
     : '<div class="empty-state">当前筛选条件下没有命中消息。</div>';
+}
+
+function renderMessageContent(message) {
+  const location = parseLocationMessage(message.content);
+  if (!location) {
+    return `<p class="message-content">${escapeHtml(message.content)}</p>`;
+  }
+
+  return `
+    <a class="location-card" href="${escapeAttr(location.url)}" target="_blank" rel="noopener noreferrer" aria-label="在高德地图打开 ${escapeAttr(location.name)}">
+      <img class="location-card-image" src="${escapeAttr(location.image)}" alt="${escapeAttr(location.name)} 地图缩略图" loading="lazy">
+      <span class="location-card-body">
+        <span class="location-card-name">${escapeHtml(location.name)}</span>
+        <span class="location-card-address">${escapeHtml(location.address)}</span>
+      </span>
+    </a>
+  `;
+}
+
+function parseLocationMessage(content) {
+  const text = String(content || "").trim();
+  const match = text.match(/^\[位置卡片\]\s*(.+?)(?:\s*[（(]([^()（）]+)[）)])?\s*$/u);
+  if (!match) {
+    return null;
+  }
+
+  const rawName = match[1].trim();
+  const address = (match[2] || "").trim();
+  const override = LOCATION_CARD_OVERRIDES.get(`${rawName}|${address}`) || {};
+  const name = override.name || rawName;
+  const city = override.city || "";
+  const image = override.image || "./assets/images/places/hkl.jpg";
+  return {
+    name,
+    address,
+    image,
+    url: override.url || createAmapSearchUrl(name, address, city)
+  };
+}
+
+function createAmapSearchUrl(name, address, city) {
+  const keyword = encodeURIComponent([name, address].filter(Boolean).join(" "));
+  const cityParam = city ? `&city=${encodeURIComponent(city)}` : "";
+  return `https://uri.amap.com/search?keyword=${keyword}${cityParam}&view=map&src=xibinku&callnative=0`;
 }
 
 function renderMessageBadges(badgeItems) {
@@ -997,7 +1067,7 @@ function getUnifiedArchiveItems() {
     const textLength = String(article.text || article.summary || "").length;
     return {
       source: "articles",
-      sourceLabel: "斌说说",
+      sourceLabel: "全斌文",
       date: article.date || "未知",
       title: article.title || "未命名文章",
       metricValue: textLength,
@@ -1005,7 +1075,7 @@ function getUnifiedArchiveItems() {
       comparableSize: Math.ceil(textLength / 40),
       conversationMessages: 0,
       pressureScore: clamp(Math.round(textLength / 70), 8, 100),
-      summary: article.summary || "个人长文与随笔"
+      summary: article.summary || "个人长文、随笔与附件文档"
     };
   });
 
@@ -1089,7 +1159,7 @@ function analyzeSession(session, sessionIndex, targetId, aliasMap) {
   });
 
   const category = classifyCategory(messages);
-  const title = deriveSessionTitle(messages, category.id, session.date);
+  const title = session.title || deriveSessionTitle(messages, category.id, session.date);
   const keywords = extractKeywords(messages.map((message) => message.content));
   const targetMessages = messages.filter((message) => message.isTarget);
   const topSpeakers = entriesFromMap(countBy(messages, (message) => message.sender))
@@ -1442,7 +1512,7 @@ function zoomMindAt(viewport, factor, clientX, clientY) {
   const view = ensureMindView(viewport);
   const rect = viewport.getBoundingClientRect();
   const nextScale = clamp(view.scale * factor, MIND_SCALE_MIN, MIND_SCALE_MAX);
-  
+
   if (nextScale === view.scale) return;
 
   const localX = clientX - rect.left;
@@ -1464,7 +1534,7 @@ function handleMindAction(action, viewport) {
     const isFull = wrap?.classList.contains("fullscreen");
     const btn = wrap?.querySelector('[data-mind-action="fullscreen"]');
     if (btn) btn.textContent = isFull ? "退出" : "全屏";
-    
+
     // Resize logic
     setTimeout(() => {
       const key = viewport.dataset.sessionKey;
@@ -1801,6 +1871,7 @@ function deriveSessionTitle(messages, categoryId, date) {
   const fullText = messages.map((message) => message.content).join(" ");
   const checks = {
     local: [
+      ["你指出来", "通山未脱贫"],
       ["豪客来卤菜店", "豪客来卤菜店"],
       ["三无语言", "三无语言"],
       ["普通话之乡", "普通话之乡"],
@@ -1815,12 +1886,15 @@ function deriveSessionTitle(messages, categoryId, date) {
       ["旺座理论", "旺座理论"]
     ],
     ideology: [
+      ["你指出来", "通山未脱贫"],
       ["恢复毛主席时期的制度", "恢复毛主席时期的制度"],
       ["改开是有成就的", "改开两面看待"],
       ["计划经济", "计划经济能不能回去"],
       ["控制资本", "控制资本就行了？"]
     ],
-    general: []
+    general: [
+      ["你指出来", "通山未脱贫"]
+    ]
   };
 
   for (const [needle, title] of checks[categoryId] || []) {
